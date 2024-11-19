@@ -1,0 +1,829 @@
+# HELP kudu_tserver_wal_dir_space_available_bytes Total WAL directory space available. Set to -1 if reading the disk fails
+# TYPE kudu_tserver_wal_dir_space_available_bytes gauge
+kudu_tserver_wal_dir_space_available_bytes{unit_type="bytes"} 66176434996
+# HELP kudu_tserver_data_dirs_space_available_bytes Total space available in all the data directories. Set to -1 if reading any of the disks fails
+# TYPE kudu_tserver_data_dirs_space_available_bytes gauge
+kudu_tserver_data_dirs_space_available_bytes{unit_type="bytes"} 66176434996
+# HELP kudu_tserver_memory_usage Current memory usage of the server process
+# TYPE kudu_tserver_memory_usage gauge
+kudu_tserver_memory_usage{unit_type="bytes"} 87017904
+# HELP kudu_tserver_uptime Time interval since the server has started
+# TYPE kudu_tserver_uptime gauge
+kudu_tserver_uptime{unit_type="microseconds"} 3806172964951
+# HELP kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_DumpMemTrackers Number of rejected kudu.server.GenericService.DumpMemTrackers requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_DumpMemTrackers counter
+kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_DumpMemTrackers{unit_type="requests"} 0
+# HELP kudu_tserver_log_block_manager_dead_containers_deleted Number of full (but dead) block containers that were deleted
+# TYPE kudu_tserver_log_block_manager_dead_containers_deleted counter
+kudu_tserver_log_block_manager_dead_containers_deleted{unit_type="log block containers"} 0
+# HELP kudu_tserver_clock_ntp_status Output of ntp_adjtime()/ntp_gettime() kernel API call
+# TYPE kudu_tserver_clock_ntp_status gauge
+kudu_tserver_clock_ntp_status{unit_type="state"} now:1732034542733767 maxerror:107345 status:ok
+# HELP kudu_tserver_log_block_manager_holes_punched Number of holes punched since service start
+# TYPE kudu_tserver_log_block_manager_holes_punched counter
+kudu_tserver_log_block_manager_holes_punched{unit_type="holes"} 22
+# HELP kudu_tserver_log_block_manager_total_containers_startup Number of log block containers which were present during the server startup
+# TYPE kudu_tserver_log_block_manager_total_containers_startup gauge
+kudu_tserver_log_block_manager_total_containers_startup{unit_type="log block containers"} 15
+# HELP kudu_tserver_log_block_manager_full_containers Number of full log block containers
+# TYPE kudu_tserver_log_block_manager_full_containers gauge
+kudu_tserver_log_block_manager_full_containers{unit_type="log block containers"} 0
+# HELP kudu_tserver_log_block_manager_containers Number of log block containers
+# TYPE kudu_tserver_log_block_manager_containers gauge
+kudu_tserver_log_block_manager_containers{unit_type="log block containers"} 15
+# HELP kudu_tserver_log_block_manager_bytes_under_management Number of bytes of data blocks currently under management
+# TYPE kudu_tserver_log_block_manager_bytes_under_management gauge
+kudu_tserver_log_block_manager_bytes_under_management{unit_type="bytes"} 278468372
+# HELP kudu_tserver_block_manager_total_disk_sync Number of disk synchronizations of block data since service start
+# TYPE kudu_tserver_block_manager_total_disk_sync counter
+kudu_tserver_block_manager_total_disk_sync{unit_type="blocks"} 104
+# HELP kudu_tserver_block_manager_total_blocks_deleted Number of data blocks that were deleted since service start
+# TYPE kudu_tserver_block_manager_total_blocks_deleted counter
+kudu_tserver_block_manager_total_blocks_deleted{unit_type="blocks"} 22
+# HELP kudu_tserver_block_manager_total_blocks_created Number of data blocks that were created since service start
+# TYPE kudu_tserver_block_manager_total_blocks_created counter
+kudu_tserver_block_manager_total_blocks_created{unit_type="blocks"} 60
+# HELP kudu_tserver_block_manager_total_writable_blocks Number of data blocks opened for writing since service start
+# TYPE kudu_tserver_block_manager_total_writable_blocks counter
+kudu_tserver_block_manager_total_writable_blocks{unit_type="blocks"} 60
+# HELP kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers Microseconds spent handling kudu.server.GenericService.DumpMemTrackers RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers histogram
+kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_DumpMemTrackers_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_block_manager_total_readable_blocks Number of data blocks opened for reading since service start
+# TYPE kudu_tserver_block_manager_total_readable_blocks counter
+kudu_tserver_block_manager_total_readable_blocks{unit_type="blocks"} 195
+# HELP kudu_tserver_block_manager_blocks_open_writing Number of data blocks currently open for writing
+# TYPE kudu_tserver_block_manager_blocks_open_writing gauge
+kudu_tserver_block_manager_blocks_open_writing{unit_type="blocks"} 0
+# HELP kudu_tserver_block_manager_blocks_open_reading Number of data blocks currently open for reading
+# TYPE kudu_tserver_block_manager_blocks_open_reading gauge
+kudu_tserver_block_manager_blocks_open_reading{unit_type="blocks"} 181
+# HELP kudu_tserver_reactor_active_latency_us Histogram of the wall clock time for reactor thread wake-ups. The reactor thread is responsible for all network I/O and therefore outliers in this latency histogram directly contribute to the latency of both inbound and outbound RPCs.
+# TYPE kudu_tserver_reactor_active_latency_us histogram
+kudu_tserver_reactor_active_latency_us_bucket{unit_type="microseconds", le="0.75"} 37
+kudu_tserver_reactor_active_latency_us_bucket{unit_type="microseconds", le="0.95"} 69
+kudu_tserver_reactor_active_latency_us_bucket{unit_type="microseconds", le="0.99"} 102
+kudu_tserver_reactor_active_latency_us_bucket{unit_type="microseconds", le="0.999"} 154
+kudu_tserver_reactor_active_latency_us_bucket{unit_type="microseconds", le="0.9999"} 260
+kudu_tserver_reactor_active_latency_us_bucket{unit_type="microseconds", le="+Inf"} 4232483073
+kudu_tserver_reactor_active_latency_us_sum{unit_type="microseconds"} 97264665188
+kudu_tserver_reactor_active_latency_us_count{unit_type="microseconds"} 4232483073
+# HELP kudu_tserver_tcmalloc_current_total_thread_cache_bytes A measure of some of the memory TCMalloc is using (for small objects).
+# TYPE kudu_tserver_tcmalloc_current_total_thread_cache_bytes gauge
+kudu_tserver_tcmalloc_current_total_thread_cache_bytes{unit_type="bytes"} 19603296
+# HELP kudu_tserver_data_dirs_full Number of data directories whose disks are currently full
+# TYPE kudu_tserver_data_dirs_full gauge
+kudu_tserver_data_dirs_full{unit_type="data directories"} 0
+# HELP kudu_tserver_op_apply_queue_length Number of operations waiting to be applied to the tablet. High queue lengths indicate that the server is unable to process operations as fast as they are being written to the WAL.
+# TYPE kudu_tserver_op_apply_queue_length histogram
+kudu_tserver_op_apply_queue_length_bucket{unit_type="tasks", le="0.75"} 9984
+kudu_tserver_op_apply_queue_length_bucket{unit_type="tasks", le="0.95"} 9984
+kudu_tserver_op_apply_queue_length_bucket{unit_type="tasks", le="0.99"} 9984
+kudu_tserver_op_apply_queue_length_bucket{unit_type="tasks", le="0.999"} 9984
+kudu_tserver_op_apply_queue_length_bucket{unit_type="tasks", le="0.9999"} 9984
+kudu_tserver_op_apply_queue_length_bucket{unit_type="tasks", le="+Inf"} 300027
+kudu_tserver_op_apply_queue_length_sum{unit_type="tasks"} 5235752131
+kudu_tserver_op_apply_queue_length_count{unit_type="tasks"} 300027
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetConsensusState Number of rejected kudu.consensus.ConsensusService.GetConsensusState requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetConsensusState counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetConsensusState{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive Microseconds spent handling kudu.tserver.TabletCopyService.CheckSessionActive RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_generic_heap_size Bytes of system memory reserved by TCMalloc.
+# TYPE kudu_tserver_generic_heap_size gauge
+kudu_tserver_generic_heap_size{unit_type="bytes"} 9519382528
+# HELP kudu_tserver_block_cache_hits Number of lookups that found a block
+# TYPE kudu_tserver_block_cache_hits counter
+kudu_tserver_block_cache_hits{unit_type="blocks"} 0
+# HELP kudu_tserver_data_dirs_failed Number of data directories whose disks are currently in a failed state
+# TYPE kudu_tserver_data_dirs_failed gauge
+kudu_tserver_data_dirs_failed{unit_type="data directories"} 0
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState Microseconds spent handling kudu.consensus.ConsensusService.GetConsensusState RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState_bucket{unit_type="microseconds", le="0.75"} 680
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState_bucket{unit_type="microseconds", le="0.95"} 728
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState_bucket{unit_type="microseconds", le="0.99"} 728
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState_bucket{unit_type="microseconds", le="0.999"} 728
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState_bucket{unit_type="microseconds", le="0.9999"} 728
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState_bucket{unit_type="microseconds", le="+Inf"} 4
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState_sum{unit_type="microseconds"} 1589
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetConsensusState_count{unit_type="microseconds"} 4
+# HELP kudu_tserver_generic_current_allocated_bytes Number of bytes used by the application. This will not typically match the memory use reported by the OS, because it does not include TCMalloc overhead or memory fragmentation.
+# TYPE kudu_tserver_generic_current_allocated_bytes gauge
+kudu_tserver_generic_current_allocated_bytes{unit_type="bytes"} 87037440
+# HELP kudu_tserver_block_cache_misses_caching Number of lookups that were expecting a block that didn't yield one. Use this number instead of cache_misses when trying to determine how efficient the cache is
+# TYPE kudu_tserver_block_cache_misses_caching counter
+kudu_tserver_block_cache_misses_caching{unit_type="blocks"} 121
+# HELP kudu_tserver_tcmalloc_pageheap_unmapped_bytes Number of bytes in free, unmapped pages in page heap. These are bytes that have been released back to the OS, possibly by one of the MallocExtension "Release" calls. They can be used to fulfill allocation requests, but typically incur a page fault. They always count towards virtual memory usage, and depending on the OS, typically do not count towards physical memory usage.
+# TYPE kudu_tserver_tcmalloc_pageheap_unmapped_bytes gauge
+kudu_tserver_tcmalloc_pageheap_unmapped_bytes{unit_type="bytes"} 9349570560
+# HELP kudu_tserver_block_cache_usage Memory consumed by the block cache
+# TYPE kudu_tserver_block_cache_usage gauge
+kudu_tserver_block_cache_usage{unit_type="bytes"} 1285648
+# HELP kudu_tserver_hybrid_clock_error Server clock maximum error; returns 2^64-1 when unable to read the underlying clock
+# TYPE kudu_tserver_hybrid_clock_error gauge
+kudu_tserver_hybrid_clock_error{unit_type="microseconds"} 107345
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote Microseconds spent handling kudu.consensus.ConsensusService.RequestConsensusVote RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote_bucket{unit_type="microseconds", le="0.75"} 165
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote_bucket{unit_type="microseconds", le="0.95"} 1952
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote_bucket{unit_type="microseconds", le="0.99"} 126464
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote_bucket{unit_type="microseconds", le="0.999"} 191488
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote_bucket{unit_type="microseconds", le="0.9999"} 215040
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote_bucket{unit_type="microseconds", le="+Inf"} 3901
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote_sum{unit_type="microseconds"} 10054983
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote_count{unit_type="microseconds"} 3901
+# HELP kudu_tserver_tcmalloc_max_total_thread_cache_bytes A limit to how much memory TCMalloc dedicates for small objects. Higher numbers trade off more memory use for -- in some situations -- improved efficiency.
+# TYPE kudu_tserver_tcmalloc_max_total_thread_cache_bytes gauge
+kudu_tserver_tcmalloc_max_total_thread_cache_bytes{unit_type="bytes"} 33554432
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_RunLeaderElection Number of rejected kudu.consensus.ConsensusService.RunLeaderElection requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_RunLeaderElection counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_RunLeaderElection{unit_type="requests"} 0
+# HELP kudu_tserver_hybrid_clock_timestamp Hybrid clock timestamp; returns 2^64-1 when unable to read the underlying clock
+# TYPE kudu_tserver_hybrid_clock_timestamp gauge
+kudu_tserver_hybrid_clock_timestamp{unit_type="microseconds"} 7094413487038115840
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_RequestConsensusVote Number of rejected kudu.consensus.ConsensusService.RequestConsensusVote requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_RequestConsensusVote counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_RequestConsensusVote{unit_type="requests"} 0
+# HELP kudu_tserver_log_block_manager_blocks_under_management Number of data blocks currently under management
+# TYPE kudu_tserver_log_block_manager_blocks_under_management gauge
+kudu_tserver_log_block_manager_blocks_under_management{unit_type="blocks"} 181
+# HELP kudu_tserver_hybrid_clock_max_errors The statistics on the maximum error of the underlying clock
+# TYPE kudu_tserver_hybrid_clock_max_errors histogram
+kudu_tserver_hybrid_clock_max_errors_bucket{unit_type="microseconds", le="0.75"} 139264
+kudu_tserver_hybrid_clock_max_errors_bucket{unit_type="microseconds", le="0.95"} 253952
+kudu_tserver_hybrid_clock_max_errors_bucket{unit_type="microseconds", le="0.99"} 344064
+kudu_tserver_hybrid_clock_max_errors_bucket{unit_type="microseconds", le="0.999"} 425984
+kudu_tserver_hybrid_clock_max_errors_bucket{unit_type="microseconds", le="0.9999"} 475136
+kudu_tserver_hybrid_clock_max_errors_bucket{unit_type="microseconds", le="+Inf"} 4301158677
+kudu_tserver_hybrid_clock_max_errors_sum{unit_type="microseconds"} 439256620961834
+kudu_tserver_hybrid_clock_max_errors_count{unit_type="microseconds"} 4301158677
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig Microseconds spent handling kudu.consensus.ConsensusService.ChangeConfig RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_ChangeConfig_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_block_cache_misses Number of lookups that didn't yield a block
+# TYPE kudu_tserver_block_cache_misses counter
+kudu_tserver_block_cache_misses{unit_type="blocks"} 10
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_UnsafeChangeConfig Number of rejected kudu.consensus.ConsensusService.UnsafeChangeConfig requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_UnsafeChangeConfig counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_UnsafeChangeConfig{unit_type="requests"} 0
+# HELP kudu_tserver_block_cache_hits_caching Number of lookups that were expecting a block that found one. Use this number instead of cache_hits when trying to determine how efficient the cache is
+# TYPE kudu_tserver_block_cache_hits_caching counter
+kudu_tserver_block_cache_hits_caching{unit_type="blocks"} 7
+# HELP kudu_tserver_tcmalloc_pageheap_free_bytes Number of bytes in free, mapped pages in page heap. These bytes can be used to fulfill allocation requests. They always count towards virtual memory usage, and unless the underlying memory is swapped out by the OS, they also count towards physical memory usage.
+# TYPE kudu_tserver_tcmalloc_pageheap_free_bytes gauge
+kudu_tserver_tcmalloc_pageheap_free_bytes{unit_type="bytes"} 8626176
+# HELP kudu_tserver_block_cache_evictions Number of blocks evicted from the cache
+# TYPE kudu_tserver_block_cache_evictions counter
+kudu_tserver_block_cache_evictions{unit_type="blocks"} 0
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig Microseconds spent handling kudu.consensus.ConsensusService.UnsafeChangeConfig RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_file_cache_usage Number of entries in the file cache
+# TYPE kudu_tserver_file_cache_usage gauge
+kudu_tserver_file_cache_usage{unit_type="entries"} 402
+# HELP kudu_tserver_tablets_num_stopping Number of tablets currently stopping
+# TYPE kudu_tserver_tablets_num_stopping gauge
+kudu_tserver_tablets_num_stopping{unit_type="tablets"} 0
+# HELP kudu_tserver_code_cache_queries Number of codegen cache queries (hits + misses) since start
+# TYPE kudu_tserver_code_cache_queries counter
+kudu_tserver_code_cache_queries{unit_type="queries"} 36
+# HELP kudu_tserver_tablets_num_bootstrapping Number of tablets currently bootstrapping
+# TYPE kudu_tserver_tablets_num_bootstrapping gauge
+kudu_tserver_tablets_num_bootstrapping{unit_type="tablets"} 0
+# HELP kudu_tserver_tablets_num_not_initialized Number of tablets currently not initialized
+# TYPE kudu_tserver_tablets_num_not_initialized gauge
+kudu_tserver_tablets_num_not_initialized{unit_type="tablets"} 0
+# HELP kudu_tserver_op_apply_run_time Time that operations spent being applied to the tablet. High values may indicate that the server is under-provisioned or that operations consist of very large batches.
+# TYPE kudu_tserver_op_apply_run_time histogram
+kudu_tserver_op_apply_run_time_bucket{unit_type="microseconds", le="0.75"} 512
+kudu_tserver_op_apply_run_time_bucket{unit_type="microseconds", le="0.95"} 2944
+kudu_tserver_op_apply_run_time_bucket{unit_type="microseconds", le="0.99"} 8064
+kudu_tserver_op_apply_run_time_bucket{unit_type="microseconds", le="0.999"} 18432
+kudu_tserver_op_apply_run_time_bucket{unit_type="microseconds", le="0.9999"} 50176
+kudu_tserver_op_apply_run_time_bucket{unit_type="microseconds", le="+Inf"} 300027
+kudu_tserver_op_apply_run_time_sum{unit_type="microseconds"} 190132868
+kudu_tserver_op_apply_run_time_count{unit_type="microseconds"} 300027
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession Microseconds spent handling kudu.tserver.TabletCopyService.BeginTabletCopySession RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_cpu_utime Total user CPU time of the process
+# TYPE kudu_tserver_cpu_utime counter
+kudu_tserver_cpu_utime{unit_type="milliseconds"} 126029997
+# HELP kudu_tserver_file_cache_lookups Number of file descriptors looked up from the cache
+# TYPE kudu_tserver_file_cache_lookups counter
+kudu_tserver_file_cache_lookups{unit_type="entries"} 211150397
+# HELP kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_GetStatus Number of rejected kudu.server.GenericService.GetStatus requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_GetStatus counter
+kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_GetStatus{unit_type="requests"} 0
+# HELP kudu_tserver_threads_running Current number of running threads
+# TYPE kudu_tserver_threads_running gauge
+kudu_tserver_threads_running{unit_type="threads"} 122
+# HELP kudu_tserver_file_cache_inserts Number of file descriptors inserted in the cache
+# TYPE kudu_tserver_file_cache_inserts counter
+kudu_tserver_file_cache_inserts{unit_type="entries"} 902
+# HELP kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus Microseconds spent handling kudu.server.GenericService.GetStatus RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus histogram
+kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus_bucket{unit_type="microseconds", le="0.75"} 65
+kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus_bucket{unit_type="microseconds", le="0.95"} 65
+kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus_bucket{unit_type="microseconds", le="0.99"} 65
+kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus_bucket{unit_type="microseconds", le="0.999"} 65
+kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus_bucket{unit_type="microseconds", le="0.9999"} 65
+kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus_bucket{unit_type="microseconds", le="+Inf"} 4
+kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus_sum{unit_type="microseconds"} 216
+kudu_tserver_handler_latency_kudu_server_GenericService_GetStatus_count{unit_type="microseconds"} 4
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_BeginTabletCopySession Number of rejected kudu.tserver.TabletCopyService.BeginTabletCopySession requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_BeginTabletCopySession counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_BeginTabletCopySession{unit_type="requests"} 0
+# HELP kudu_tserver_cpu_stime Total system CPU time of the process
+# TYPE kudu_tserver_cpu_stime counter
+kudu_tserver_cpu_stime{unit_type="milliseconds"} 104710109
+# HELP kudu_tserver_file_cache_evictions Number of file descriptors evicted from the cache
+# TYPE kudu_tserver_file_cache_evictions counter
+kudu_tserver_file_cache_evictions{unit_type="entries"} 500
+# HELP kudu_tserver_startup_progress_steps_remaining Server startup progress steps remaining
+# TYPE kudu_tserver_startup_progress_steps_remaining gauge
+kudu_tserver_startup_progress_steps_remaining{unit_type="units"} 0
+# HELP kudu_tserver_tablets_num_running Number of tablets currently running
+# TYPE kudu_tserver_tablets_num_running gauge
+kudu_tserver_tablets_num_running{unit_type="tablets"} 186
+# HELP kudu_tserver_tablet_copy_open_source_sessions Number of currently open tablet copy source sessions on this server
+# TYPE kudu_tserver_tablet_copy_open_source_sessions gauge
+kudu_tserver_tablet_copy_open_source_sessions{unit_type="sessions"} 0
+# HELP kudu_tserver_block_cache_lookups Number of blocks looked up from the cache
+# TYPE kudu_tserver_block_cache_lookups counter
+kudu_tserver_block_cache_lookups{unit_type="blocks"} 138
+# HELP kudu_tserver_file_cache_hits_caching Number of lookups that were expecting a file descriptor that found one. Use this number instead of cache_hits when trying to determine how efficient the cache is
+# TYPE kudu_tserver_file_cache_hits_caching counter
+kudu_tserver_file_cache_hits_caching{unit_type="entries"} 211149495
+# HELP kudu_tserver_tablets_num_failed Number of failed tablets
+# TYPE kudu_tserver_tablets_num_failed gauge
+kudu_tserver_tablets_num_failed{unit_type="tablets"} 0
+# HELP kudu_tserver_log_block_manager_processed_containers_startup Number of log block containers which were opened/processed during the server startup
+# TYPE kudu_tserver_log_block_manager_processed_containers_startup gauge
+kudu_tserver_log_block_manager_processed_containers_startup{unit_type="log block containers"} 15
+# HELP kudu_tserver_code_cache_hits Number of codegen cache hits since start
+# TYPE kudu_tserver_code_cache_hits counter
+kudu_tserver_code_cache_hits{unit_type="hits"} 16
+# HELP kudu_tserver_hybrid_clock_extrapolation_intervals The statistics on the duration of intervals when the underlying clock was extrapolated instead of using the direct readings
+# TYPE kudu_tserver_hybrid_clock_extrapolation_intervals histogram
+kudu_tserver_hybrid_clock_extrapolation_intervals_bucket{unit_type="seconds", le="0.75"} 0
+kudu_tserver_hybrid_clock_extrapolation_intervals_bucket{unit_type="seconds", le="0.95"} 0
+kudu_tserver_hybrid_clock_extrapolation_intervals_bucket{unit_type="seconds", le="0.99"} 0
+kudu_tserver_hybrid_clock_extrapolation_intervals_bucket{unit_type="seconds", le="0.999"} 0
+kudu_tserver_hybrid_clock_extrapolation_intervals_bucket{unit_type="seconds", le="0.9999"} 0
+kudu_tserver_hybrid_clock_extrapolation_intervals_bucket{unit_type="seconds", le="+Inf"} 0
+kudu_tserver_hybrid_clock_extrapolation_intervals_sum{unit_type="seconds"} 0
+kudu_tserver_hybrid_clock_extrapolation_intervals_count{unit_type="seconds"} 0
+# HELP kudu_tserver_startup_progress_time_elapsed Time taken by the server to complete the startup ortime elapsed so far for the server to startup
+# TYPE kudu_tserver_startup_progress_time_elapsed gauge
+kudu_tserver_startup_progress_time_elapsed{unit_type="milliseconds"} 1203
+# HELP kudu_tserver_tablets_num_initialized Number of tablets currently initialized
+# TYPE kudu_tserver_tablets_num_initialized gauge
+kudu_tserver_tablets_num_initialized{unit_type="tablets"} 0
+# HELP kudu_tserver_tablet_copy_bytes_sent Number of bytes sent during tablet copy operations since server start
+# TYPE kudu_tserver_tablet_copy_bytes_sent counter
+kudu_tserver_tablet_copy_bytes_sent{unit_type="bytes"} 0
+# HELP kudu_tserver_block_cache_inserts Number of blocks inserted in the cache
+# TYPE kudu_tserver_block_cache_inserts counter
+kudu_tserver_block_cache_inserts{unit_type="blocks"} 121
+# HELP kudu_tserver_scheduling_priority The scheduling priority of the process
+# TYPE kudu_tserver_scheduling_priority gauge
+kudu_tserver_scheduling_priority{unit_type="state"} 0
+# HELP kudu_tserver_block_manager_total_bytes_written Number of bytes of block data written since service start
+# TYPE kudu_tserver_block_manager_total_bytes_written counter
+kudu_tserver_block_manager_total_bytes_written{unit_type="bytes"} 112264868
+# HELP kudu_tserver_file_cache_hits Number of lookups that found a file descriptor
+# TYPE kudu_tserver_file_cache_hits counter
+kudu_tserver_file_cache_hits{unit_type="entries"} 0
+# HELP kudu_tserver_rpc_connections_accepted Number of incoming TCP connections made to the RPC server
+# TYPE kudu_tserver_rpc_connections_accepted counter
+kudu_tserver_rpc_connections_accepted{unit_type="connections"} 234
+# HELP kudu_tserver_file_cache_misses_caching Number of lookups that were expecting a file descriptor that didn't yield one. Use this number instead of cache_misses when trying to determine how efficient the cache is
+# TYPE kudu_tserver_file_cache_misses_caching counter
+kudu_tserver_file_cache_misses_caching{unit_type="entries"} 902
+# HELP kudu_tserver_block_manager_total_bytes_read Number of bytes of block data read since service start
+# TYPE kudu_tserver_block_manager_total_bytes_read counter
+kudu_tserver_block_manager_total_bytes_read{unit_type="bytes"} 1185794
+# HELP kudu_tserver_tablet_copy_bytes_fetched Number of bytes fetched during tablet copy operations since server start
+# TYPE kudu_tserver_tablet_copy_bytes_fetched counter
+kudu_tserver_tablet_copy_bytes_fetched{unit_type="bytes"} 0
+# HELP kudu_tserver_tablets_num_opened_startup Number of tablets opened during server startup
+# TYPE kudu_tserver_tablets_num_opened_startup gauge
+kudu_tserver_tablets_num_opened_startup{unit_type="tablets"} 131
+# HELP kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_SetFlag Number of rejected kudu.server.GenericService.SetFlag requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_SetFlag counter
+kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_SetFlag{unit_type="requests"} 0
+# HELP kudu_tserver_tablet_copy_open_client_sessions Number of currently open tablet copy client sessions on this server
+# TYPE kudu_tserver_tablet_copy_open_client_sessions gauge
+kudu_tserver_tablet_copy_open_client_sessions{unit_type="sessions"} 0
+# HELP kudu_tserver_tablets_num_stopped Number of tablets currently stopped
+# TYPE kudu_tserver_tablets_num_stopped gauge
+kudu_tserver_tablets_num_stopped{unit_type="tablets"} 0
+# HELP kudu_tserver_tablets_num_shutdown Number of tablets currently shut down
+# TYPE kudu_tserver_tablets_num_shutdown gauge
+kudu_tserver_tablets_num_shutdown{unit_type="tablets"} 0
+# HELP kudu_tserver_scanners_expired Number of scanners that have expired due to inactivity since service start
+# TYPE kudu_tserver_scanners_expired counter
+kudu_tserver_scanners_expired{unit_type="scanners"} 0
+# HELP kudu_tserver_hybrid_clock_extrapolating Whether HybridClock timestamps are extrapolated because of inability to read the underlying clock
+# TYPE kudu_tserver_hybrid_clock_extrapolating gauge
+kudu_tserver_hybrid_clock_extrapolating{unit_type="state"} 0
+# HELP kudu_tserver_scanner_duration Histogram of the duration of active scanners on this server
+# TYPE kudu_tserver_scanner_duration histogram
+kudu_tserver_scanner_duration_bucket{unit_type="microseconds", le="0.75"} 3760
+kudu_tserver_scanner_duration_bucket{unit_type="microseconds", le="0.95"} 70144
+kudu_tserver_scanner_duration_bucket{unit_type="microseconds", le="0.99"} 80896
+kudu_tserver_scanner_duration_bucket{unit_type="microseconds", le="0.999"} 80896
+kudu_tserver_scanner_duration_bucket{unit_type="microseconds", le="0.9999"} 80896
+kudu_tserver_scanner_duration_bucket{unit_type="microseconds", le="+Inf"} 22
+kudu_tserver_scanner_duration_sum{unit_type="microseconds"} 280882
+kudu_tserver_scanner_duration_count{unit_type="microseconds"} 22
+# HELP kudu_tserver_file_cache_misses Number of lookups that didn't yield a file descriptor
+# TYPE kudu_tserver_file_cache_misses counter
+kudu_tserver_file_cache_misses{unit_type="entries"} 0
+# HELP kudu_tserver_active_scanners Number of scanners that are currently active
+# TYPE kudu_tserver_active_scanners gauge
+kudu_tserver_active_scanners{unit_type="scanners"} 0
+# HELP kudu_tserver_reactor_load_percent The percentage of time that the reactor is busy (not blocked awaiting network activity). If this metric shows significant samples nears 100%, increasing the number of reactors may be beneficial.
+# TYPE kudu_tserver_reactor_load_percent histogram
+kudu_tserver_reactor_load_percent_bucket{unit_type="units", le="0.75"} 1
+kudu_tserver_reactor_load_percent_bucket{unit_type="units", le="0.95"} 2
+kudu_tserver_reactor_load_percent_bucket{unit_type="units", le="0.99"} 2
+kudu_tserver_reactor_load_percent_bucket{unit_type="units", le="0.999"} 3
+kudu_tserver_reactor_load_percent_bucket{unit_type="units", le="0.9999"} 4
+kudu_tserver_reactor_load_percent_bucket{unit_type="units", le="+Inf"} 152246887
+kudu_tserver_reactor_load_percent_sum{unit_type="units"} 70965430
+kudu_tserver_reactor_load_percent_count{unit_type="units"} 152246887
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Checksum Number of rejected kudu.tserver.TabletServerService.Checksum requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Checksum counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Checksum{unit_type="requests"} 0
+# HELP kudu_tserver_op_apply_queue_time Time that operations spent waiting in the apply queue before being processed. High queue times indicate that the server is unable to process operations as fast as they are being written to the WAL.
+# TYPE kudu_tserver_op_apply_queue_time histogram
+kudu_tserver_op_apply_queue_time_bucket{unit_type="microseconds", le="0.75"} 4685824
+kudu_tserver_op_apply_queue_time_bucket{unit_type="microseconds", le="0.95"} 6979584
+kudu_tserver_op_apply_queue_time_bucket{unit_type="microseconds", le="0.99"} 7110656
+kudu_tserver_op_apply_queue_time_bucket{unit_type="microseconds", le="0.999"} 7143424
+kudu_tserver_op_apply_queue_time_bucket{unit_type="microseconds", le="0.9999"} 7143424
+kudu_tserver_op_apply_queue_time_bucket{unit_type="microseconds", le="+Inf"} 300027
+kudu_tserver_op_apply_queue_time_sum{unit_type="microseconds"} 680921516910
+kudu_tserver_op_apply_queue_time_count{unit_type="microseconds"} 300027
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy Microseconds spent handling kudu.consensus.ConsensusService.StartTabletCopy RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_StartTabletCopy_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_num_raft_leaders Number of tablet replicas that are Raft leaders
+# TYPE kudu_tserver_num_raft_leaders gauge
+kudu_tserver_num_raft_leaders{unit_type="tablets"} 51
+# HELP kudu_tserver_threads_started Total number of threads started on this server
+# TYPE kudu_tserver_threads_started counter
+kudu_tserver_threads_started{unit_type="threads"} 594195
+# HELP kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_GetFlags Number of rejected kudu.server.GenericService.GetFlags requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_GetFlags counter
+kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_GetFlags{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag Microseconds spent handling kudu.server.GenericService.SetFlag RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag histogram
+kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetFlag_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet Microseconds spent handling kudu.tserver.TabletServerAdminService.DeleteTablet RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet_bucket{unit_type="microseconds", le="0.75"} 159744
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet_bucket{unit_type="microseconds", le="0.95"} 274432
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet_bucket{unit_type="microseconds", le="0.99"} 303104
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet_bucket{unit_type="microseconds", le="0.999"} 309248
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet_bucket{unit_type="microseconds", le="0.9999"} 309248
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet_bucket{unit_type="microseconds", le="+Inf"} 176
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet_sum{unit_type="microseconds"} 16968360
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_DeleteTablet_count{unit_type="microseconds"} 176
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping Microseconds spent handling kudu.tserver.TabletServerService.Ping RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Ping_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_merged_entities_count_of_server Count of entities merged together when entities are merged by common attribute value.
+# TYPE kudu_tserver_merged_entities_count_of_server gauge
+kudu_tserver_merged_entities_count_of_server{unit_type="entries"} 1
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_DeleteTablet Number of rejected kudu.tserver.TabletServerAdminService.DeleteTablet requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_DeleteTablet counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_DeleteTablet{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Ping Number of rejected kudu.tserver.TabletServerService.Ping requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Ping counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Ping{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write Microseconds spent handling kudu.tserver.TabletServerService.Write RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write_bucket{unit_type="microseconds", le="0.75"} 22020096
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write_bucket{unit_type="microseconds", le="0.95"} 23199744
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write_bucket{unit_type="microseconds", le="0.99"} 23461888
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write_bucket{unit_type="microseconds", le="0.999"} 23461888
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write_bucket{unit_type="microseconds", le="0.9999"} 23461888
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write_bucket{unit_type="microseconds", le="+Inf"} 99993
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write_sum{unit_type="microseconds"} 1208820081334
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Write_count{unit_type="microseconds"} 99993
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema Microseconds spent handling kudu.tserver.TabletServerAdminService.AlterSchema RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_AlterSchema_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce Microseconds spent handling kudu.tserver.TabletServerAdminService.Quiesce RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce_bucket{unit_type="microseconds", le="0.75"} 89
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce_bucket{unit_type="microseconds", le="0.95"} 118
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce_bucket{unit_type="microseconds", le="0.99"} 118
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce_bucket{unit_type="microseconds", le="0.999"} 118
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce_bucket{unit_type="microseconds", le="0.9999"} 118
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce_bucket{unit_type="microseconds", le="+Inf"} 4
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce_sum{unit_type="microseconds"} 376
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_Quiesce_count{unit_type="microseconds"} 4
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan Microseconds spent handling kudu.tserver.TabletServerService.Scan RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan_bucket{unit_type="microseconds", le="0.75"} 3360
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan_bucket{unit_type="microseconds", le="0.95"} 4832
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan_bucket{unit_type="microseconds", le="0.99"} 6720
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan_bucket{unit_type="microseconds", le="0.999"} 6720
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan_bucket{unit_type="microseconds", le="0.9999"} 6720
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan_bucket{unit_type="microseconds", le="+Inf"} 46
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan_sum{unit_type="microseconds"} 85444
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Scan_count{unit_type="microseconds"} 46
+# HELP kudu_tserver_maintenance_op_prepare_failed Number of times when calling Prepare() on a maintenance operation failed
+# TYPE kudu_tserver_maintenance_op_prepare_failed counter
+kudu_tserver_maintenance_op_prepare_failed{unit_type="operations"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_Quiesce Number of rejected kudu.tserver.TabletServerAdminService.Quiesce requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_Quiesce counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_Quiesce{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Scan Number of rejected kudu.tserver.TabletServerService.Scan requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Scan counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Scan{unit_type="requests"} 0
+# HELP kudu_tserver_maintenance_op_find_best_candidate_duration Time spent choosing a maintenance operation with highest scores among available candidates
+# TYPE kudu_tserver_maintenance_op_find_best_candidate_duration histogram
+kudu_tserver_maintenance_op_find_best_candidate_duration_bucket{unit_type="microseconds", le="0.75"} 2736
+kudu_tserver_maintenance_op_find_best_candidate_duration_bucket{unit_type="microseconds", le="0.95"} 3616
+kudu_tserver_maintenance_op_find_best_candidate_duration_bucket{unit_type="microseconds", le="0.99"} 3856
+kudu_tserver_maintenance_op_find_best_candidate_duration_bucket{unit_type="microseconds", le="0.999"} 5056
+kudu_tserver_maintenance_op_find_best_candidate_duration_bucket{unit_type="microseconds", le="0.9999"} 6304
+kudu_tserver_maintenance_op_find_best_candidate_duration_bucket{unit_type="microseconds", le="+Inf"} 15052466
+kudu_tserver_maintenance_op_find_best_candidate_duration_sum{unit_type="microseconds"} 41409648329
+kudu_tserver_maintenance_op_find_best_candidate_duration_count{unit_type="microseconds"} 15052466
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction Microseconds spent handling kudu.tserver.TabletServerAdminService.CoordinateTransaction RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CoordinateTransaction_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive Microseconds spent handling kudu.tserver.TabletServerService.ScannerKeepAlive RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ScannerKeepAlive_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction Microseconds spent handling kudu.tserver.TabletServerAdminService.ParticipateInTransaction RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_ParticipateInTransaction_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets Microseconds spent handling kudu.tserver.TabletServerService.ListTablets RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets_bucket{unit_type="microseconds", le="0.75"} 644
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets_bucket{unit_type="microseconds", le="0.95"} 712
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets_bucket{unit_type="microseconds", le="0.99"} 712
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets_bucket{unit_type="microseconds", le="0.999"} 712
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets_bucket{unit_type="microseconds", le="0.9999"} 712
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets_bucket{unit_type="microseconds", le="+Inf"} 4
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets_sum{unit_type="microseconds"} 2543
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_ListTablets_count{unit_type="microseconds"} 4
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange Microseconds spent handling kudu.tserver.TabletServerService.SplitKeyRange RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_SplitKeyRange_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_SplitKeyRange Number of rejected kudu.tserver.TabletServerService.SplitKeyRange requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_SplitKeyRange counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_SplitKeyRange{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum Microseconds spent handling kudu.tserver.TabletServerService.Checksum RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletServerService_Checksum_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_op_apply_queue_overload_rejections Number of rejected write requests due to overloaded op apply queue
+# TYPE kudu_tserver_op_apply_queue_overload_rejections counter
+kudu_tserver_op_apply_queue_overload_rejections{unit_type="requests"} 0
+# HELP kudu_tserver_slow_scans Number of slow scanners that are defined by --slow_scanner_threshold_ms if --show_slow_scans set to 'true'.
+# TYPE kudu_tserver_slow_scans gauge
+kudu_tserver_slow_scans{unit_type="scanners"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet Microseconds spent handling kudu.tserver.TabletServerAdminService.CreateTablet RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet_bucket{unit_type="microseconds", le="0.75"} 26752
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet_bucket{unit_type="microseconds", le="0.95"} 71168
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet_bucket{unit_type="microseconds", le="0.99"} 82432
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet_bucket{unit_type="microseconds", le="0.999"} 82944
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet_bucket{unit_type="microseconds", le="0.9999"} 82944
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet_bucket{unit_type="microseconds", le="+Inf"} 231
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet_sum{unit_type="microseconds"} 5621303
+kudu_tserver_handler_latency_kudu_tserver_TabletServerAdminService_CreateTablet_count{unit_type="microseconds"} 231
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_StartTabletCopy Number of rejected kudu.consensus.ConsensusService.StartTabletCopy requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_StartTabletCopy counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_StartTabletCopy{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_CreateTablet Number of rejected kudu.tserver.TabletServerAdminService.CreateTablet requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_CreateTablet counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_CreateTablet{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Write Number of rejected kudu.tserver.TabletServerService.Write requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Write counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_Write{unit_type="requests"} 25323
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_AlterSchema Number of rejected kudu.tserver.TabletServerAdminService.AlterSchema requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_AlterSchema counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_AlterSchema{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags Microseconds spent handling kudu.server.GenericService.GetFlags RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags histogram
+kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags_bucket{unit_type="microseconds", le="0.75"} 952
+kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags_bucket{unit_type="microseconds", le="0.95"} 1720
+kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags_bucket{unit_type="microseconds", le="0.99"} 1720
+kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags_bucket{unit_type="microseconds", le="0.999"} 1720
+kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags_bucket{unit_type="microseconds", le="0.9999"} 1720
+kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags_bucket{unit_type="microseconds", le="+Inf"} 8
+kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags_sum{unit_type="microseconds"} 5426
+kudu_tserver_handler_latency_kudu_server_GenericService_GetFlags_count{unit_type="microseconds"} 8
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_ScannerKeepAlive Number of rejected kudu.tserver.TabletServerService.ScannerKeepAlive requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_ScannerKeepAlive counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_ScannerKeepAlive{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_CoordinateTransaction Number of rejected kudu.tserver.TabletServerAdminService.CoordinateTransaction requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_CoordinateTransaction counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_CoordinateTransaction{unit_type="requests"} 0
+# HELP kudu_tserver_voluntary_context_switches Total voluntary context switches
+# TYPE kudu_tserver_voluntary_context_switches counter
+kudu_tserver_voluntary_context_switches{unit_type="context switches"} 4904832800
+# HELP kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage Microseconds spent handling kudu.server.GenericService.FlushCoverage RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage histogram
+kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_FlushCoverage_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_ListTablets Number of rejected kudu.tserver.TabletServerService.ListTablets requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_ListTablets counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerService_ListTablets{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_ParticipateInTransaction Number of rejected kudu.tserver.TabletServerAdminService.ParticipateInTransaction requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_ParticipateInTransaction counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletServerAdminService_ParticipateInTransaction{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks Microseconds spent handling kudu.server.GenericService.CheckLeaks RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks histogram
+kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_CheckLeaks_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus Microseconds spent handling kudu.consensus.ConsensusService.UpdateConsensus RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus_bucket{unit_type="microseconds", le="0.75"} 33
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus_bucket{unit_type="microseconds", le="0.95"} 47
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus_bucket{unit_type="microseconds", le="0.99"} 60
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus_bucket{unit_type="microseconds", le="0.999"} 93
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus_bucket{unit_type="microseconds", le="0.9999"} 199
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus_bucket{unit_type="microseconds", le="+Inf"} 1008112309
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus_sum{unit_type="microseconds"} 29431383122
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_UpdateConsensus_count{unit_type="microseconds"} 1008112309
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_EndTabletCopySession Number of rejected kudu.tserver.TabletCopyService.EndTabletCopySession requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_EndTabletCopySession counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_EndTabletCopySession{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_UpdateConsensus Number of rejected kudu.consensus.ConsensusService.UpdateConsensus requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_UpdateConsensus counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_UpdateConsensus{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_ChangeConfig Number of rejected kudu.consensus.ConsensusService.ChangeConfig requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_ChangeConfig counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_ChangeConfig{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig Microseconds spent handling kudu.consensus.ConsensusService.BulkChangeConfig RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_BulkChangeConfig Number of rejected kudu.consensus.ConsensusService.BulkChangeConfig requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_BulkChangeConfig counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_BulkChangeConfig{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance Microseconds spent handling kudu.consensus.ConsensusService.GetNodeInstance RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetNodeInstance_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_glog_warning_messages Number of WARNING-level log messages emitted by the application.
+# TYPE kudu_tserver_glog_warning_messages counter
+kudu_tserver_glog_warning_messages{unit_type="messages"} 27135
+# HELP kudu_tserver_rpcs_timed_out_in_queue Number of RPCs whose timeout elapsed while waiting in the service queue, and thus were not processed.
+# TYPE kudu_tserver_rpcs_timed_out_in_queue counter
+kudu_tserver_rpcs_timed_out_in_queue{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetNodeInstance Number of rejected kudu.consensus.ConsensusService.GetNodeInstance requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetNodeInstance counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetNodeInstance{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection Microseconds spent handling kudu.consensus.ConsensusService.RunLeaderElection RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_RunLeaderElection_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_glog_error_messages Number of ERROR-level log messages emitted by the application.
+# TYPE kudu_tserver_glog_error_messages counter
+kudu_tserver_glog_error_messages{unit_type="messages"} 0
+# HELP kudu_tserver_rpcs_queue_overflow Number of RPCs dropped because the service queue was full.
+# TYPE kudu_tserver_rpcs_queue_overflow counter
+kudu_tserver_rpcs_queue_overflow{unit_type="requests"} 25323
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown Microseconds spent handling kudu.consensus.ConsensusService.LeaderStepDown RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_LeaderStepDown_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_LeaderStepDown Number of rejected kudu.consensus.ConsensusService.LeaderStepDown requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_LeaderStepDown counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_LeaderStepDown{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId Microseconds spent handling kudu.consensus.ConsensusService.GetLastOpId RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId histogram
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_consensus_ConsensusService_GetLastOpId_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetLastOpId Number of rejected kudu.consensus.ConsensusService.GetLastOpId requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetLastOpId counter
+kudu_tserver_queue_overflow_rejections_kudu_consensus_ConsensusService_GetLastOpId{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_CheckSessionActive Number of rejected kudu.tserver.TabletCopyService.CheckSessionActive requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_CheckSessionActive counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_CheckSessionActive{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData Microseconds spent handling kudu.tserver.TabletCopyService.FetchData RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_FetchData_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_FetchData Number of rejected kudu.tserver.TabletCopyService.FetchData requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_FetchData counter
+kudu_tserver_queue_overflow_rejections_kudu_tserver_TabletCopyService_FetchData{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession Microseconds spent handling kudu.tserver.TabletCopyService.EndTabletCopySession RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession histogram
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_glog_info_messages Number of INFO-level log messages emitted by the application.
+# TYPE kudu_tserver_glog_info_messages counter
+kudu_tserver_glog_info_messages{unit_type="messages"} 173025
+# HELP kudu_tserver_rpc_incoming_queue_time Number of microseconds incoming RPC requests spend in the worker queue
+# TYPE kudu_tserver_rpc_incoming_queue_time histogram
+kudu_tserver_rpc_incoming_queue_time_bucket{unit_type="microseconds", le="0.75"} 44
+kudu_tserver_rpc_incoming_queue_time_bucket{unit_type="microseconds", le="0.95"} 64
+kudu_tserver_rpc_incoming_queue_time_bucket{unit_type="microseconds", le="0.99"} 110
+kudu_tserver_rpc_incoming_queue_time_bucket{unit_type="microseconds", le="0.999"} 160
+kudu_tserver_rpc_incoming_queue_time_bucket{unit_type="microseconds", le="0.9999"} 857
+kudu_tserver_rpc_incoming_queue_time_bucket{unit_type="microseconds", le="+Inf"} 1008216684
+kudu_tserver_rpc_incoming_queue_time_sum{unit_type="microseconds"} 35431110599
+kudu_tserver_rpc_incoming_queue_time_count{unit_type="microseconds"} 1008216684
+# HELP kudu_tserver_involuntary_context_switches Total involuntary context switches
+# TYPE kudu_tserver_involuntary_context_switches counter
+kudu_tserver_involuntary_context_switches{unit_type="context switches"} 5020075547
+# HELP kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_FlushCoverage Number of rejected kudu.server.GenericService.FlushCoverage requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_FlushCoverage counter
+kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_FlushCoverage{unit_type="requests"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_CheckLeaks Number of rejected kudu.server.GenericService.CheckLeaks requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_CheckLeaks counter
+kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_CheckLeaks{unit_type="requests"} 0
+# HELP kudu_tserver_spinlock_contention_time Amount of time consumed by contention on internal spinlocks since the server started. If this increases rapidly, it may indicate a performance issue in Kudu internals triggered by a particular workload and warrant investigation.
+# TYPE kudu_tserver_spinlock_contention_time counter
+kudu_tserver_spinlock_contention_time{unit_type="microseconds"} 165636468
+# HELP kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock Microseconds spent handling kudu.server.GenericService.ServerClock RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock histogram
+kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock_bucket{unit_type="microseconds", le="0.75"} 26
+kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock_bucket{unit_type="microseconds", le="0.95"} 28
+kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock_bucket{unit_type="microseconds", le="0.99"} 28
+kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock_bucket{unit_type="microseconds", le="0.999"} 28
+kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock_bucket{unit_type="microseconds", le="0.9999"} 28
+kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock_bucket{unit_type="microseconds", le="+Inf"} 4
+kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock_sum{unit_type="microseconds"} 105
+kudu_tserver_handler_latency_kudu_server_GenericService_ServerClock_count{unit_type="microseconds"} 4
+# HELP kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_ServerClock Number of rejected kudu.server.GenericService.ServerClock requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_ServerClock counter
+kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_ServerClock{unit_type="requests"} 0
+# HELP kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests Microseconds spent handling kudu.server.GenericService.SetServerWallClockForTests RPC requests
+# TYPE kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests histogram
+kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests_bucket{unit_type="microseconds", le="0.75"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests_bucket{unit_type="microseconds", le="0.95"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests_bucket{unit_type="microseconds", le="0.99"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests_bucket{unit_type="microseconds", le="0.999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests_bucket{unit_type="microseconds", le="0.9999"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests_bucket{unit_type="microseconds", le="+Inf"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests_sum{unit_type="microseconds"} 0
+kudu_tserver_handler_latency_kudu_server_GenericService_SetServerWallClockForTests_count{unit_type="microseconds"} 0
+# HELP kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_SetServerWallClockForTests Number of rejected kudu.server.GenericService.SetServerWallClockForTests requests due to RPC queue overflow
+# TYPE kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_SetServerWallClockForTests counter
+kudu_tserver_queue_overflow_rejections_kudu_server_GenericService_SetServerWallClockForTests{unit_type="requests"} 0
