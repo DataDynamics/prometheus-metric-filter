@@ -33,13 +33,15 @@ public class PrometheusController {
     @GetMapping
     ResponseEntity<String> getMetrics(@RequestParam(name = "URL", required = true) String url,
                                       @RequestParam(name = "Metric's Name", required = true) String name) {
+
         Assert.notNull(url, "URL은 필수값입니다.");
+
         if (isEmpty(name)) {
             return ResponseEntity.badRequest().body("name 옵션을 지정하십시오.");
         }
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Accept", "text/plain");
+        headers.set("Accept", "text/plain"); // for Prometheus
 
         HttpEntity request = new HttpEntity(headers);
 
@@ -51,6 +53,7 @@ public class PrometheusController {
         );
 
         String body = response.getBody();
+        String[] names = org.apache.commons.lang3.StringUtils.splitPreserveAllTokens(name);
         if (StringUtils.isEmpty(name)) {
             return ResponseEntity.ok(body);
         } else {
@@ -58,9 +61,22 @@ public class PrometheusController {
             Scanner scanner = new Scanner(body);
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                if (line.startsWith(String.format(Patterns.METRIC_HELP, name)) || line.startsWith(String.format(Patterns.METRIC_TYPE, name)) || line.startsWith(String.format(Patterns.METRIC_NAME, name))) {
-                    // ignored
-                } else {
+                boolean isFilter = false;
+
+                // metric name이 속해 있는지 확인한 후에 필터링 한다.
+                for (String n : names) {
+                    String trimmedName = n.trim();
+                    if ((!StringUtils.isEmpty(trimmedName)) && line.startsWith(String.format(Patterns.METRIC_HELP, trimmedName)) ||
+                            line.startsWith(String.format(Patterns.METRIC_TYPE, trimmedName)) ||
+                            line.startsWith(String.format(Patterns.METRIC_NAME, trimmedName))
+                    ) {
+                        isFilter = true;
+                        break;
+                    }
+                }
+
+                // 핕터링 하지 않으면 metric을 사용한다.
+                if (!isFilter) {
                     metrics.add(line);
                 }
             }
