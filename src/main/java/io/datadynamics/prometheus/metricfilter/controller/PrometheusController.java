@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -90,9 +91,18 @@ public class PrometheusController {
     }
 
     @GetMapping("/coordinator")
-    ResponseEntity<Map> getQueryMetrics(@RequestParam(name = "URL", required = true) String url) throws IOException {
+    ResponseEntity<String> getQueryMetrics(@RequestParam(name = "URL", required = true) String url) throws IOException {
         Map status = ImpalaUtils.getRunning(url);
-        return ResponseEntity.ok(status);
+        List<String> metrics = new ArrayList();
+        metrics.add(String.format("# HELP impala_wait_to_close_query_count Number of Query to wait to close"));
+        metrics.add(String.format("# TYPE impala_wait_to_close_query_count counter"));
+        metrics.add(String.format("impala_wait_to_close_query_count{host=\"%s\"} %s", url, status.get("waitToClose")));
+
+        metrics.add(String.format("# HELP impala_running_query_count Number of Running Query"));
+        metrics.add(String.format("# TYPE impala_running_query_count counter"));
+        metrics.add(String.format("impala_running_query_count{host=\"%s\"} %s", url, status.get("running")));
+
+        return ResponseEntity.ok(Joiner.on("\n").join(metrics));
     }
 
 }
