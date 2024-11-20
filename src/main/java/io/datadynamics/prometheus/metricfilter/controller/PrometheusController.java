@@ -34,7 +34,7 @@ public class PrometheusController {
     @Autowired
     RestTemplate restTemplate;
 
-    @GetMapping(consumes = "text/plain")
+    @GetMapping(produces = "text/plain")
     ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url,
                                       @RequestParam(name = "name", required = true) String name) {
 
@@ -90,7 +90,7 @@ public class PrometheusController {
         }
     }
 
-    @GetMapping(value = "/coordinator", consumes = "text/plain")
+    @GetMapping(value = "/coordinator", produces = "text/plain")
     ResponseEntity<String> getQueryMetrics(@RequestParam(name = "url", required = true) String url) throws IOException {
         Map status = ImpalaUtils.getRunning(url);
         List<String> metrics = new ArrayList();
