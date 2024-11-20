@@ -25,13 +25,13 @@ import static io.micrometer.common.util.StringUtils.isEmpty;
 @Slf4j
 @RestController
 @RequestMapping("/metrics")
-public class MetricsController {
+public class PrometheusController {
 
     @Autowired
     RestTemplate restTemplate;
 
     @GetMapping
-    ResponseEntity<String> metrics(@RequestParam(name = "URL", required = true) String url, @RequestParam(name = "Metric's Name", required = true) String name) {
+    ResponseEntity<String> getMetrics(@RequestParam(name = "URL", required = true) String url, @RequestParam(name = "Metric's Name", required = true) String name) {
         Assert.notNull(url, "URL은 필수값입니다.");
         if (isEmpty(name)) {
             return ResponseEntity.badRequest().body("name 옵션을 지정하십시오.");
@@ -57,7 +57,7 @@ public class MetricsController {
             Scanner scanner = new Scanner(body);
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                if (line.startsWith(String.format(Patterns.HELP, name)) || line.startsWith(String.format(Patterns.TYPE, name)) || line.startsWith(name)) {
+                if (line.startsWith(String.format(Patterns.METRIC_HELP, name)) || line.startsWith(String.format(Patterns.METRIC_TYPE, name)) || line.startsWith(String.format(Patterns.METRIC_NAME, name))) {
                     // ignored
                 } else {
                     metrics.add(line);
