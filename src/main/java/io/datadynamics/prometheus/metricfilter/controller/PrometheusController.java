@@ -37,6 +37,7 @@ public class PrometheusController {
     @GetMapping(produces = "text/plain")
     ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url,
                                       @RequestParam(name = "name", required = true) String name) {
+        log.info("url: {}, name: {}", url, name);
 
         Assert.notNull(url, "URL은 필수값입니다.");
 
@@ -74,6 +75,8 @@ public class PrometheusController {
                             line.startsWith(String.format(Patterns.METRIC_TYPE, trimmedName)) ||
                             line.startsWith(String.format(Patterns.METRIC_NAME, trimmedName))
                     ) {
+                        log.debug("Filter: {}", line);
+
                         isFilter = true;
                         break;
                     }
