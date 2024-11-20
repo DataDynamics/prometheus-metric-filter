@@ -61,7 +61,7 @@ public class PrometheusController {
         if (StringUtils.isEmpty(name)) {
             return ResponseEntity.ok(body);
         } else {
-            String[] names = org.apache.commons.lang3.StringUtils.splitPreserveAllTokens(name);
+            String[] names = org.apache.commons.lang3.StringUtils.splitPreserveAllTokens(name, ",");
             List<String> metrics = new ArrayList<>();
             Scanner scanner = new Scanner(body);
             while (scanner.hasNextLine()) {
