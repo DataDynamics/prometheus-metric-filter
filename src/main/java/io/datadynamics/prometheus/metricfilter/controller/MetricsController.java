@@ -1,6 +1,7 @@
-package io.datadynamics.prometheus.metricfilter;
+package io.datadynamics.prometheus.metricfilter.controller;
 
 import com.google.common.base.Joiner;
+import io.datadynamics.prometheus.metricfilter.Patterns;
 import io.micrometer.common.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

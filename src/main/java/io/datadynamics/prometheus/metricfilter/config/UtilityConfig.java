@@ -1,4 +1,4 @@
-package io.datadynamics.prometheus.metricfilter;
+package io.datadynamics.prometheus.metricfilter.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

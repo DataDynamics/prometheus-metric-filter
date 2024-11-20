@@ -1,4 +1,4 @@
-package io.datadynamics.prometheus.metricfilter;
+package io.datadynamics.prometheus.metricfilter.config;
 
 import io.micrometer.core.instrument.util.IOUtils;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
