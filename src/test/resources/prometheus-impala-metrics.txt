@@ -1,0 +1,1822 @@
+# HELP impala_thrift_server_beeswax_frontend_svc_thread_wait_time Amount of time clients of Beeswax API spent waiting for service threads
+# TYPE impala_thrift_server_beeswax_frontend_svc_thread_wait_time summary
+impala_thrift_server_beeswax_frontend_svc_thread_wait_time{quantile="0.2"} 0
+impala_thrift_server_beeswax_frontend_svc_thread_wait_time{quantile="0.5"} 0
+impala_thrift_server_beeswax_frontend_svc_thread_wait_time{quantile="0.7"} 0
+impala_thrift_server_beeswax_frontend_svc_thread_wait_time{quantile="0.9"} 0
+impala_thrift_server_beeswax_frontend_svc_thread_wait_time{quantile="0.95"} 0
+impala_thrift_server_beeswax_frontend_svc_thread_wait_time{quantile="0.999"} 0
+impala_thrift_server_beeswax_frontend_svc_thread_wait_time_count 0
+impala_thrift_server_beeswax_frontend_svc_thread_wait_time_sum 0
+# HELP impala_thrift_server_beeswax_frontend_timedout_cnxn_requests The number of Beeswax API connection requests to this Impala Daemon that have been timed out waiting to be setup.
+# TYPE impala_thrift_server_beeswax_frontend_timedout_cnxn_requests gauge
+impala_thrift_server_beeswax_frontend_timedout_cnxn_requests 0
+# HELP impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time Amount of time clients of HiveServer2 HTTP API spent waiting for service threads
+# TYPE impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time summary
+impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time{quantile="0.2"} 0
+impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time{quantile="0.5"} 0
+impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time{quantile="0.7"} 0
+impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time{quantile="0.9"} 0
+impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time{quantile="0.95"} 0
+impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time{quantile="0.999"} 0
+impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time_count 0
+impala_thrift_server_hiveserver2_http_frontend_svc_thread_wait_time_sum 0
+# HELP impala_thrift_server_hiveserver2_http_frontend_timedout_cnxn_requests The number of HiveServer2 HTTP API connection requests to this Impala Daemon that have been timed out waiting to be setup.
+# TYPE impala_thrift_server_hiveserver2_http_frontend_timedout_cnxn_requests gauge
+impala_thrift_server_hiveserver2_http_frontend_timedout_cnxn_requests 0
+# HELP impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time Amount of time clients of HiveServer2 API spent waiting for service threads
+# TYPE impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time summary
+impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time{quantile="0.2"} 0
+impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time{quantile="0.5"} 0
+impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time{quantile="0.7"} 0
+impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time{quantile="0.9"} 0
+impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time{quantile="0.95"} 0
+impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time{quantile="0.999"} 0
+impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time_count 0
+impala_thrift_server_hiveserver2_frontend_svc_thread_wait_time_sum 0
+# HELP impala_thrift_server_hiveserver2_frontend_timedout_cnxn_requests The number of HiveServer2 API connection requests to this Impala Daemon that have been timed out waiting to be setup.
+# TYPE impala_thrift_server_hiveserver2_frontend_timedout_cnxn_requests gauge
+impala_thrift_server_hiveserver2_frontend_timedout_cnxn_requests 0
+# HELP impala_mem_tracker_process_bytes_over_limit The amount of memory by which the process was over its memory limit the last time the memory limit was encountered.
+# TYPE impala_mem_tracker_process_bytes_over_limit gauge
+impala_mem_tracker_process_bytes_over_limit -1
+# HELP impala_thread_manager_total_threads_created Threads created over the lifetime of the process.
+# TYPE impala_thread_manager_total_threads_created gauge
+impala_thread_manager_total_threads_created 80
+# HELP impala_mem_tracker_process_limit The process memory tracker limit.
+# TYPE impala_mem_tracker_process_limit gauge
+impala_mem_tracker_process_limit 4229955584
+# HELP impala_tmp_file_mgr_scratch_read_memory_buffer_used_high_water_mark The high water mark for read memory buffer bytes of all scratch directories.
+# TYPE impala_tmp_file_mgr_scratch_read_memory_buffer_used_high_water_mark gauge
+impala_tmp_file_mgr_scratch_read_memory_buffer_used_high_water_mark 0
+# HELP impala_thrift_server_hiveserver2_http_frontend_connection_setup_time Amount of time clients of HiveServer2 HTTP API spent waiting for connection to be set up
+# TYPE impala_thrift_server_hiveserver2_http_frontend_connection_setup_time summary
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_time{quantile="0.2"} 0
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_time{quantile="0.5"} 0
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_time{quantile="0.7"} 0
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_time{quantile="0.9"} 0
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_time{quantile="0.95"} 0
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_time{quantile="0.999"} 0
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_time_count 0
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_time_sum 0
+# HELP impala_mem_tracker_process_num_gcs The total number of garbage collections performed by the memory tracker over the life of the process.
+# TYPE impala_mem_tracker_process_num_gcs counter
+impala_mem_tracker_process_num_gcs 0
+# HELP impala_catalog_server_client_cache_total_clients The total number of clients in the Catalog Server client cache.
+# TYPE impala_catalog_server_client_cache_total_clients gauge
+impala_catalog_server_client_cache_total_clients 0
+# HELP impala_thrift_server_hiveserver2_http_frontend_connections_in_use The number of active HiveServer2 HTTP API connections to this Impala Daemon.
+# TYPE impala_thrift_server_hiveserver2_http_frontend_connections_in_use gauge
+impala_thrift_server_hiveserver2_http_frontend_connections_in_use 0
+# HELP impala_catalog_server_client_cache_clients_in_use The number of clients currently in use by the Catalog Server client cache.
+# TYPE impala_catalog_server_client_cache_clients_in_use gauge
+impala_catalog_server_client_cache_clients_in_use 0
+# HELP impala_mem_tracker_process_bytes_freed_by_last_gc The amount of memory freed by the last memory tracker garbage collection.
+# TYPE impala_mem_tracker_process_bytes_freed_by_last_gc gauge
+impala_mem_tracker_process_bytes_freed_by_last_gc -1
+# HELP impala_thrift_server_beeswax_frontend_total_connections The total number of Beeswax API connections made to this Impala Daemon over its lifetime.
+# TYPE impala_thrift_server_beeswax_frontend_total_connections counter
+impala_thrift_server_beeswax_frontend_total_connections 0
+# HELP impala_thrift_server_hiveserver2_frontend_total_connections The total number of HiveServer2 API connections made to this Impala Daemon over its lifetime.
+# TYPE impala_thrift_server_hiveserver2_frontend_total_connections counter
+impala_thrift_server_hiveserver2_frontend_total_connections 0
+# HELP impala_statestore_subscriber_statestore_client_cache_total_clients The total number of StateStore subscriber clients in this Impala Daemon's client cache. These clients are for communication from this role to the StateStore.
+# TYPE impala_statestore_subscriber_statestore_client_cache_total_clients gauge
+impala_statestore_subscriber_statestore_client_cache_total_clients 1
+# HELP impala_thrift_server_hiveserver2_frontend_connection_setup_time Amount of time clients of HiveServer2 API spent waiting for connection to be set up
+# TYPE impala_thrift_server_hiveserver2_frontend_connection_setup_time summary
+impala_thrift_server_hiveserver2_frontend_connection_setup_time{quantile="0.2"} 0
+impala_thrift_server_hiveserver2_frontend_connection_setup_time{quantile="0.5"} 0
+impala_thrift_server_hiveserver2_frontend_connection_setup_time{quantile="0.7"} 0
+impala_thrift_server_hiveserver2_frontend_connection_setup_time{quantile="0.9"} 0
+impala_thrift_server_hiveserver2_frontend_connection_setup_time{quantile="0.95"} 0
+impala_thrift_server_hiveserver2_frontend_connection_setup_time{quantile="0.999"} 0
+impala_thrift_server_hiveserver2_frontend_connection_setup_time_count 0
+impala_thrift_server_hiveserver2_frontend_connection_setup_time_sum 0
+# HELP impala_tmp_file_mgr_scratch_space_bytes_used_high_water_mark The high water mark for spilled bytes across all scratch directories.
+# TYPE impala_tmp_file_mgr_scratch_space_bytes_used_high_water_mark gauge
+impala_tmp_file_mgr_scratch_space_bytes_used_high_water_mark 0
+# HELP impala_thrift_server_hiveserver2_frontend_connections_in_use The number of active HiveServer2 API connections to this Impala Daemon.
+# TYPE impala_thrift_server_hiveserver2_frontend_connections_in_use gauge
+impala_thrift_server_hiveserver2_frontend_connections_in_use 0
+# HELP impala_thrift_server_hiveserver2_frontend_connection_setup_queue_size The number of HiveServer2 API connections to this Impala Daemon that have been accepted and are waiting to be setup.
+# TYPE impala_thrift_server_hiveserver2_frontend_connection_setup_queue_size gauge
+impala_thrift_server_hiveserver2_frontend_connection_setup_queue_size 0
+# HELP impala_statestore_subscriber_statestore_client_cache_clients_in_use The number of active StateStore subscriber clients in this Impala Daemon's client cache. These clients are for communication from this role to the StateStore.
+# TYPE impala_statestore_subscriber_statestore_client_cache_clients_in_use gauge
+impala_statestore_subscriber_statestore_client_cache_clients_in_use 0
+# HELP impala_request_pool_service_resolve_pool_duration_ms Time (ms) spent resolving request request pools.
+# TYPE impala_request_pool_service_resolve_pool_duration_ms counter
+impala_request_pool_service_resolve_pool_duration_ms_total 0
+
+# HELP impala_tmp_file_mgr_scratch_space_bytes_used The current total spilled bytes across all scratch directories.
+# TYPE impala_tmp_file_mgr_scratch_space_bytes_used gauge
+impala_tmp_file_mgr_scratch_space_bytes_used 0
+# HELP impala_thrift_server_beeswax_frontend_connection_setup_queue_size The number of Beeswax API connections to this Impala Daemon that have been accepted and are waiting to be setup.
+# TYPE impala_thrift_server_beeswax_frontend_connection_setup_queue_size gauge
+impala_thrift_server_beeswax_frontend_connection_setup_queue_size 0
+# HELP impala_external_data_source_class_cache_hits Number of cache hits in the External Data Source Class Cache
+# TYPE impala_external_data_source_class_cache_hits counter
+impala_external_data_source_class_cache_hits 0
+# HELP impala_tmp_file_mgr_scratch_space_bytes_used_dir_0 The current total spilled bytes for a single scratch directory.
+# TYPE impala_tmp_file_mgr_scratch_space_bytes_used_dir_0 gauge
+impala_tmp_file_mgr_scratch_space_bytes_used_dir_0 0
+# HELP impala_tmp_file_mgr_active_scratch_dirs The number of active scratch directories for spilling to disk.
+# TYPE impala_tmp_file_mgr_active_scratch_dirs gauge
+impala_tmp_file_mgr_active_scratch_dirs 1
+# HELP impala_tmp_file_mgr_scratch_read_memory_buffer_used The current total read memory buffer bytes for all scratch directories.
+# TYPE impala_tmp_file_mgr_scratch_read_memory_buffer_used gauge
+impala_tmp_file_mgr_scratch_read_memory_buffer_used 0
+# HELP impala_thrift_server_beeswax_frontend_connection_setup_time Amount of time clients of Beeswax API spent waiting for connection to be set up
+# TYPE impala_thrift_server_beeswax_frontend_connection_setup_time summary
+impala_thrift_server_beeswax_frontend_connection_setup_time{quantile="0.2"} 0
+impala_thrift_server_beeswax_frontend_connection_setup_time{quantile="0.5"} 0
+impala_thrift_server_beeswax_frontend_connection_setup_time{quantile="0.7"} 0
+impala_thrift_server_beeswax_frontend_connection_setup_time{quantile="0.9"} 0
+impala_thrift_server_beeswax_frontend_connection_setup_time{quantile="0.95"} 0
+impala_thrift_server_beeswax_frontend_connection_setup_time{quantile="0.999"} 0
+impala_thrift_server_beeswax_frontend_connection_setup_time_count 0
+impala_thrift_server_beeswax_frontend_connection_setup_time_sum 0
+# HELP impala_thrift_server_hiveserver2_http_frontend_connection_setup_queue_size The number of HiveServer2 HTTP API connections to this Impala Daemon that have been accepted and are waiting to be setup.
+# TYPE impala_thrift_server_hiveserver2_http_frontend_connection_setup_queue_size gauge
+impala_thrift_server_hiveserver2_http_frontend_connection_setup_queue_size 0
+# HELP impala_external_data_source_class_cache_misses Number of cache misses in the External Data Source Class Cache
+# TYPE impala_external_data_source_class_cache_misses counter
+impala_external_data_source_class_cache_misses 0
+# HELP impala_thread_manager_running_threads The number of running threads in this process.
+# TYPE impala_thread_manager_running_threads gauge
+impala_thread_manager_running_threads 34
+# HELP impala_thrift_server_beeswax_frontend_connections_in_use The number of active Beeswax API connections to this Impala Daemon.
+# TYPE impala_thrift_server_beeswax_frontend_connections_in_use gauge
+impala_thrift_server_beeswax_frontend_connections_in_use 0
+# HELP impala_thrift_server_hiveserver2_http_frontend_total_connections The total number of HiveServer2 HTTP API connections made to this Impala Daemon over its lifetime.
+# TYPE impala_thrift_server_hiveserver2_http_frontend_total_connections counter
+impala_thrift_server_hiveserver2_http_frontend_total_connections 0
+# HELP impala_tcmalloc_physical_bytes_reserved Derived metric computing the amount of physical memory (in bytes) used by the process, including that actually in use and free bytes reserved by tcmalloc. Does not include the tcmalloc metadata.
+# TYPE impala_tcmalloc_physical_bytes_reserved gauge
+impala_tcmalloc_physical_bytes_reserved 137912320
+# HELP impala_tcmalloc_pageheap_unmapped_bytes Number of bytes in free, unmapped pages in page heap. These are bytes that have been released back to the OS, possibly by one of the MallocExtension "Release" calls. They can be used to fulfill allocation requests, but typically incur a page fault. They always count towards virtual memory usage, and depending on the OS, typically do not count towards physical memory usage.
+# TYPE impala_tcmalloc_pageheap_unmapped_bytes gauge
+impala_tcmalloc_pageheap_unmapped_bytes 24690688
+# HELP impala_tcmalloc_pageheap_free_bytes Number of bytes in free, mapped pages in page heap. These bytes can be used to fulfill allocation requests. They always count towards virtual memory usage, and unless the underlying memory is swapped out by the OS, they also count towards physical memory usage.
+# TYPE impala_tcmalloc_pageheap_free_bytes gauge
+impala_tcmalloc_pageheap_free_bytes 0
+# HELP impala_tcmalloc_total_bytes_reserved Bytes of system memory reserved by TCMalloc.
+# TYPE impala_tcmalloc_total_bytes_reserved gauge
+impala_tcmalloc_total_bytes_reserved 162603008
+# HELP impala_tcmalloc_bytes_in_use Number of bytes used by the application. This will not typically match the memory use reported by the OS, because it does not include TCMalloc overhead or memory fragmentation.
+# TYPE impala_tcmalloc_bytes_in_use gauge
+impala_tcmalloc_bytes_in_use 110077904
+# HELP impala_server_hedged_read_ops_win The total number of times hedged reads were faster than regular read operations
+# TYPE impala_server_hedged_read_ops_win counter
+impala_server_hedged_read_ops_win 0
+# HELP impala_server_ddl_durations_ms Distribution of DDL operation latencies
+# TYPE impala_server_ddl_durations_ms summary
+impala_server_ddl_durations_ms{quantile="0.2"} 0
+impala_server_ddl_durations_ms{quantile="0.5"} 0
+impala_server_ddl_durations_ms{quantile="0.7"} 0
+impala_server_ddl_durations_ms{quantile="0.9"} 0
+impala_server_ddl_durations_ms{quantile="0.95"} 0
+impala_server_ddl_durations_ms{quantile="0.999"} 0
+impala_server_ddl_durations_ms_count 0
+impala_server_ddl_durations_ms_sum 0
+# HELP impala_server_query_durations_ms Distribution of query latencies
+# TYPE impala_server_query_durations_ms summary
+impala_server_query_durations_ms{quantile="0.2"} 0
+impala_server_query_durations_ms{quantile="0.5"} 0
+impala_server_query_durations_ms{quantile="0.7"} 0
+impala_server_query_durations_ms{quantile="0.9"} 0
+impala_server_query_durations_ms{quantile="0.95"} 0
+impala_server_query_durations_ms{quantile="0.999"} 0
+impala_server_query_durations_ms_count 0
+impala_server_query_durations_ms_sum 0
+# HELP impala_server_resultset_cache_total_bytes Total number of bytes consumed for rows cached to support HS2 FETCH_FIRST.
+# TYPE impala_server_resultset_cache_total_bytes gauge
+impala_server_resultset_cache_total_bytes 0
+# HELP impala_server_scan_ranges_total The total number of scan ranges read over the life of the process
+# TYPE impala_server_scan_ranges_total counter
+impala_server_scan_ranges_total 26
+# HELP impala_server_resultset_cache_total_num_rows Total number of rows cached to support HS2 FETCH_FIRST.
+# TYPE impala_server_resultset_cache_total_num_rows gauge
+impala_server_resultset_cache_total_num_rows 0
+# HELP impala_server_backend_num_queries_executed The total number of queries that executed on this backend over the life of the process.
+# TYPE impala_server_backend_num_queries_executed counter
+impala_server_backend_num_queries_executed 8
+# HELP impala_server_hedged_read_ops The total number of hedged reads attempted over the life of the process
+# TYPE impala_server_hedged_read_ops counter
+impala_server_hedged_read_ops 0
+# HELP impala_server_num_queries The total number of queries processed over the life of the process
+# TYPE impala_server_num_queries counter
+impala_server_num_queries 0
+# HELP impala_server_num_queries_registered The total number of queries registered on this Impala server instance. Includes queries that are in flight and waiting to be closed
+# TYPE impala_server_num_queries_registered gauge
+impala_server_num_queries_registered 0
+# HELP impala_server_num_queries_expired Number of queries expired due to inactivity.
+# TYPE impala_server_num_queries_expired counter
+impala_server_num_queries_expired 0
+# HELP impala_server_num_queries_spilled Number of queries for which any operator spilled.
+# TYPE impala_server_num_queries_spilled counter
+impala_server_num_queries_spilled 0
+# HELP impala_server_num_fragments_in_flight The number of query fragment instances currently executing.
+# TYPE impala_server_num_fragments_in_flight gauge
+impala_server_num_fragments_in_flight 0
+# HELP impala_server_backend_num_queries_executing The number of queries currently executing on this backend.
+# TYPE impala_server_backend_num_queries_executing gauge
+impala_server_backend_num_queries_executing 0
+# HELP impala_server_num_fragments The total number of query fragments processed over the life of the process.
+# TYPE impala_server_num_fragments counter
+impala_server_num_fragments 8
+# HELP impala_server_num_files_open_for_insert The number of HDFS files currently open for writing.
+# TYPE impala_server_num_files_open_for_insert gauge
+impala_server_num_files_open_for_insert 0
+# HELP impala_server_scan_ranges_num_missing_volume_id The total number of scan ranges read over the life of the process that did not have volume metadata
+# TYPE impala_server_scan_ranges_num_missing_volume_id counter
+impala_server_scan_ranges_num_missing_volume_id 0
+# HELP impala_server_num_open_hiveserver2_sessions The number of open HiveServer2 sessions.
+# TYPE impala_server_num_open_hiveserver2_sessions gauge
+impala_server_num_open_hiveserver2_sessions 0
+# HELP impala_server_num_open_beeswax_sessions The number of open Beeswax sessions.
+# TYPE impala_server_num_open_beeswax_sessions gauge
+impala_server_num_open_beeswax_sessions 0
+# HELP impala_server_num_sessions_expired Number of sessions expired due to inactivity.
+# TYPE impala_server_num_sessions_expired counter
+impala_server_num_sessions_expired 0
+# HELP impala_catalog_cache_entry_99th_size 99th percentile size of entries added to the Impalad Catalog.
+# TYPE impala_catalog_cache_entry_99th_size gauge
+impala_catalog_cache_entry_99th_size 0
+# HELP impala_catalog_cache_entry_median_size Median size of entries added to the Impalad Catalog cache.
+# TYPE impala_catalog_cache_entry_median_size gauge
+impala_catalog_cache_entry_median_size 0
+# HELP impala_catalog_cache_total_load_time Total time spent in Impalad Catalog cache loading new values.
+# TYPE impala_catalog_cache_total_load_time counter
+impala_catalog_cache_total_load_time 0
+# HELP impala_catalog_cache_miss_count Number of Impalad Catalog cache requests that returned uncached values.
+# TYPE impala_catalog_cache_miss_count counter
+impala_catalog_cache_miss_count 0
+# HELP impala_catalog_cache_load_success_count Number of Impalad Catalog cache requests that successfully loaded new values.
+# TYPE impala_catalog_cache_load_success_count counter
+impala_catalog_cache_load_success_count 0
+# HELP impala_catalog_num_tables The number of tables in the catalog. Untracked in LocalCatalog mode.
+# TYPE impala_catalog_num_tables gauge
+impala_catalog_num_tables -1
+# HELP impala_catalog_cache_miss_rate Ratio of Impalad Catalog cache requests that were misses.
+# TYPE impala_catalog_cache_miss_rate gauge
+impala_catalog_cache_miss_rate 0
+# HELP impala_catalog_curr_version Catalog topic update version.
+# TYPE impala_catalog_curr_version gauge
+impala_catalog_curr_version 154
+# HELP impala_catalog_catalog_object_version_lower_bound Lower bound of catalog object version in local catalog cache.
+# TYPE impala_catalog_catalog_object_version_lower_bound gauge
+impala_catalog_catalog_object_version_lower_bound 1
+# HELP impala_catalog_curr_topic Statestore topic update version.
+# TYPE impala_catalog_curr_topic gauge
+impala_catalog_curr_topic 281
+# HELP impala_catalog_cache_load_exception_rate Ratio of Impalad Catalog cache requests that threw exceptions loading new values.
+# TYPE impala_catalog_cache_load_exception_rate gauge
+impala_catalog_cache_load_exception_rate 0
+# HELP impala_catalog_num_databases The number of databases in the catalog. Untracked in LocalCatalog mode.
+# TYPE impala_catalog_num_databases gauge
+impala_catalog_num_databases -1
+# HELP impala_catalog_cache_request_count Total number of Impalad Catalog cache requests.
+# TYPE impala_catalog_cache_request_count counter
+impala_catalog_cache_request_count 0
+# HELP impala_catalog_cache_load_exception_count Total requests to Impalad Catalog cache requests that threw exceptions loading new values.
+# TYPE impala_catalog_cache_load_exception_count counter
+impala_catalog_cache_load_exception_count 0
+# HELP impala_catalog_cache_hit_count Total number of Impalad Catalog cache hits.
+# TYPE impala_catalog_cache_hit_count counter
+impala_catalog_cache_hit_count 0
+# HELP impala_catalog_cache_average_load_time Average time spent loading new values into the Impalad Catalog Cache.
+# TYPE impala_catalog_cache_average_load_time gauge
+impala_catalog_cache_average_load_time 0
+# HELP impala_catalog_cache_load_count Total requests to Impalad Catalog cache requests that loaded new values.
+# TYPE impala_catalog_cache_load_count counter
+impala_catalog_cache_load_count 0
+# HELP impala_catalog_cache_eviction_count Total number of evictions from the Impalad Catalog Cache.
+# TYPE impala_catalog_cache_eviction_count counter
+impala_catalog_cache_eviction_count 0
+# HELP impala_catalog_cache_hit_rate Ratio of Impalad Catalog cache requests that were hits.
+# TYPE impala_catalog_cache_hit_rate gauge
+impala_catalog_cache_hit_rate 1
+# HELP impala_server_io_mgr_queue_13_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_13_write_io_error counter
+impala_server_io_mgr_queue_13_write_io_error 0
+# HELP impala_server_io_mgr_queue_13_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_13_read_size summary
+impala_server_io_mgr_queue_13_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_13_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_13_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_13_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_13_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_13_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_13_read_size_count 0
+impala_server_io_mgr_queue_13_read_size_sum 0
+# HELP impala_server_io_mgr_queue_12_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_12_write_io_error counter
+impala_server_io_mgr_queue_12_write_io_error 0
+# HELP impala_server_io_mgr_queue_12_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_12_write_size summary
+impala_server_io_mgr_queue_12_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_12_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_12_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_12_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_12_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_12_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_12_write_size_count 0
+impala_server_io_mgr_queue_12_write_size_sum 0
+# HELP impala_server_io_mgr_queue_12_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_12_write_latency summary
+impala_server_io_mgr_queue_12_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_12_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_12_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_12_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_12_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_12_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_12_write_latency_count 0
+impala_server_io_mgr_queue_12_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_12_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_12_read_size summary
+impala_server_io_mgr_queue_12_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_12_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_12_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_12_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_12_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_12_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_12_read_size_count 0
+impala_server_io_mgr_queue_12_read_size_sum 0
+# HELP impala_server_io_mgr_queue_12_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_12_read_latency summary
+impala_server_io_mgr_queue_12_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_12_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_12_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_12_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_12_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_12_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_12_read_latency_count 0
+impala_server_io_mgr_queue_12_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_11_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_11_write_io_error counter
+impala_server_io_mgr_queue_11_write_io_error 0
+# HELP impala_server_io_mgr_queue_11_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_11_read_latency summary
+impala_server_io_mgr_queue_11_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_11_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_11_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_11_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_11_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_11_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_11_read_latency_count 0
+impala_server_io_mgr_queue_11_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_10_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_10_write_io_error counter
+impala_server_io_mgr_queue_10_write_io_error 0
+# HELP impala_server_io_mgr_queue_9_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_9_write_size summary
+impala_server_io_mgr_queue_9_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_9_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_9_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_9_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_9_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_9_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_9_write_size_count 0
+impala_server_io_mgr_queue_9_write_size_sum 0
+# HELP impala_server_io_mgr_queue_9_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_9_read_latency summary
+impala_server_io_mgr_queue_9_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_9_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_9_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_9_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_9_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_9_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_9_read_latency_count 0
+impala_server_io_mgr_queue_9_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_8_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_8_write_size summary
+impala_server_io_mgr_queue_8_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_8_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_8_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_8_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_8_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_8_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_8_write_size_count 0
+impala_server_io_mgr_queue_8_write_size_sum 0
+# HELP impala_server_io_mgr_queue_8_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_8_read_latency summary
+impala_server_io_mgr_queue_8_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_8_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_8_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_8_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_8_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_8_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_8_read_latency_count 0
+impala_server_io_mgr_queue_8_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_9_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_9_write_io_error counter
+impala_server_io_mgr_queue_9_write_io_error 0
+# HELP impala_server_io_mgr_queue_7_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_7_write_latency summary
+impala_server_io_mgr_queue_7_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_7_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_7_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_7_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_7_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_7_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_7_write_latency_count 0
+impala_server_io_mgr_queue_7_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_7_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_7_read_size summary
+impala_server_io_mgr_queue_7_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_7_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_7_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_7_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_7_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_7_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_7_read_size_count 0
+impala_server_io_mgr_queue_7_read_size_sum 0
+# HELP impala_server_io_mgr_queue_7_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_7_read_latency summary
+impala_server_io_mgr_queue_7_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_7_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_7_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_7_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_7_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_7_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_7_read_latency_count 0
+impala_server_io_mgr_queue_7_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_6_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_6_write_latency summary
+impala_server_io_mgr_queue_6_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_6_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_6_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_6_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_6_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_6_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_6_write_latency_count 0
+impala_server_io_mgr_queue_6_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_9_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_9_write_latency summary
+impala_server_io_mgr_queue_9_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_9_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_9_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_9_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_9_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_9_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_9_write_latency_count 0
+impala_server_io_mgr_queue_9_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_6_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_6_read_size summary
+impala_server_io_mgr_queue_6_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_6_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_6_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_6_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_6_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_6_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_6_read_size_count 0
+impala_server_io_mgr_queue_6_read_size_sum 0
+# HELP impala_server_io_mgr_queue_6_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_6_read_latency summary
+impala_server_io_mgr_queue_6_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_6_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_6_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_6_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_6_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_6_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_6_read_latency_count 0
+impala_server_io_mgr_queue_6_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_5_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_5_write_size summary
+impala_server_io_mgr_queue_5_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_5_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_5_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_5_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_5_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_5_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_5_write_size_count 0
+impala_server_io_mgr_queue_5_write_size_sum 0
+# HELP impala_server_io_mgr_queue_5_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_5_write_latency summary
+impala_server_io_mgr_queue_5_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_5_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_5_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_5_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_5_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_5_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_5_write_latency_count 0
+impala_server_io_mgr_queue_5_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_10_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_10_write_latency summary
+impala_server_io_mgr_queue_10_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_10_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_10_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_10_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_10_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_10_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_10_write_latency_count 0
+impala_server_io_mgr_queue_10_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_5_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_5_read_size summary
+impala_server_io_mgr_queue_5_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_5_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_5_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_5_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_5_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_5_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_5_read_size_count 0
+impala_server_io_mgr_queue_5_read_size_sum 0
+# HELP impala_server_io_mgr_queue_7_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_7_write_size summary
+impala_server_io_mgr_queue_7_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_7_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_7_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_7_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_7_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_7_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_7_write_size_count 0
+impala_server_io_mgr_queue_7_write_size_sum 0
+# HELP impala_server_io_mgr_queue_5_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_5_read_latency summary
+impala_server_io_mgr_queue_5_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_5_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_5_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_5_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_5_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_5_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_5_read_latency_count 0
+impala_server_io_mgr_queue_5_read_latency_sum 0
+# HELP impala_server_io_mgr_remote_data_cache_async_writes_outstanding_bytes Total number of bytes of async writes outstanding in the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_async_writes_outstanding_bytes counter
+impala_server_io_mgr_remote_data_cache_async_writes_outstanding_bytes 0
+# HELP impala_server_io_mgr_queue_8_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_8_read_size summary
+impala_server_io_mgr_queue_8_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_8_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_8_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_8_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_8_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_8_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_8_read_size_count 0
+impala_server_io_mgr_queue_8_read_size_sum 0
+# HELP impala_server_io_mgr_queue_1_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_1_write_io_error counter
+impala_server_io_mgr_queue_1_write_io_error 0
+# HELP impala_server_io_mgr_queue_9_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_9_read_size summary
+impala_server_io_mgr_queue_9_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_9_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_9_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_9_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_9_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_9_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_9_read_size_count 0
+impala_server_io_mgr_queue_9_read_size_sum 0
+# HELP impala_server_io_mgr_remote_data_cache_num_entries Current number of entries in the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_num_entries gauge
+impala_server_io_mgr_remote_data_cache_num_entries 0
+# HELP impala_server_io_mgr_queue_13_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_13_read_latency summary
+impala_server_io_mgr_queue_13_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_13_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_13_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_13_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_13_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_13_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_13_read_latency_count 0
+impala_server_io_mgr_queue_13_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_3_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_3_write_latency summary
+impala_server_io_mgr_queue_3_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_3_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_3_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_3_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_3_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_3_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_3_write_latency_count 0
+impala_server_io_mgr_queue_3_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_7_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_7_write_io_error counter
+impala_server_io_mgr_queue_7_write_io_error 0
+# HELP impala_server_io_mgr_remote_data_cache_total_bytes Current byte size of the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_total_bytes gauge
+impala_server_io_mgr_remote_data_cache_total_bytes 0
+# HELP impala_server_io_mgr_remote_data_cache_miss_count Total number of misses in the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_miss_count counter
+impala_server_io_mgr_remote_data_cache_miss_count 0
+# HELP impala_server_io_mgr_queue_11_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_11_read_size summary
+impala_server_io_mgr_queue_11_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_11_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_11_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_11_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_11_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_11_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_11_read_size_count 0
+impala_server_io_mgr_queue_11_read_size_sum 0
+# HELP impala_server_io_mgr_queue_8_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_8_write_io_error counter
+impala_server_io_mgr_queue_8_write_io_error 0
+# HELP impala_server_io_mgr_queue_5_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_5_write_io_error counter
+impala_server_io_mgr_queue_5_write_io_error 0
+# HELP impala_server_io_mgr_queue_11_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_11_write_size summary
+impala_server_io_mgr_queue_11_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_11_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_11_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_11_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_11_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_11_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_11_write_size_count 0
+impala_server_io_mgr_queue_11_write_size_sum 0
+# HELP impala_server_io_mgr_remote_data_cache_hit_bytes Total number of bytes of hits in the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_hit_bytes counter
+impala_server_io_mgr_remote_data_cache_hit_bytes 0
+# HELP impala_server_io_mgr_cached_file_handles_hit_ratio HDFS file handle cache hit ratio, between 0 and 1, where 1 means all reads were served from cached file handles.
+# TYPE impala_server_io_mgr_cached_file_handles_hit_ratio counter
+impala_server_io_mgr_cached_file_handles_hit_ratio_total 41
+impala_server_io_mgr_cached_file_handles_hit_ratio_last 1
+impala_server_io_mgr_cached_file_handles_hit_ratio_mean 0.829268
+
+# HELP impala_server_io_mgr_remote_data_cache_dropped_bytes Total number of bytes not inserted in remote data cache due to concurrency limit.
+# TYPE impala_server_io_mgr_remote_data_cache_dropped_bytes counter
+impala_server_io_mgr_remote_data_cache_dropped_bytes 0
+# HELP impala_server_io_mgr_remote_data_cache_num_writes Total number of writes into the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_num_writes counter
+impala_server_io_mgr_remote_data_cache_num_writes 0
+# HELP impala_server_io_mgr_cached_bytes_read Total number of cached bytes read by the IO manager.
+# TYPE impala_server_io_mgr_cached_bytes_read counter
+impala_server_io_mgr_cached_bytes_read 0
+# HELP impala_server_io_mgr_cached_file_handles_miss_count Number of cache misses for cached HDFS file handles
+# TYPE impala_server_io_mgr_cached_file_handles_miss_count gauge
+impala_server_io_mgr_cached_file_handles_miss_count 7
+# HELP impala_server_io_mgr_num_file_handles_outstanding Number of HDFS file handles that are currently in use by readers.
+# TYPE impala_server_io_mgr_num_file_handles_outstanding gauge
+impala_server_io_mgr_num_file_handles_outstanding 0
+# HELP impala_server_io_mgr_remote_data_cache_dropped_entries Total number of entries not inserted in remote data cache due to concurrency limit.
+# TYPE impala_server_io_mgr_remote_data_cache_dropped_entries counter
+impala_server_io_mgr_remote_data_cache_dropped_entries 0
+# HELP impala_server_io_mgr_cached_file_handles_hit_count Number of cache hits for cached HDFS file handles
+# TYPE impala_server_io_mgr_cached_file_handles_hit_count gauge
+impala_server_io_mgr_cached_file_handles_hit_count 34
+# HELP impala_server_io_mgr_queue_4_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_4_write_io_error counter
+impala_server_io_mgr_queue_4_write_io_error 0
+# HELP impala_server_io_mgr_queue_0_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_0_read_size summary
+impala_server_io_mgr_queue_0_read_size{quantile="0.2"} 1852
+impala_server_io_mgr_queue_0_read_size{quantile="0.5"} 30096
+impala_server_io_mgr_queue_0_read_size{quantile="0.7"} 102400
+impala_server_io_mgr_queue_0_read_size{quantile="0.9"} 102400
+impala_server_io_mgr_queue_0_read_size{quantile="0.95"} 102400
+impala_server_io_mgr_queue_0_read_size{quantile="0.999"} 102400
+impala_server_io_mgr_queue_0_read_size_count 41
+impala_server_io_mgr_queue_0_read_size_sum 2061623
+# HELP impala_server_io_mgr_bytes_read The total number of bytes read by the IO manager.
+# TYPE impala_server_io_mgr_bytes_read counter
+impala_server_io_mgr_bytes_read 2061623
+# HELP impala_server_io_mgr_erasure_coded_bytes_read Total number of erasure-coded bytes read by the IO manager.
+# TYPE impala_server_io_mgr_erasure_coded_bytes_read counter
+impala_server_io_mgr_erasure_coded_bytes_read 0
+# HELP impala_server_io_mgr_remote_data_cache_miss_bytes Total number of bytes of misses in the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_miss_bytes counter
+impala_server_io_mgr_remote_data_cache_miss_bytes 0
+# HELP impala_server_io_mgr_encrypted_bytes_read Total number of encrypted bytes read by the IO manager.
+# TYPE impala_server_io_mgr_encrypted_bytes_read counter
+impala_server_io_mgr_encrypted_bytes_read 0
+# HELP impala_server_io_mgr_remote_data_cache_async_writes_dropped_entries Total number of entries not inserted in the remote data cache due to async writes buffer size limit.
+# TYPE impala_server_io_mgr_remote_data_cache_async_writes_dropped_entries counter
+impala_server_io_mgr_remote_data_cache_async_writes_dropped_entries 0
+# HELP impala_server_io_mgr_num_cached_file_handles Number of currently cached HDFS file handles in the IO manager.
+# TYPE impala_server_io_mgr_num_cached_file_handles gauge
+impala_server_io_mgr_num_cached_file_handles 0
+# HELP impala_server_io_mgr_queue_13_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_13_write_size summary
+impala_server_io_mgr_queue_13_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_13_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_13_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_13_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_13_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_13_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_13_write_size_count 0
+impala_server_io_mgr_queue_13_write_size_sum 0
+# HELP impala_server_io_mgr_queue_6_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_6_write_io_error counter
+impala_server_io_mgr_queue_6_write_io_error 0
+# HELP impala_server_io_mgr_remote_data_cache_num_async_writes_submitted Total number of async writes submitted in the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_num_async_writes_submitted counter
+impala_server_io_mgr_remote_data_cache_num_async_writes_submitted 0
+# HELP impala_server_io_mgr_num_open_files The current number of files opened by the IO Manager
+# TYPE impala_server_io_mgr_num_open_files gauge
+impala_server_io_mgr_num_open_files 0
+# HELP impala_server_io_mgr_bytes_written Total number of bytes written to disk by the IO manager.
+# TYPE impala_server_io_mgr_bytes_written counter
+impala_server_io_mgr_bytes_written 0
+# HELP impala_server_io_mgr_queue_0_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_0_write_size summary
+impala_server_io_mgr_queue_0_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_0_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_0_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_0_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_0_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_0_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_0_write_size_count 0
+impala_server_io_mgr_queue_0_write_size_sum 0
+# HELP impala_server_io_mgr_queue_11_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_11_write_latency summary
+impala_server_io_mgr_queue_11_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_11_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_11_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_11_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_11_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_11_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_11_write_latency_count 0
+impala_server_io_mgr_queue_11_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_10_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_10_write_size summary
+impala_server_io_mgr_queue_10_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_10_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_10_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_10_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_10_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_10_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_10_write_size_count 0
+impala_server_io_mgr_queue_10_write_size_sum 0
+# HELP impala_server_io_mgr_queue_0_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_0_read_latency summary
+impala_server_io_mgr_queue_0_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_0_read_latency{quantile="0.5"} 0.000999936
+impala_server_io_mgr_queue_0_read_latency{quantile="0.7"} 0.00399974
+impala_server_io_mgr_queue_0_read_latency{quantile="0.9"} 0.13199
+impala_server_io_mgr_queue_0_read_latency{quantile="0.95"} 0.132973
+impala_server_io_mgr_queue_0_read_latency{quantile="0.999"} 0.133956
+impala_server_io_mgr_queue_0_read_latency_count 41
+impala_server_io_mgr_queue_0_read_latency_sum 0.733047
+# HELP impala_server_io_mgr_queue_6_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_6_write_size summary
+impala_server_io_mgr_queue_6_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_6_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_6_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_6_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_6_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_6_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_6_write_size_count 0
+impala_server_io_mgr_queue_6_write_size_sum 0
+# HELP impala_server_io_mgr_queue_1_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_1_read_size summary
+impala_server_io_mgr_queue_1_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_1_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_1_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_1_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_1_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_1_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_1_read_size_count 0
+impala_server_io_mgr_queue_1_read_size_sum 0
+# HELP impala_server_io_mgr_queue_1_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_1_write_latency summary
+impala_server_io_mgr_queue_1_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_1_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_1_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_1_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_1_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_1_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_1_write_latency_count 0
+impala_server_io_mgr_queue_1_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_0_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_0_write_latency summary
+impala_server_io_mgr_queue_0_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_0_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_0_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_0_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_0_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_0_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_0_write_latency_count 0
+impala_server_io_mgr_queue_0_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_0_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_0_write_io_error counter
+impala_server_io_mgr_queue_0_write_io_error 0
+# HELP impala_server_io_mgr_remote_data_cache_instant_evictions Total number of instantaneous evictions from the remote data cache. An instantaneous eviction happens when the eviction policy rejects an entry during insert.
+# TYPE impala_server_io_mgr_remote_data_cache_instant_evictions counter
+impala_server_io_mgr_remote_data_cache_instant_evictions 0
+# HELP impala_server_io_mgr_queue_2_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_2_write_io_error counter
+impala_server_io_mgr_queue_2_write_io_error 0
+# HELP impala_server_io_mgr_queue_13_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_13_write_latency summary
+impala_server_io_mgr_queue_13_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_13_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_13_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_13_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_13_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_13_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_13_write_latency_count 0
+impala_server_io_mgr_queue_13_write_latency_sum 0
+# HELP impala_server_io_mgr_remote_data_cache_hit_count Total number of hits in the remote data cache.
+# TYPE impala_server_io_mgr_remote_data_cache_hit_count counter
+impala_server_io_mgr_remote_data_cache_hit_count 0
+# HELP impala_server_io_mgr_queue_3_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_3_write_size summary
+impala_server_io_mgr_queue_3_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_3_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_3_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_3_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_3_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_3_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_3_write_size_count 0
+impala_server_io_mgr_queue_3_write_size_sum 0
+# HELP impala_server_io_mgr_queue_10_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_10_read_size summary
+impala_server_io_mgr_queue_10_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_10_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_10_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_10_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_10_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_10_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_10_read_size_count 0
+impala_server_io_mgr_queue_10_read_size_sum 0
+# HELP impala_server_io_mgr_cached_file_handles_reopened Number of cached HDFS file handles reopened
+# TYPE impala_server_io_mgr_cached_file_handles_reopened counter
+impala_server_io_mgr_cached_file_handles_reopened 0
+# HELP impala_server_io_mgr_queue_1_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_1_read_latency summary
+impala_server_io_mgr_queue_1_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_1_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_1_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_1_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_1_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_1_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_1_read_latency_count 0
+impala_server_io_mgr_queue_1_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_1_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_1_write_size summary
+impala_server_io_mgr_queue_1_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_1_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_1_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_1_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_1_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_1_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_1_write_size_count 0
+impala_server_io_mgr_queue_1_write_size_sum 0
+# HELP impala_server_io_mgr_queue_2_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_2_read_latency summary
+impala_server_io_mgr_queue_2_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_2_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_2_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_2_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_2_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_2_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_2_read_latency_count 0
+impala_server_io_mgr_queue_2_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_4_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_4_read_size summary
+impala_server_io_mgr_queue_4_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_4_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_4_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_4_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_4_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_4_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_4_read_size_count 0
+impala_server_io_mgr_queue_4_read_size_sum 0
+# HELP impala_server_io_mgr_queue_2_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_2_read_size summary
+impala_server_io_mgr_queue_2_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_2_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_2_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_2_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_2_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_2_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_2_read_size_count 0
+impala_server_io_mgr_queue_2_read_size_sum 0
+# HELP impala_server_io_mgr_queue_3_write_io_error The number of write io errors on disk.
+# TYPE impala_server_io_mgr_queue_3_write_io_error counter
+impala_server_io_mgr_queue_3_write_io_error 0
+# HELP impala_server_io_mgr_queue_2_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_2_write_latency summary
+impala_server_io_mgr_queue_2_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_2_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_2_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_2_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_2_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_2_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_2_write_latency_count 0
+impala_server_io_mgr_queue_2_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_8_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_8_write_latency summary
+impala_server_io_mgr_queue_8_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_8_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_8_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_8_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_8_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_8_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_8_write_latency_count 0
+impala_server_io_mgr_queue_8_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_2_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_2_write_size summary
+impala_server_io_mgr_queue_2_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_2_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_2_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_2_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_2_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_2_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_2_write_size_count 0
+impala_server_io_mgr_queue_2_write_size_sum 0
+# HELP impala_server_io_mgr_short_circuit_bytes_read Total number of short-circuit bytes read by the IO manager.
+# TYPE impala_server_io_mgr_short_circuit_bytes_read counter
+impala_server_io_mgr_short_circuit_bytes_read 2061623
+# HELP impala_server_io_mgr_queue_3_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_3_read_latency summary
+impala_server_io_mgr_queue_3_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_3_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_3_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_3_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_3_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_3_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_3_read_latency_count 0
+impala_server_io_mgr_queue_3_read_latency_sum 0
+# HELP impala_server_io_mgr_queue_3_read_size Histogram of read operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_3_read_size summary
+impala_server_io_mgr_queue_3_read_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_3_read_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_3_read_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_3_read_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_3_read_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_3_read_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_3_read_size_count 0
+impala_server_io_mgr_queue_3_read_size_sum 0
+# HELP impala_server_io_mgr_queue_10_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_10_read_latency summary
+impala_server_io_mgr_queue_10_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_10_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_10_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_10_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_10_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_10_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_10_read_latency_count 0
+impala_server_io_mgr_queue_10_read_latency_sum 0
+# HELP impala_server_io_mgr_local_bytes_read Total number of local bytes read by the IO manager.
+# TYPE impala_server_io_mgr_local_bytes_read counter
+impala_server_io_mgr_local_bytes_read 2061623
+# HELP impala_server_io_mgr_queue_4_read_latency Histogram of read operation times on disk.
+# TYPE impala_server_io_mgr_queue_4_read_latency summary
+impala_server_io_mgr_queue_4_read_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_4_read_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_4_read_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_4_read_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_4_read_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_4_read_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_4_read_latency_count 0
+impala_server_io_mgr_queue_4_read_latency_sum 0
+# HELP impala_server_io_mgr_remote_data_cache_async_writes_dropped_bytes Total number of bytes not inserted in the remote data cache due to async writes buffer size limit.
+# TYPE impala_server_io_mgr_remote_data_cache_async_writes_dropped_bytes counter
+impala_server_io_mgr_remote_data_cache_async_writes_dropped_bytes 0
+# HELP impala_server_io_mgr_queue_4_write_latency Histogram of write operation times on disk.
+# TYPE impala_server_io_mgr_queue_4_write_latency summary
+impala_server_io_mgr_queue_4_write_latency{quantile="0.2"} 0
+impala_server_io_mgr_queue_4_write_latency{quantile="0.5"} 0
+impala_server_io_mgr_queue_4_write_latency{quantile="0.7"} 0
+impala_server_io_mgr_queue_4_write_latency{quantile="0.9"} 0
+impala_server_io_mgr_queue_4_write_latency{quantile="0.95"} 0
+impala_server_io_mgr_queue_4_write_latency{quantile="0.999"} 0
+impala_server_io_mgr_queue_4_write_latency_count 0
+impala_server_io_mgr_queue_4_write_latency_sum 0
+# HELP impala_server_io_mgr_queue_4_write_size Histogram of write operation sizes on disk.
+# TYPE impala_server_io_mgr_queue_4_write_size summary
+impala_server_io_mgr_queue_4_write_size{quantile="0.2"} 0
+impala_server_io_mgr_queue_4_write_size{quantile="0.5"} 0
+impala_server_io_mgr_queue_4_write_size{quantile="0.7"} 0
+impala_server_io_mgr_queue_4_write_size{quantile="0.9"} 0
+impala_server_io_mgr_queue_4_write_size{quantile="0.95"} 0
+impala_server_io_mgr_queue_4_write_size{quantile="0.999"} 0
+impala_server_io_mgr_queue_4_write_size_count 0
+impala_server_io_mgr_queue_4_write_size_sum 0
+# HELP impala_buffer_pool_clean_page_bytes Total bytes of clean page memory cached in the buffer pool.
+# TYPE impala_buffer_pool_clean_page_bytes gauge
+impala_buffer_pool_clean_page_bytes 0
+# HELP impala_buffer_pool_clean_pages Total number of clean pages cached in the buffer pool.
+# TYPE impala_buffer_pool_clean_pages gauge
+impala_buffer_pool_clean_pages 0
+# HELP impala_buffer_pool_free_buffers Total number of free buffers cached in the buffer pool.
+# TYPE impala_buffer_pool_free_buffers gauge
+impala_buffer_pool_free_buffers 0
+# HELP impala_buffer_pool_unused_reservation_bytes Total bytes of buffer reservations by Impala subsystems that are currently unused
+# TYPE impala_buffer_pool_unused_reservation_bytes gauge
+impala_buffer_pool_unused_reservation_bytes 0
+# HELP impala_buffer_pool_arena_7_num_final_scavenges Number of times the allocator had to lock all arenas and scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_7_num_final_scavenges counter
+impala_buffer_pool_arena_7_num_final_scavenges 0
+# HELP impala_buffer_pool_arena_7_clean_page_hits Number of times a clean page was evicted to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_7_clean_page_hits counter
+impala_buffer_pool_arena_7_clean_page_hits 0
+# HELP impala_buffer_pool_arena_2_clean_page_hits Number of times a clean page was evicted to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_2_clean_page_hits counter
+impala_buffer_pool_arena_2_clean_page_hits 0
+# HELP impala_buffer_pool_arena_2_num_scavenges Number of times the allocator had to scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_2_num_scavenges counter
+impala_buffer_pool_arena_2_num_scavenges 0
+# HELP impala_buffer_pool_arena_5_numa_arena_free_buffer_hits Number of times that a recycled buffer within the same NUMA node was used to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_5_numa_arena_free_buffer_hits counter
+impala_buffer_pool_arena_5_numa_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_2_system_alloc_time Total time the buffer pool spent in the system allocator for this arena.
+# TYPE impala_buffer_pool_arena_2_system_alloc_time counter
+impala_buffer_pool_arena_2_system_alloc_time 0
+# HELP impala_buffer_pool_arena_0_num_final_scavenges Number of times the allocator had to lock all arenas and scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_0_num_final_scavenges counter
+impala_buffer_pool_arena_0_num_final_scavenges 0
+# HELP impala_buffer_pool_arena_7_allocated_buffer_sizes Statistics for buffer sizes allocated from the system. Only a subset of allocations are counted in this metric to reduce overhead.
+# TYPE impala_buffer_pool_arena_7_allocated_buffer_sizes summary
+impala_buffer_pool_arena_7_allocated_buffer_sizes{quantile="0.2"} 0
+impala_buffer_pool_arena_7_allocated_buffer_sizes{quantile="0.5"} 0
+impala_buffer_pool_arena_7_allocated_buffer_sizes{quantile="0.7"} 0
+impala_buffer_pool_arena_7_allocated_buffer_sizes{quantile="0.9"} 0
+impala_buffer_pool_arena_7_allocated_buffer_sizes{quantile="0.95"} 0
+impala_buffer_pool_arena_7_allocated_buffer_sizes{quantile="0.999"} 0
+impala_buffer_pool_arena_7_allocated_buffer_sizes_count 0
+impala_buffer_pool_arena_7_allocated_buffer_sizes_sum 0
+# HELP impala_buffer_pool_arena_1_local_arena_free_buffer_hits Number of times a free buffer was recycled from this core's arena to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_1_local_arena_free_buffer_hits counter
+impala_buffer_pool_arena_1_local_arena_free_buffer_hits 3
+# HELP impala_buffer_pool_arena_2_local_arena_free_buffer_hits Number of times a free buffer was recycled from this core's arena to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_2_local_arena_free_buffer_hits counter
+impala_buffer_pool_arena_2_local_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_1_num_final_scavenges Number of times the allocator had to lock all arenas and scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_1_num_final_scavenges counter
+impala_buffer_pool_arena_1_num_final_scavenges 0
+# HELP impala_buffer_pool_arena_1_num_scavenges Number of times the allocator had to scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_1_num_scavenges counter
+impala_buffer_pool_arena_1_num_scavenges 0
+# HELP impala_buffer_pool_arena_3_direct_alloc_count Number of times a new buffer was directly allocated from the system allocator to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_3_direct_alloc_count counter
+impala_buffer_pool_arena_3_direct_alloc_count 5
+# HELP impala_buffer_pool_arena_6_num_scavenges Number of times the allocator had to scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_6_num_scavenges counter
+impala_buffer_pool_arena_6_num_scavenges 0
+# HELP impala_buffer_pool_arena_7_local_arena_free_buffer_hits Number of times a free buffer was recycled from this core's arena to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_7_local_arena_free_buffer_hits counter
+impala_buffer_pool_arena_7_local_arena_free_buffer_hits 4
+# HELP impala_buffer_pool_arena_1_clean_page_hits Number of times a clean page was evicted to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_1_clean_page_hits counter
+impala_buffer_pool_arena_1_clean_page_hits 0
+# HELP impala_buffer_pool_arena_6_system_alloc_time Total time the buffer pool spent in the system allocator for this arena.
+# TYPE impala_buffer_pool_arena_6_system_alloc_time counter
+impala_buffer_pool_arena_6_system_alloc_time 0
+# HELP impala_buffer_pool_arena_0_system_alloc_time Total time the buffer pool spent in the system allocator for this arena.
+# TYPE impala_buffer_pool_arena_0_system_alloc_time counter
+impala_buffer_pool_arena_0_system_alloc_time 0
+# HELP impala_buffer_pool_arena_4_local_arena_free_buffer_hits Number of times a free buffer was recycled from this core's arena to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_4_local_arena_free_buffer_hits counter
+impala_buffer_pool_arena_4_local_arena_free_buffer_hits 1
+# HELP impala_buffer_pool_arena_6_numa_arena_free_buffer_hits Number of times that a recycled buffer within the same NUMA node was used to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_6_numa_arena_free_buffer_hits counter
+impala_buffer_pool_arena_6_numa_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_0_local_arena_free_buffer_hits Number of times a free buffer was recycled from this core's arena to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_0_local_arena_free_buffer_hits counter
+impala_buffer_pool_arena_0_local_arena_free_buffer_hits 2
+# HELP impala_buffer_pool_arena_1_allocated_buffer_sizes Statistics for buffer sizes allocated from the system. Only a subset of allocations are counted in this metric to reduce overhead.
+# TYPE impala_buffer_pool_arena_1_allocated_buffer_sizes summary
+impala_buffer_pool_arena_1_allocated_buffer_sizes{quantile="0.2"} 0
+impala_buffer_pool_arena_1_allocated_buffer_sizes{quantile="0.5"} 0
+impala_buffer_pool_arena_1_allocated_buffer_sizes{quantile="0.7"} 0
+impala_buffer_pool_arena_1_allocated_buffer_sizes{quantile="0.9"} 0
+impala_buffer_pool_arena_1_allocated_buffer_sizes{quantile="0.95"} 0
+impala_buffer_pool_arena_1_allocated_buffer_sizes{quantile="0.999"} 0
+impala_buffer_pool_arena_1_allocated_buffer_sizes_count 0
+impala_buffer_pool_arena_1_allocated_buffer_sizes_sum 0
+# HELP impala_buffer_pool_arena_4_clean_page_hits Number of times a clean page was evicted to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_4_clean_page_hits counter
+impala_buffer_pool_arena_4_clean_page_hits 0
+# HELP impala_buffer_pool_arena_3_allocated_buffer_sizes Statistics for buffer sizes allocated from the system. Only a subset of allocations are counted in this metric to reduce overhead.
+# TYPE impala_buffer_pool_arena_3_allocated_buffer_sizes summary
+impala_buffer_pool_arena_3_allocated_buffer_sizes{quantile="0.2"} 0
+impala_buffer_pool_arena_3_allocated_buffer_sizes{quantile="0.5"} 0
+impala_buffer_pool_arena_3_allocated_buffer_sizes{quantile="0.7"} 0
+impala_buffer_pool_arena_3_allocated_buffer_sizes{quantile="0.9"} 0
+impala_buffer_pool_arena_3_allocated_buffer_sizes{quantile="0.95"} 0
+impala_buffer_pool_arena_3_allocated_buffer_sizes{quantile="0.999"} 0
+impala_buffer_pool_arena_3_allocated_buffer_sizes_count 0
+impala_buffer_pool_arena_3_allocated_buffer_sizes_sum 0
+# HELP impala_buffer_pool_arena_3_system_alloc_time Total time the buffer pool spent in the system allocator for this arena.
+# TYPE impala_buffer_pool_arena_3_system_alloc_time counter
+impala_buffer_pool_arena_3_system_alloc_time 0
+# HELP impala_buffer_pool_arena_1_direct_alloc_count Number of times a new buffer was directly allocated from the system allocator to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_1_direct_alloc_count counter
+impala_buffer_pool_arena_1_direct_alloc_count 5
+# HELP impala_buffer_pool_arena_0_direct_alloc_count Number of times a new buffer was directly allocated from the system allocator to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_0_direct_alloc_count counter
+impala_buffer_pool_arena_0_direct_alloc_count 3
+# HELP impala_buffer_pool_clean_pages_limit Limit on number of clean pages cached in the buffer pool.
+# TYPE impala_buffer_pool_clean_pages_limit gauge
+impala_buffer_pool_clean_pages_limit 359546060
+# HELP impala_buffer_pool_free_buffer_bytes Total bytes of free buffer memory cached in the buffer pool.
+# TYPE impala_buffer_pool_free_buffer_bytes gauge
+impala_buffer_pool_free_buffer_bytes 0
+# HELP impala_buffer_pool_arena_2_direct_alloc_count Number of times a new buffer was directly allocated from the system allocator to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_2_direct_alloc_count counter
+impala_buffer_pool_arena_2_direct_alloc_count 4
+# HELP impala_buffer_pool_arena_5_local_arena_free_buffer_hits Number of times a free buffer was recycled from this core's arena to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_5_local_arena_free_buffer_hits counter
+impala_buffer_pool_arena_5_local_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_7_direct_alloc_count Number of times a new buffer was directly allocated from the system allocator to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_7_direct_alloc_count counter
+impala_buffer_pool_arena_7_direct_alloc_count 6
+# HELP impala_buffer_pool_arena_0_num_scavenges Number of times the allocator had to scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_0_num_scavenges counter
+impala_buffer_pool_arena_0_num_scavenges 0
+# HELP impala_buffer_pool_arena_4_numa_arena_free_buffer_hits Number of times that a recycled buffer within the same NUMA node was used to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_4_numa_arena_free_buffer_hits counter
+impala_buffer_pool_arena_4_numa_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_7_system_alloc_time Total time the buffer pool spent in the system allocator for this arena.
+# TYPE impala_buffer_pool_arena_7_system_alloc_time counter
+impala_buffer_pool_arena_7_system_alloc_time 0
+# HELP impala_buffer_pool_arena_2_numa_arena_free_buffer_hits Number of times that a recycled buffer within the same NUMA node was used to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_2_numa_arena_free_buffer_hits counter
+impala_buffer_pool_arena_2_numa_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_0_allocated_buffer_sizes Statistics for buffer sizes allocated from the system. Only a subset of allocations are counted in this metric to reduce overhead.
+# TYPE impala_buffer_pool_arena_0_allocated_buffer_sizes summary
+impala_buffer_pool_arena_0_allocated_buffer_sizes{quantile="0.2"} 0
+impala_buffer_pool_arena_0_allocated_buffer_sizes{quantile="0.5"} 0
+impala_buffer_pool_arena_0_allocated_buffer_sizes{quantile="0.7"} 0
+impala_buffer_pool_arena_0_allocated_buffer_sizes{quantile="0.9"} 0
+impala_buffer_pool_arena_0_allocated_buffer_sizes{quantile="0.95"} 0
+impala_buffer_pool_arena_0_allocated_buffer_sizes{quantile="0.999"} 0
+impala_buffer_pool_arena_0_allocated_buffer_sizes_count 0
+impala_buffer_pool_arena_0_allocated_buffer_sizes_sum 0
+# HELP impala_buffer_pool_arena_7_num_scavenges Number of times the allocator had to scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_7_num_scavenges counter
+impala_buffer_pool_arena_7_num_scavenges 0
+# HELP impala_buffer_pool_arena_3_numa_arena_free_buffer_hits Number of times that a recycled buffer within the same NUMA node was used to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_3_numa_arena_free_buffer_hits counter
+impala_buffer_pool_arena_3_numa_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_2_num_final_scavenges Number of times the allocator had to lock all arenas and scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_2_num_final_scavenges counter
+impala_buffer_pool_arena_2_num_final_scavenges 0
+# HELP impala_buffer_pool_arena_5_num_scavenges Number of times the allocator had to scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_5_num_scavenges counter
+impala_buffer_pool_arena_5_num_scavenges 0
+# HELP impala_buffer_pool_arena_0_numa_arena_free_buffer_hits Number of times that a recycled buffer within the same NUMA node was used to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_0_numa_arena_free_buffer_hits counter
+impala_buffer_pool_arena_0_numa_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_system_allocated Total buffer memory currently allocated by the buffer pool.
+# TYPE impala_buffer_pool_system_allocated gauge
+impala_buffer_pool_system_allocated 0
+# HELP impala_buffer_pool_arena_5_allocated_buffer_sizes Statistics for buffer sizes allocated from the system. Only a subset of allocations are counted in this metric to reduce overhead.
+# TYPE impala_buffer_pool_arena_5_allocated_buffer_sizes summary
+impala_buffer_pool_arena_5_allocated_buffer_sizes{quantile="0.2"} 0
+impala_buffer_pool_arena_5_allocated_buffer_sizes{quantile="0.5"} 0
+impala_buffer_pool_arena_5_allocated_buffer_sizes{quantile="0.7"} 0
+impala_buffer_pool_arena_5_allocated_buffer_sizes{quantile="0.9"} 0
+impala_buffer_pool_arena_5_allocated_buffer_sizes{quantile="0.95"} 0
+impala_buffer_pool_arena_5_allocated_buffer_sizes{quantile="0.999"} 0
+impala_buffer_pool_arena_5_allocated_buffer_sizes_count 0
+impala_buffer_pool_arena_5_allocated_buffer_sizes_sum 0
+# HELP impala_buffer_pool_arena_0_clean_page_hits Number of times a clean page was evicted to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_0_clean_page_hits counter
+impala_buffer_pool_arena_0_clean_page_hits 0
+# HELP impala_buffer_pool_limit Maximum allowed bytes allocated by the buffer pool.
+# TYPE impala_buffer_pool_limit gauge
+impala_buffer_pool_limit 3595460608
+# HELP impala_buffer_pool_arena_1_system_alloc_time Total time the buffer pool spent in the system allocator for this arena.
+# TYPE impala_buffer_pool_arena_1_system_alloc_time counter
+impala_buffer_pool_arena_1_system_alloc_time 0
+# HELP impala_buffer_pool_arena_1_numa_arena_free_buffer_hits Number of times that a recycled buffer within the same NUMA node was used to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_1_numa_arena_free_buffer_hits counter
+impala_buffer_pool_arena_1_numa_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_3_clean_page_hits Number of times a clean page was evicted to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_3_clean_page_hits counter
+impala_buffer_pool_arena_3_clean_page_hits 0
+# HELP impala_buffer_pool_reserved Total bytes of buffers reserved by Impala subsystems
+# TYPE impala_buffer_pool_reserved gauge
+impala_buffer_pool_reserved 0
+# HELP impala_buffer_pool_arena_3_num_scavenges Number of times the allocator had to scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_3_num_scavenges counter
+impala_buffer_pool_arena_3_num_scavenges 0
+# HELP impala_buffer_pool_arena_3_local_arena_free_buffer_hits Number of times a free buffer was recycled from this core's arena to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_3_local_arena_free_buffer_hits counter
+impala_buffer_pool_arena_3_local_arena_free_buffer_hits 1
+# HELP impala_buffer_pool_arena_3_num_final_scavenges Number of times the allocator had to lock all arenas and scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_3_num_final_scavenges counter
+impala_buffer_pool_arena_3_num_final_scavenges 0
+# HELP impala_buffer_pool_arena_4_system_alloc_time Total time the buffer pool spent in the system allocator for this arena.
+# TYPE impala_buffer_pool_arena_4_system_alloc_time counter
+impala_buffer_pool_arena_4_system_alloc_time 0
+# HELP impala_buffer_pool_arena_7_numa_arena_free_buffer_hits Number of times that a recycled buffer within the same NUMA node was used to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_7_numa_arena_free_buffer_hits counter
+impala_buffer_pool_arena_7_numa_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_4_direct_alloc_count Number of times a new buffer was directly allocated from the system allocator to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_4_direct_alloc_count counter
+impala_buffer_pool_arena_4_direct_alloc_count 2
+# HELP impala_buffer_pool_arena_4_num_scavenges Number of times the allocator had to scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_4_num_scavenges counter
+impala_buffer_pool_arena_4_num_scavenges 0
+# HELP impala_buffer_pool_arena_6_local_arena_free_buffer_hits Number of times a free buffer was recycled from this core's arena to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_6_local_arena_free_buffer_hits counter
+impala_buffer_pool_arena_6_local_arena_free_buffer_hits 0
+# HELP impala_buffer_pool_arena_5_system_alloc_time Total time the buffer pool spent in the system allocator for this arena.
+# TYPE impala_buffer_pool_arena_5_system_alloc_time counter
+impala_buffer_pool_arena_5_system_alloc_time 0
+# HELP impala_buffer_pool_arena_4_num_final_scavenges Number of times the allocator had to lock all arenas and scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_4_num_final_scavenges counter
+impala_buffer_pool_arena_4_num_final_scavenges 0
+# HELP impala_buffer_pool_arena_5_direct_alloc_count Number of times a new buffer was directly allocated from the system allocator to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_5_direct_alloc_count counter
+impala_buffer_pool_arena_5_direct_alloc_count 3
+# HELP impala_buffer_pool_arena_2_allocated_buffer_sizes Statistics for buffer sizes allocated from the system. Only a subset of allocations are counted in this metric to reduce overhead.
+# TYPE impala_buffer_pool_arena_2_allocated_buffer_sizes summary
+impala_buffer_pool_arena_2_allocated_buffer_sizes{quantile="0.2"} 0
+impala_buffer_pool_arena_2_allocated_buffer_sizes{quantile="0.5"} 0
+impala_buffer_pool_arena_2_allocated_buffer_sizes{quantile="0.7"} 0
+impala_buffer_pool_arena_2_allocated_buffer_sizes{quantile="0.9"} 0
+impala_buffer_pool_arena_2_allocated_buffer_sizes{quantile="0.95"} 0
+impala_buffer_pool_arena_2_allocated_buffer_sizes{quantile="0.999"} 0
+impala_buffer_pool_arena_2_allocated_buffer_sizes_count 0
+impala_buffer_pool_arena_2_allocated_buffer_sizes_sum 0
+# HELP impala_buffer_pool_arena_4_allocated_buffer_sizes Statistics for buffer sizes allocated from the system. Only a subset of allocations are counted in this metric to reduce overhead.
+# TYPE impala_buffer_pool_arena_4_allocated_buffer_sizes summary
+impala_buffer_pool_arena_4_allocated_buffer_sizes{quantile="0.2"} 0
+impala_buffer_pool_arena_4_allocated_buffer_sizes{quantile="0.5"} 0
+impala_buffer_pool_arena_4_allocated_buffer_sizes{quantile="0.7"} 0
+impala_buffer_pool_arena_4_allocated_buffer_sizes{quantile="0.9"} 0
+impala_buffer_pool_arena_4_allocated_buffer_sizes{quantile="0.95"} 0
+impala_buffer_pool_arena_4_allocated_buffer_sizes{quantile="0.999"} 0
+impala_buffer_pool_arena_4_allocated_buffer_sizes_count 0
+impala_buffer_pool_arena_4_allocated_buffer_sizes_sum 0
+# HELP impala_buffer_pool_arena_5_num_final_scavenges Number of times the allocator had to lock all arenas and scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_5_num_final_scavenges counter
+impala_buffer_pool_arena_5_num_final_scavenges 0
+# HELP impala_buffer_pool_arena_5_clean_page_hits Number of times a clean page was evicted to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_5_clean_page_hits counter
+impala_buffer_pool_arena_5_clean_page_hits 0
+# HELP impala_buffer_pool_arena_6_direct_alloc_count Number of times a new buffer was directly allocated from the system allocator to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_6_direct_alloc_count counter
+impala_buffer_pool_arena_6_direct_alloc_count 4
+# HELP impala_buffer_pool_arena_6_allocated_buffer_sizes Statistics for buffer sizes allocated from the system. Only a subset of allocations are counted in this metric to reduce overhead.
+# TYPE impala_buffer_pool_arena_6_allocated_buffer_sizes summary
+impala_buffer_pool_arena_6_allocated_buffer_sizes{quantile="0.2"} 0
+impala_buffer_pool_arena_6_allocated_buffer_sizes{quantile="0.5"} 0
+impala_buffer_pool_arena_6_allocated_buffer_sizes{quantile="0.7"} 0
+impala_buffer_pool_arena_6_allocated_buffer_sizes{quantile="0.9"} 0
+impala_buffer_pool_arena_6_allocated_buffer_sizes{quantile="0.95"} 0
+impala_buffer_pool_arena_6_allocated_buffer_sizes{quantile="0.999"} 0
+impala_buffer_pool_arena_6_allocated_buffer_sizes_count 0
+impala_buffer_pool_arena_6_allocated_buffer_sizes_sum 0
+# HELP impala_buffer_pool_arena_6_clean_page_hits Number of times a clean page was evicted to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_6_clean_page_hits counter
+impala_buffer_pool_arena_6_clean_page_hits 0
+# HELP impala_buffer_pool_arena_6_num_final_scavenges Number of times the allocator had to lock all arenas and scavenge to fulfil an allocation.
+# TYPE impala_buffer_pool_arena_6_num_final_scavenges counter
+impala_buffer_pool_arena_6_num_final_scavenges 0
+# HELP impala_jvm_gc_num_warn_threshold_exceeded Jvm Pause Detection Warning Threshold Exceeded
+# TYPE impala_jvm_gc_num_warn_threshold_exceeded counter
+impala_jvm_gc_num_warn_threshold_exceeded 0
+# HELP impala_jvm_gc_num_info_threshold_exceeded Jvm Pause Detection Info Threshold Exceeded
+# TYPE impala_jvm_gc_num_info_threshold_exceeded counter
+impala_jvm_gc_num_info_threshold_exceeded 0
+# HELP impala_jvm_non_heap_peak_init_usage_bytes Jvm non-heap Peak Init Usage Bytes
+# TYPE impala_jvm_non_heap_peak_init_usage_bytes gauge
+impala_jvm_non_heap_peak_init_usage_bytes 0
+# HELP impala_jvm_non_heap_peak_committed_usage_bytes Jvm non-heap Peak Committed Usage Bytes
+# TYPE impala_jvm_non_heap_peak_committed_usage_bytes gauge
+impala_jvm_non_heap_peak_committed_usage_bytes 0
+# HELP impala_jvm_non_heap_peak_current_usage_bytes Jvm non-heap Peak Current Usage Bytes
+# TYPE impala_jvm_non_heap_peak_current_usage_bytes gauge
+impala_jvm_non_heap_peak_current_usage_bytes 0
+# HELP impala_jvm_non_heap_peak_max_usage_bytes Jvm non-heap Peak Max Usage Bytes
+# TYPE impala_jvm_non_heap_peak_max_usage_bytes gauge
+impala_jvm_non_heap_peak_max_usage_bytes 0
+# HELP impala_jvm_non_heap_max_usage_bytes Jvm non-heap Max Usage Bytes
+# TYPE impala_jvm_non_heap_max_usage_bytes gauge
+impala_jvm_non_heap_max_usage_bytes -1
+# HELP impala_jvm_heap_peak_committed_usage_bytes Jvm heap Peak Committed Usage Bytes
+# TYPE impala_jvm_heap_peak_committed_usage_bytes gauge
+impala_jvm_heap_peak_committed_usage_bytes 0
+# HELP impala_jvm_heap_peak_max_usage_bytes Jvm heap Peak Max Usage Bytes
+# TYPE impala_jvm_heap_peak_max_usage_bytes gauge
+impala_jvm_heap_peak_max_usage_bytes 0
+# HELP impala_jvm_heap_init_usage_bytes Jvm heap Init Usage Bytes
+# TYPE impala_jvm_heap_init_usage_bytes gauge
+impala_jvm_heap_init_usage_bytes 4294967296
+# HELP impala_jvm_heap_committed_usage_bytes Jvm heap Committed Usage Bytes
+# TYPE impala_jvm_heap_committed_usage_bytes gauge
+impala_jvm_heap_committed_usage_bytes 4294967296
+# HELP impala_jvm_heap_current_usage_bytes Jvm heap Current Usage Bytes
+# TYPE impala_jvm_heap_current_usage_bytes gauge
+impala_jvm_heap_current_usage_bytes 1339318848
+# HELP impala_jvm_codeheap_'non_profiled_nmethods'_peak_init_usage_bytes Jvm codeheap-'non-profiled-nmethods' Peak Init Usage Bytes
+# TYPE impala_jvm_codeheap_'non_profiled_nmethods'_peak_init_usage_bytes gauge
+impala_jvm_codeheap_'non_profiled_nmethods'_peak_init_usage_bytes 2555904
+# HELP impala_jvm_codeheap_'non_profiled_nmethods'_peak_committed_usage_bytes Jvm codeheap-'non-profiled-nmethods' Peak Committed Usage Bytes
+# TYPE impala_jvm_codeheap_'non_profiled_nmethods'_peak_committed_usage_bytes gauge
+impala_jvm_codeheap_'non_profiled_nmethods'_peak_committed_usage_bytes 6225920
+# HELP impala_jvm_non_heap_committed_usage_bytes Jvm non-heap Committed Usage Bytes
+# TYPE impala_jvm_non_heap_committed_usage_bytes gauge
+impala_jvm_non_heap_committed_usage_bytes 99024896
+# HELP impala_jvm_codeheap_'non_profiled_nmethods'_committed_usage_bytes Jvm codeheap-'non-profiled-nmethods' Committed Usage Bytes
+# TYPE impala_jvm_codeheap_'non_profiled_nmethods'_committed_usage_bytes gauge
+impala_jvm_codeheap_'non_profiled_nmethods'_committed_usage_bytes 6225920
+# HELP impala_jvm_codeheap_'non_profiled_nmethods'_current_usage_bytes Jvm codeheap-'non-profiled-nmethods' Current Usage Bytes
+# TYPE impala_jvm_codeheap_'non_profiled_nmethods'_current_usage_bytes gauge
+impala_jvm_codeheap_'non_profiled_nmethods'_current_usage_bytes 6181120
+# HELP impala_jvm_codeheap_'non_profiled_nmethods'_max_usage_bytes Jvm codeheap-'non-profiled-nmethods' Max Usage Bytes
+# TYPE impala_jvm_codeheap_'non_profiled_nmethods'_max_usage_bytes gauge
+impala_jvm_codeheap_'non_profiled_nmethods'_max_usage_bytes 122912768
+# HELP impala_jvm_g1_survivor_space_peak_init_usage_bytes Jvm g1-survivor-space Peak Init Usage Bytes
+# TYPE impala_jvm_g1_survivor_space_peak_init_usage_bytes gauge
+impala_jvm_g1_survivor_space_peak_init_usage_bytes 0
+# HELP impala_jvm_g1_survivor_space_peak_current_usage_bytes Jvm g1-survivor-space Peak Current Usage Bytes
+# TYPE impala_jvm_g1_survivor_space_peak_current_usage_bytes gauge
+impala_jvm_g1_survivor_space_peak_current_usage_bytes 25165824
+# HELP impala_jvm_g1_survivor_space_init_usage_bytes Jvm g1-survivor-space Init Usage Bytes
+# TYPE impala_jvm_g1_survivor_space_init_usage_bytes gauge
+impala_jvm_g1_survivor_space_init_usage_bytes 0
+# HELP impala_jvm_codeheap_'profiled_nmethods'_committed_usage_bytes Jvm codeheap-'profiled-nmethods' Committed Usage Bytes
+# TYPE impala_jvm_codeheap_'profiled_nmethods'_committed_usage_bytes gauge
+impala_jvm_codeheap_'profiled_nmethods'_committed_usage_bytes 15794176
+# HELP impala_jvm_metaspace_peak_init_usage_bytes Jvm metaspace Peak Init Usage Bytes
+# TYPE impala_jvm_metaspace_peak_init_usage_bytes gauge
+impala_jvm_metaspace_peak_init_usage_bytes 0
+# HELP impala_jvm_codeheap_'non_profiled_nmethods'_peak_current_usage_bytes Jvm codeheap-'non-profiled-nmethods' Peak Current Usage Bytes
+# TYPE impala_jvm_codeheap_'non_profiled_nmethods'_peak_current_usage_bytes gauge
+impala_jvm_codeheap_'non_profiled_nmethods'_peak_current_usage_bytes 6181120
+# HELP impala_jvm_metaspace_peak_current_usage_bytes Jvm metaspace Peak Current Usage Bytes
+# TYPE impala_jvm_metaspace_peak_current_usage_bytes gauge
+impala_jvm_metaspace_peak_current_usage_bytes 65985584
+# HELP impala_jvm_metaspace_peak_max_usage_bytes Jvm metaspace Peak Max Usage Bytes
+# TYPE impala_jvm_metaspace_peak_max_usage_bytes gauge
+impala_jvm_metaspace_peak_max_usage_bytes -1
+# HELP impala_jvm_non_heap_init_usage_bytes Jvm non-heap Init Usage Bytes
+# TYPE impala_jvm_non_heap_init_usage_bytes gauge
+impala_jvm_non_heap_init_usage_bytes 7667712
+# HELP impala_jvm_metaspace_committed_usage_bytes Jvm metaspace Committed Usage Bytes
+# TYPE impala_jvm_metaspace_committed_usage_bytes gauge
+impala_jvm_metaspace_committed_usage_bytes 67239936
+# HELP impala_jvm_gc_time_millis Jvm Garbage Collection Time
+# TYPE impala_jvm_gc_time_millis counter
+impala_jvm_gc_time_millis 0.443
+# HELP impala_jvm_total_init_usage_bytes Jvm total Init Usage Bytes
+# TYPE impala_jvm_total_init_usage_bytes gauge
+impala_jvm_total_init_usage_bytes 4302635008
+# HELP impala_jvm_codeheap_'profiled_nmethods'_peak_current_usage_bytes Jvm codeheap-'profiled-nmethods' Peak Current Usage Bytes
+# TYPE impala_jvm_codeheap_'profiled_nmethods'_peak_current_usage_bytes gauge
+impala_jvm_codeheap_'profiled_nmethods'_peak_current_usage_bytes 15777280
+# HELP impala_jvm_g1_old_gen_max_usage_bytes Jvm g1-old-gen Max Usage Bytes
+# TYPE impala_jvm_g1_old_gen_max_usage_bytes gauge
+impala_jvm_g1_old_gen_max_usage_bytes 4294967296
+# HELP impala_jvm_codeheap_'non_profiled_nmethods'_peak_max_usage_bytes Jvm codeheap-'non-profiled-nmethods' Peak Max Usage Bytes
+# TYPE impala_jvm_codeheap_'non_profiled_nmethods'_peak_max_usage_bytes gauge
+impala_jvm_codeheap_'non_profiled_nmethods'_peak_max_usage_bytes 122912768
+# HELP impala_jvm_codeheap_'non_nmethods'_peak_committed_usage_bytes Jvm codeheap-'non-nmethods' Peak Committed Usage Bytes
+# TYPE impala_jvm_codeheap_'non_nmethods'_peak_committed_usage_bytes gauge
+impala_jvm_codeheap_'non_nmethods'_peak_committed_usage_bytes 2555904
+# HELP impala_jvm_metaspace_init_usage_bytes Jvm metaspace Init Usage Bytes
+# TYPE impala_jvm_metaspace_init_usage_bytes gauge
+impala_jvm_metaspace_init_usage_bytes 0
+# HELP impala_jvm_codeheap_'profiled_nmethods'_current_usage_bytes Jvm codeheap-'profiled-nmethods' Current Usage Bytes
+# TYPE impala_jvm_codeheap_'profiled_nmethods'_current_usage_bytes gauge
+impala_jvm_codeheap_'profiled_nmethods'_current_usage_bytes 15777280
+# HELP impala_jvm_compressed_class_space_peak_current_usage_bytes Jvm compressed-class-space Peak Current Usage Bytes
+# TYPE impala_jvm_compressed_class_space_peak_current_usage_bytes gauge
+impala_jvm_compressed_class_space_peak_current_usage_bytes 6741608
+# HELP impala_jvm_codeheap_'profiled_nmethods'_init_usage_bytes Jvm codeheap-'profiled-nmethods' Init Usage Bytes
+# TYPE impala_jvm_codeheap_'profiled_nmethods'_init_usage_bytes gauge
+impala_jvm_codeheap_'profiled_nmethods'_init_usage_bytes 2555904
+# HELP impala_jvm_g1_eden_space_peak_max_usage_bytes Jvm g1-eden-space Peak Max Usage Bytes
+# TYPE impala_jvm_g1_eden_space_peak_max_usage_bytes gauge
+impala_jvm_g1_eden_space_peak_max_usage_bytes -1
+# HELP impala_jvm_gc_total_extra_sleep_time_millis Jvm Pause Detection Extra Sleep Time
+# TYPE impala_jvm_gc_total_extra_sleep_time_millis counter
+impala_jvm_gc_total_extra_sleep_time_millis 0.224
+# HELP impala_jvm_codeheap_'non_nmethods'_peak_current_usage_bytes Jvm codeheap-'non-nmethods' Peak Current Usage Bytes
+# TYPE impala_jvm_codeheap_'non_nmethods'_peak_current_usage_bytes gauge
+impala_jvm_codeheap_'non_nmethods'_peak_current_usage_bytes 1362688
+# HELP impala_jvm_g1_survivor_space_current_usage_bytes Jvm g1-survivor-space Current Usage Bytes
+# TYPE impala_jvm_g1_survivor_space_current_usage_bytes gauge
+impala_jvm_g1_survivor_space_current_usage_bytes 4194304
+# HELP impala_jvm_g1_eden_space_committed_usage_bytes Jvm g1-eden-space Committed Usage Bytes
+# TYPE impala_jvm_g1_eden_space_committed_usage_bytes gauge
+impala_jvm_g1_eden_space_committed_usage_bytes 2701131776
+# HELP impala_jvm_g1_survivor_space_peak_committed_usage_bytes Jvm g1-survivor-space Peak Committed Usage Bytes
+# TYPE impala_jvm_g1_survivor_space_peak_committed_usage_bytes gauge
+impala_jvm_g1_survivor_space_peak_committed_usage_bytes 25165824
+# HELP impala_jvm_total_current_usage_bytes Jvm total Current Usage Bytes
+# TYPE impala_jvm_total_current_usage_bytes gauge
+impala_jvm_total_current_usage_bytes 1435320920
+# HELP impala_jvm_non_heap_current_usage_bytes Jvm non-heap Current Usage Bytes
+# TYPE impala_jvm_non_heap_current_usage_bytes gauge
+impala_jvm_non_heap_current_usage_bytes 96002072
+# HELP impala_jvm_total_peak_max_usage_bytes Jvm total Peak Max Usage Bytes
+# TYPE impala_jvm_total_peak_max_usage_bytes gauge
+impala_jvm_total_peak_max_usage_bytes 5620367357
+# HELP impala_jvm_codeheap_'non_nmethods'_init_usage_bytes Jvm codeheap-'non-nmethods' Init Usage Bytes
+# TYPE impala_jvm_codeheap_'non_nmethods'_init_usage_bytes gauge
+impala_jvm_codeheap_'non_nmethods'_init_usage_bytes 2555904
+# HELP impala_jvm_compressed_class_space_peak_init_usage_bytes Jvm compressed-class-space Peak Init Usage Bytes
+# TYPE impala_jvm_compressed_class_space_peak_init_usage_bytes gauge
+impala_jvm_compressed_class_space_peak_init_usage_bytes 0
+# HELP impala_jvm_heap_peak_init_usage_bytes Jvm heap Peak Init Usage Bytes
+# TYPE impala_jvm_heap_peak_init_usage_bytes gauge
+impala_jvm_heap_peak_init_usage_bytes 0
+# HELP impala_jvm_g1_eden_space_max_usage_bytes Jvm g1-eden-space Max Usage Bytes
+# TYPE impala_jvm_g1_eden_space_max_usage_bytes gauge
+impala_jvm_g1_eden_space_max_usage_bytes -1
+# HELP impala_jvm_g1_old_gen_peak_max_usage_bytes Jvm g1-old-gen Peak Max Usage Bytes
+# TYPE impala_jvm_g1_old_gen_peak_max_usage_bytes gauge
+impala_jvm_g1_old_gen_peak_max_usage_bytes 4294967296
+# HELP impala_jvm_total_peak_current_usage_bytes Jvm total Peak Current Usage Bytes
+# TYPE impala_jvm_total_peak_current_usage_bytes gauge
+impala_jvm_total_peak_current_usage_bytes 2767214504
+# HELP impala_jvm_codeheap_'non_nmethods'_current_usage_bytes Jvm codeheap-'non-nmethods' Current Usage Bytes
+# TYPE impala_jvm_codeheap_'non_nmethods'_current_usage_bytes gauge
+impala_jvm_codeheap_'non_nmethods'_current_usage_bytes 1316480
+# HELP impala_jvm_g1_survivor_space_peak_max_usage_bytes Jvm g1-survivor-space Peak Max Usage Bytes
+# TYPE impala_jvm_g1_survivor_space_peak_max_usage_bytes gauge
+impala_jvm_g1_survivor_space_peak_max_usage_bytes -1
+# HELP impala_jvm_metaspace_current_usage_bytes Jvm metaspace Current Usage Bytes
+# TYPE impala_jvm_metaspace_current_usage_bytes gauge
+impala_jvm_metaspace_current_usage_bytes 65985584
+# HELP impala_jvm_total_peak_committed_usage_bytes Jvm total Peak Committed Usage Bytes
+# TYPE impala_jvm_total_peak_committed_usage_bytes gauge
+impala_jvm_total_peak_committed_usage_bytes 6893797376
+# HELP impala_jvm_total_peak_init_usage_bytes Jvm total Peak Init Usage Bytes
+# TYPE impala_jvm_total_peak_init_usage_bytes gauge
+impala_jvm_total_peak_init_usage_bytes 4302635008
+# HELP impala_jvm_total_committed_usage_bytes Jvm total Committed Usage Bytes
+# TYPE impala_jvm_total_committed_usage_bytes gauge
+impala_jvm_total_committed_usage_bytes 4393992192
+# HELP impala_jvm_compressed_class_space_init_usage_bytes Jvm compressed-class-space Init Usage Bytes
+# TYPE impala_jvm_compressed_class_space_init_usage_bytes gauge
+impala_jvm_compressed_class_space_init_usage_bytes 0
+# HELP impala_jvm_codeheap_'non_nmethods'_committed_usage_bytes Jvm codeheap-'non-nmethods' Committed Usage Bytes
+# TYPE impala_jvm_codeheap_'non_nmethods'_committed_usage_bytes gauge
+impala_jvm_codeheap_'non_nmethods'_committed_usage_bytes 2555904
+# HELP impala_jvm_codeheap_'profiled_nmethods'_peak_init_usage_bytes Jvm codeheap-'profiled-nmethods' Peak Init Usage Bytes
+# TYPE impala_jvm_codeheap_'profiled_nmethods'_peak_init_usage_bytes gauge
+impala_jvm_codeheap_'profiled_nmethods'_peak_init_usage_bytes 2555904
+# HELP impala_jvm_g1_old_gen_peak_init_usage_bytes Jvm g1-old-gen Peak Init Usage Bytes
+# TYPE impala_jvm_g1_old_gen_peak_init_usage_bytes gauge
+impala_jvm_g1_old_gen_peak_init_usage_bytes 4068474880
+# HELP impala_jvm_codeheap_'non_profiled_nmethods'_init_usage_bytes Jvm codeheap-'non-profiled-nmethods' Init Usage Bytes
+# TYPE impala_jvm_codeheap_'non_profiled_nmethods'_init_usage_bytes gauge
+impala_jvm_codeheap_'non_profiled_nmethods'_init_usage_bytes 2555904
+# HELP impala_jvm_codeheap_'profiled_nmethods'_peak_max_usage_bytes Jvm codeheap-'profiled-nmethods' Peak Max Usage Bytes
+# TYPE impala_jvm_codeheap_'profiled_nmethods'_peak_max_usage_bytes gauge
+impala_jvm_codeheap_'profiled_nmethods'_peak_max_usage_bytes 122908672
+# HELP impala_jvm_metaspace_max_usage_bytes Jvm metaspace Max Usage Bytes
+# TYPE impala_jvm_metaspace_max_usage_bytes gauge
+impala_jvm_metaspace_max_usage_bytes -1
+# HELP impala_jvm_codeheap_'non_nmethods'_peak_max_usage_bytes Jvm codeheap-'non-nmethods' Peak Max Usage Bytes
+# TYPE impala_jvm_codeheap_'non_nmethods'_peak_max_usage_bytes gauge
+impala_jvm_codeheap_'non_nmethods'_peak_max_usage_bytes 5836800
+# HELP impala_jvm_g1_old_gen_init_usage_bytes Jvm g1-old-gen Init Usage Bytes
+# TYPE impala_jvm_g1_old_gen_init_usage_bytes gauge
+impala_jvm_g1_old_gen_init_usage_bytes 4068474880
+# HELP impala_jvm_codeheap_'profiled_nmethods'_peak_committed_usage_bytes Jvm codeheap-'profiled-nmethods' Peak Committed Usage Bytes
+# TYPE impala_jvm_codeheap_'profiled_nmethods'_peak_committed_usage_bytes gauge
+impala_jvm_codeheap_'profiled_nmethods'_peak_committed_usage_bytes 15794176
+# HELP impala_jvm_metaspace_peak_committed_usage_bytes Jvm metaspace Peak Committed Usage Bytes
+# TYPE impala_jvm_metaspace_peak_committed_usage_bytes gauge
+impala_jvm_metaspace_peak_committed_usage_bytes 67239936
+# HELP impala_jvm_compressed_class_space_max_usage_bytes Jvm compressed-class-space Max Usage Bytes
+# TYPE impala_jvm_compressed_class_space_max_usage_bytes gauge
+impala_jvm_compressed_class_space_max_usage_bytes 1073741824
+# HELP impala_jvm_codeheap_'non_nmethods'_max_usage_bytes Jvm codeheap-'non-nmethods' Max Usage Bytes
+# TYPE impala_jvm_codeheap_'non_nmethods'_max_usage_bytes gauge
+impala_jvm_codeheap_'non_nmethods'_max_usage_bytes 5836800
+# HELP impala_jvm_compressed_class_space_committed_usage_bytes Jvm compressed-class-space Committed Usage Bytes
+# TYPE impala_jvm_compressed_class_space_committed_usage_bytes gauge
+impala_jvm_compressed_class_space_committed_usage_bytes 7208960
+# HELP impala_jvm_compressed_class_space_current_usage_bytes Jvm compressed-class-space Current Usage Bytes
+# TYPE impala_jvm_compressed_class_space_current_usage_bytes gauge
+impala_jvm_compressed_class_space_current_usage_bytes 6741608
+# HELP impala_jvm_gc_count Jvm Garbage Collection Count
+# TYPE impala_jvm_gc_count counter
+impala_jvm_gc_count 25
+# HELP impala_jvm_compressed_class_space_peak_max_usage_bytes Jvm compressed-class-space Peak Max Usage Bytes
+# TYPE impala_jvm_compressed_class_space_peak_max_usage_bytes gauge
+impala_jvm_compressed_class_space_peak_max_usage_bytes 1073741824
+# HELP impala_jvm_compressed_class_space_peak_committed_usage_bytes Jvm compressed-class-space Peak Committed Usage Bytes
+# TYPE impala_jvm_compressed_class_space_peak_committed_usage_bytes gauge
+impala_jvm_compressed_class_space_peak_committed_usage_bytes 7208960
+# HELP impala_jvm_g1_eden_space_current_usage_bytes Jvm g1-eden-space Current Usage Bytes
+# TYPE impala_jvm_g1_eden_space_current_usage_bytes gauge
+impala_jvm_g1_eden_space_current_usage_bytes 1260388352
+# HELP impala_jvm_g1_eden_space_init_usage_bytes Jvm g1-eden-space Init Usage Bytes
+# TYPE impala_jvm_g1_eden_space_init_usage_bytes gauge
+impala_jvm_g1_eden_space_init_usage_bytes 226492416
+# HELP impala_jvm_heap_max_usage_bytes Jvm heap Max Usage Bytes
+# TYPE impala_jvm_heap_max_usage_bytes gauge
+impala_jvm_heap_max_usage_bytes 4294967296
+# HELP impala_jvm_g1_eden_space_peak_committed_usage_bytes Jvm g1-eden-space Peak Committed Usage Bytes
+# TYPE impala_jvm_g1_eden_space_peak_committed_usage_bytes gauge
+impala_jvm_g1_eden_space_peak_committed_usage_bytes 2701131776
+# HELP impala_jvm_heap_peak_current_usage_bytes Jvm heap Peak Current Usage Bytes
+# TYPE impala_jvm_heap_peak_current_usage_bytes gauge
+impala_jvm_heap_peak_current_usage_bytes 0
+# HELP impala_jvm_codeheap_'profiled_nmethods'_max_usage_bytes Jvm codeheap-'profiled-nmethods' Max Usage Bytes
+# TYPE impala_jvm_codeheap_'profiled_nmethods'_max_usage_bytes gauge
+impala_jvm_codeheap_'profiled_nmethods'_max_usage_bytes 122908672
+# HELP impala_jvm_g1_eden_space_peak_init_usage_bytes Jvm g1-eden-space Peak Init Usage Bytes
+# TYPE impala_jvm_g1_eden_space_peak_init_usage_bytes gauge
+impala_jvm_g1_eden_space_peak_init_usage_bytes 226492416
+# HELP impala_jvm_codeheap_'non_nmethods'_peak_init_usage_bytes Jvm codeheap-'non-nmethods' Peak Init Usage Bytes
+# TYPE impala_jvm_codeheap_'non_nmethods'_peak_init_usage_bytes gauge
+impala_jvm_codeheap_'non_nmethods'_peak_init_usage_bytes 2555904
+# HELP impala_jvm_g1_old_gen_peak_committed_usage_bytes Jvm g1-old-gen Peak Committed Usage Bytes
+# TYPE impala_jvm_g1_old_gen_peak_committed_usage_bytes gauge
+impala_jvm_g1_old_gen_peak_committed_usage_bytes 4068474880
+# HELP impala_jvm_g1_old_gen_current_usage_bytes Jvm g1-old-gen Current Usage Bytes
+# TYPE impala_jvm_g1_old_gen_current_usage_bytes gauge
+impala_jvm_g1_old_gen_current_usage_bytes 74736192
+# HELP impala_jvm_g1_old_gen_committed_usage_bytes Jvm g1-old-gen Committed Usage Bytes
+# TYPE impala_jvm_g1_old_gen_committed_usage_bytes gauge
+impala_jvm_g1_old_gen_committed_usage_bytes 1589641216
+# HELP impala_jvm_total_max_usage_bytes Jvm total Max Usage Bytes
+# TYPE impala_jvm_total_max_usage_bytes gauge
+impala_jvm_total_max_usage_bytes 5620367357
+# HELP impala_jvm_g1_eden_space_peak_current_usage_bytes Jvm g1-eden-space Peak Current Usage Bytes
+# TYPE impala_jvm_g1_eden_space_peak_current_usage_bytes gauge
+impala_jvm_g1_eden_space_peak_current_usage_bytes 2571108352
+# HELP impala_jvm_g1_old_gen_peak_current_usage_bytes Jvm g1-old-gen Peak Current Usage Bytes
+# TYPE impala_jvm_g1_old_gen_peak_current_usage_bytes gauge
+impala_jvm_g1_old_gen_peak_current_usage_bytes 74892048
+# HELP impala_jvm_g1_survivor_space_max_usage_bytes Jvm g1-survivor-space Max Usage Bytes
+# TYPE impala_jvm_g1_survivor_space_max_usage_bytes gauge
+impala_jvm_g1_survivor_space_max_usage_bytes -1
+# HELP impala_jvm_g1_survivor_space_committed_usage_bytes Jvm g1-survivor-space Committed Usage Bytes
+# TYPE impala_jvm_g1_survivor_space_committed_usage_bytes gauge
+impala_jvm_g1_survivor_space_committed_usage_bytes 4194304
+# HELP impala_memory_rss Resident set size (RSS) of this process, including TCMalloc, buffer pool and Jvm.
+# TYPE impala_memory_rss gauge
+impala_memory_rss 3106103296
+# HELP impala_memory_mapped_bytes Total bytes of memory mappings in this process (the virtual memory size).
+# TYPE impala_memory_mapped_bytes gauge
+impala_memory_mapped_bytes 10752647168
+# HELP impala_memory_total_used Total memory currently used by TCMalloc and buffer pool.
+# TYPE impala_memory_total_used gauge
+impala_memory_total_used 138174464
+# HELP impala_admission_controller_pool_max_query_cpu_core_per_node_limit_root_admin Resource Pool root.admin Max Query CPU Core Per Node Limit
+# TYPE impala_admission_controller_pool_max_query_cpu_core_per_node_limit_root_admin gauge
+impala_admission_controller_pool_max_query_cpu_core_per_node_limit_root_admin 0
+# HELP impala_admission_controller_pool_min_query_mem_limit_root_admin Resource Pool root.admin Min Query Memory Limit
+# TYPE impala_admission_controller_pool_min_query_mem_limit_root_admin gauge
+impala_admission_controller_pool_min_query_mem_limit_root_admin 0
+# HELP impala_admission_controller_pool_queue_timeout_root_admin Resource Pool root.admin Queue Timeout
+# TYPE impala_admission_controller_pool_queue_timeout_root_admin gauge
+impala_admission_controller_pool_queue_timeout_root_admin 0
+# HELP impala_admission_controller_pool_max_queued_root_admin Resource Pool root.admin Configured Max Queued
+# TYPE impala_admission_controller_pool_max_queued_root_admin gauge
+impala_admission_controller_pool_max_queued_root_admin 0
+# HELP impala_admission_controller_pool_max_requests_root_admin Resource Pool root.admin Configured Max Requests
+# TYPE impala_admission_controller_pool_max_requests_root_admin gauge
+impala_admission_controller_pool_max_requests_root_admin 0
+# HELP impala_admission_controller_pool_max_query_mem_limit_root_admin Resource Pool root.admin Max Query Memory Limit
+# TYPE impala_admission_controller_pool_max_query_mem_limit_root_admin gauge
+impala_admission_controller_pool_max_query_mem_limit_root_admin 0
+# HELP impala_admission_controller_pool_max_mem_resources_root_admin Resource Pool root.admin Configured Max Mem Resources
+# TYPE impala_admission_controller_pool_max_mem_resources_root_admin gauge
+impala_admission_controller_pool_max_mem_resources_root_admin 0
+# HELP impala_admission_controller_local_backend_mem_reserved_root_admin Resource Pool root.admin Mem Reserved by the backend coordinator
+# TYPE impala_admission_controller_local_backend_mem_reserved_root_admin gauge
+impala_admission_controller_local_backend_mem_reserved_root_admin 0
+# HELP impala_admission_controller_executor_group_num_queries_executing_default Total number of queries admitted on this coordinator running on executor group: default
+# TYPE impala_admission_controller_executor_group_num_queries_executing_default gauge
+impala_admission_controller_executor_group_num_queries_executing_default 0
+# HELP impala_admission_controller_total_admitted_root_admin Total number of requests admitted to pool root.admin
+# TYPE impala_admission_controller_total_admitted_root_admin counter
+impala_admission_controller_total_admitted_root_admin 0
+# HELP impala_admission_controller_local_num_queued_root_admin Resource Pool root.admin Queue Size on the coordinator
+# TYPE impala_admission_controller_local_num_queued_root_admin gauge
+impala_admission_controller_local_num_queued_root_admin 0
+# HELP impala_admission_controller_local_num_admitted_running_root_admin Resource Pool root.admin Coordinator Backend Num Running
+# TYPE impala_admission_controller_local_num_admitted_running_root_admin gauge
+impala_admission_controller_local_num_admitted_running_root_admin 0
+# HELP impala_admission_controller_total_queued_root_admin Total number of requests queued in pool root.admin
+# TYPE impala_admission_controller_total_queued_root_admin counter
+impala_admission_controller_total_queued_root_admin 0
+# HELP impala_admission_controller_local_backend_mem_usage_root_admin Resource Pool root.admin Coordinator Backend Mem Usage
+# TYPE impala_admission_controller_local_backend_mem_usage_root_admin gauge
+impala_admission_controller_local_backend_mem_usage_root_admin 0
+# HELP impala_admission_controller_total_dequeued_root_admin Total number of requests dequeued in pool root.admin
+# TYPE impala_admission_controller_total_dequeued_root_admin counter
+impala_admission_controller_total_dequeued_root_admin 0
+# HELP impala_admission_controller_total_dequeue_failed_coordinator_limited The number of times queries cannot be dequeued because of a resource limit on the coordinator.
+# TYPE impala_admission_controller_total_dequeue_failed_coordinator_limited counter
+impala_admission_controller_total_dequeue_failed_coordinator_limited 0
+# HELP impala_admission_controller_total_timed_out_root_admin Total number of requests timed out waiting while queued in pool root.admin
+# TYPE impala_admission_controller_total_timed_out_root_admin counter
+impala_admission_controller_total_timed_out_root_admin 0
+# HELP impala_admission_controller_agg_num_queued_root_admin Resource Pool root.admin Aggregate Queue Size
+# TYPE impala_admission_controller_agg_num_queued_root_admin gauge
+impala_admission_controller_agg_num_queued_root_admin 0
+# HELP impala_admission_controller_total_released_root_admin Total number of requests that have completed and released resources in pool root.admin
+# TYPE impala_admission_controller_total_released_root_admin counter
+impala_admission_controller_total_released_root_admin 0
+# HELP impala_admission_controller_time_in_queue_ms_root_admin Resource Pool root.admin Time in Queue
+# TYPE impala_admission_controller_time_in_queue_ms_root_admin counter
+impala_admission_controller_time_in_queue_ms_root_admin 0
+# HELP impala_admission_controller_pool_max_query_cpu_core_coordinator_limit_root_admin Resource Pool root.admin Max Query CPU Core Coordinator Limit
+# TYPE impala_admission_controller_pool_max_query_cpu_core_coordinator_limit_root_admin gauge
+impala_admission_controller_pool_max_query_cpu_core_coordinator_limit_root_admin 0
+# HELP impala_admission_controller_agg_mem_reserved_root_admin Resource Pool root.admin Aggregate Mem Reserved
+# TYPE impala_admission_controller_agg_mem_reserved_root_admin gauge
+impala_admission_controller_agg_mem_reserved_root_admin 0
+# HELP impala_admission_controller_total_rejected_root_admin Total number of requests rejected in pool root.admin
+# TYPE impala_admission_controller_total_rejected_root_admin counter
+impala_admission_controller_total_rejected_root_admin 0
+# HELP impala_admission_controller_local_mem_admitted_root_admin Resource Pool root.admin Local Mem Admitted
+# TYPE impala_admission_controller_local_mem_admitted_root_admin gauge
+impala_admission_controller_local_mem_admitted_root_admin 0
+# HELP impala_admission_controller_agg_num_running_root_admin Resource Pool root.admin Aggregate Num Running
+# TYPE impala_admission_controller_agg_num_running_root_admin gauge
+impala_admission_controller_agg_num_running_root_admin 0
+# HELP impala_cluster_membership_executor_groups_total_healthy Total number of executor groups that are in a healthy state, that is, have at least the configured minimum number of executors to be considered for admission
+# TYPE impala_cluster_membership_executor_groups_total_healthy counter
+impala_cluster_membership_executor_groups_total_healthy 1
+# HELP impala_cluster_membership_backends_total Total number of backends (both coordinators and executors) registered with the statestore
+# TYPE impala_cluster_membership_backends_total counter
+impala_cluster_membership_backends_total 3
+# HELP impala_cluster_membership_executor_groups_total Total number of executor groups that have at least one executor
+# TYPE impala_cluster_membership_executor_groups_total counter
+impala_cluster_membership_executor_groups_total 1
+# HELP impala_simple_scheduler_local_assignments_total Number of assignments operating on local data
+# TYPE impala_simple_scheduler_local_assignments_total counter
+impala_simple_scheduler_local_assignments_total 0
+# HELP impala_simple_scheduler_assignments_total The number of assignments
+# TYPE impala_simple_scheduler_assignments_total counter
+impala_simple_scheduler_assignments_total 0
+# HELP impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration
+# TYPE impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration summary
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration{quantile="0.2"} 1e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration{quantile="0.5"} 1.1e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration{quantile="0.7"} 1.2e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration{quantile="0.9"} 1.3e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration{quantile="0.95"} 1.4e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration{quantile="0.999"} 3.1e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration_count 7797346
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_read_duration_sum 84.2702
+# HELP impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration
+# TYPE impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration summary
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration{quantile="0.2"} 4e-06
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration{quantile="0.5"} 5e-06
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration{quantile="0.7"} 5e-06
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration{quantile="0.9"} 5e-06
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration{quantile="0.95"} 6e-06
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration{quantile="0.999"} 2e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration_count 746340
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_read_duration_sum 3.46897
+# HELP impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration
+# TYPE impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration summary
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration{quantile="0.2"} 4.4e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration{quantile="0.5"} 4.9e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration{quantile="0.7"} 5.4e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration{quantile="0.9"} 6e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration{quantile="0.95"} 6.5e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration{quantile="0.999"} 0.000106
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration_count 746340
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_call_duration_sum 37.2658
+# HELP impala_statestore_subscriber_topic_catalog_update_update_interval Interval between topic updates for Topic catalog-update
+# TYPE impala_statestore_subscriber_topic_catalog_update_update_interval counter
+impala_statestore_subscriber_topic_catalog_update_update_interval_total 373247
+impala_statestore_subscriber_topic_catalog_update_update_interval_last 1.99913
+impala_statestore_subscriber_topic_catalog_update_update_interval_min 0.00600038
+impala_statestore_subscriber_topic_catalog_update_update_interval_max 15.087
+impala_statestore_subscriber_topic_catalog_update_update_interval_mean 2.00059
+impala_statestore_subscriber_topic_catalog_update_update_interval_stddev 0.0241998
+
+# HELP impala_statestore_subscriber_topic_impala_request_queue_update_interval Interval between topic updates for Topic impala-request-queue
+# TYPE impala_statestore_subscriber_topic_impala_request_queue_update_interval counter
+impala_statestore_subscriber_topic_impala_request_queue_update_interval_total 7424099
+impala_statestore_subscriber_topic_impala_request_queue_update_interval_last 0.100006
+impala_statestore_subscriber_topic_impala_request_queue_update_interval_min 0.0980061
+impala_statestore_subscriber_topic_impala_request_queue_update_interval_max 26.4817
+impala_statestore_subscriber_topic_impala_request_queue_update_interval_mean 0.100552
+impala_statestore_subscriber_topic_impala_request_queue_update_interval_stddev 0.0097059
+
+# HELP impala_statestore_subscriber_topic_impala_request_queue_processing_time_s Statestore Subscriber Topic impala-request-queue Processing Time
+# TYPE impala_statestore_subscriber_topic_impala_request_queue_processing_time_s counter
+impala_statestore_subscriber_topic_impala_request_queue_processing_time_s_total 7424099
+impala_statestore_subscriber_topic_impala_request_queue_processing_time_s_last 0.00100006
+impala_statestore_subscriber_topic_impala_request_queue_processing_time_s_min 0
+impala_statestore_subscriber_topic_impala_request_queue_processing_time_s_max 0.0330021
+impala_statestore_subscriber_topic_impala_request_queue_processing_time_s_mean 3.14724e-05
+impala_statestore_subscriber_topic_impala_request_queue_processing_time_s_stddev 0.000176499
+
+# HELP impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration
+# TYPE impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration summary
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration{quantile="0.2"} 2.7e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration{quantile="0.5"} 3e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration{quantile="0.7"} 3.5e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration{quantile="0.9"} 4.2e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration{quantile="0.95"} 4.7e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration{quantile="0.999"} 7.8e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration_count 7797346
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_write_duration_sum 249.886
+# HELP impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration
+# TYPE impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration summary
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration{quantile="0.2"} 8.7e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration{quantile="0.5"} 9.4e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration{quantile="0.7"} 0.000105
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration{quantile="0.9"} 0.000118
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration{quantile="0.95"} 0.000127
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration{quantile="0.999"} 0.000186
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration_count 7797346
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_UpdateState_call_duration_sum 761.677
+# HELP impala_statestore_subscriber_num_connection_failures Number of times that the Daemon detected a loss of connectivity to the StateStore.
+# TYPE impala_statestore_subscriber_num_connection_failures counter
+impala_statestore_subscriber_num_connection_failures 0
+# HELP impala_statestore_subscriber_last_recovery_duration The amount of time the StateStore subscriber took to recover the connection the last time it was lost.
+# TYPE impala_statestore_subscriber_last_recovery_duration gauge
+impala_statestore_subscriber_last_recovery_duration 0
+# HELP impala_statestore_subscriber_topic_update_duration The time (sec) taken to process Statestore subscriber topic updates.
+# TYPE impala_statestore_subscriber_topic_update_duration counter
+impala_statestore_subscriber_topic_update_duration_total 7797346
+impala_statestore_subscriber_topic_update_duration_last 0.00100006
+impala_statestore_subscriber_topic_update_duration_min 0
+impala_statestore_subscriber_topic_update_duration_max 0.0760049
+impala_statestore_subscriber_topic_update_duration_mean 3.4537e-05
+impala_statestore_subscriber_topic_update_duration_stddev 0.000187016
+
+# HELP impala_statestore_subscriber_topic_impala_membership_update_interval Interval between topic updates for Topic impala-membership
+# TYPE impala_statestore_subscriber_topic_impala_membership_update_interval counter
+impala_statestore_subscriber_topic_impala_membership_update_interval_total 7424099
+impala_statestore_subscriber_topic_impala_membership_update_interval_last 0.100006
+impala_statestore_subscriber_topic_impala_membership_update_interval_min 0.0980061
+impala_statestore_subscriber_topic_impala_membership_update_interval_max 26.4817
+impala_statestore_subscriber_topic_impala_membership_update_interval_mean 0.100552
+impala_statestore_subscriber_topic_impala_membership_update_interval_stddev 0.00970591
+
+# HELP impala_statestore_subscriber_topic_update_interval_time The time (sec) between Statestore subscriber topic updates.
+# TYPE impala_statestore_subscriber_topic_update_interval_time counter
+impala_statestore_subscriber_topic_update_interval_time_total 15221445
+impala_statestore_subscriber_topic_update_interval_time_last 0.100006
+impala_statestore_subscriber_topic_update_interval_time_min 0.00600038
+impala_statestore_subscriber_topic_update_interval_time_max 26.4817
+impala_statestore_subscriber_topic_update_interval_time_mean 0.147143
+impala_statestore_subscriber_topic_update_interval_time_stddev 0.294042
+
+# HELP impala_statestore_subscriber_num_update_catalogd_rpc The number of RPCs received for updating catalogd.
+# TYPE impala_statestore_subscriber_num_update_catalogd_rpc counter
+impala_statestore_subscriber_num_update_catalogd_rpc 0
+# HELP impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration
+# TYPE impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration summary
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration{quantile="0.2"} 2.7e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration{quantile="0.5"} 3e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration{quantile="0.7"} 3.5e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration{quantile="0.9"} 4e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration{quantile="0.95"} 4.4e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration{quantile="0.999"} 8.1e-05
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration_count 746340
+impala_rpc_method_statestore_subscriber_StatestoreSubscriber_Heartbeat_write_duration_sum 23.6445
+# HELP impala_statestore_subscriber_num_re_register_attempt The number of Re-Registration Attempt.
+# TYPE impala_statestore_subscriber_num_re_register_attempt counter
+impala_statestore_subscriber_num_re_register_attempt 0
+# HELP impala_statestore_subscriber_topic_catalog_update_processing_time_s Statestore Subscriber Topic catalog-update Processing Time
+# TYPE impala_statestore_subscriber_topic_catalog_update_processing_time_s counter
+impala_statestore_subscriber_topic_catalog_update_processing_time_s_total 373247
+impala_statestore_subscriber_topic_catalog_update_processing_time_s_last 0
+impala_statestore_subscriber_topic_catalog_update_processing_time_s_min 0
+impala_statestore_subscriber_topic_catalog_update_processing_time_s_max 0.0760049
+impala_statestore_subscriber_topic_catalog_update_processing_time_s_mean 7.77444e-05
+impala_statestore_subscriber_topic_catalog_update_processing_time_s_stddev 0.000303191
+
+# HELP impala_statestore_subscriber_heartbeat_interval_time The time (sec) between Statestore heartbeats.
+# TYPE impala_statestore_subscriber_heartbeat_interval_time counter
+impala_statestore_subscriber_heartbeat_interval_time_total 746340
+impala_statestore_subscriber_heartbeat_interval_time_last 1.00106
+impala_statestore_subscriber_heartbeat_interval_time_min 0.00200013
+impala_statestore_subscriber_heartbeat_interval_time_max 10.1196
+impala_statestore_subscriber_heartbeat_interval_time_mean 1.00054
+impala_statestore_subscriber_heartbeat_interval_time_stddev 0.0141539
+
+# HELP impala_statestore_subscriber_topic_impala_membership_processing_time_s Statestore Subscriber Topic impala-membership Processing Time
+# TYPE impala_statestore_subscriber_topic_impala_membership_processing_time_s counter
+impala_statestore_subscriber_topic_impala_membership_processing_time_s_total 7424099
+impala_statestore_subscriber_topic_impala_membership_processing_time_s_last 0
+impala_statestore_subscriber_topic_impala_membership_processing_time_s_min 0
+impala_statestore_subscriber_topic_impala_membership_processing_time_s_max 0.0330021
+impala_statestore_subscriber_topic_impala_membership_processing_time_s_mean 4.799e-06
+impala_statestore_subscriber_topic_impala_membership_processing_time_s_stddev 7.03873e-05
+
+# HELP impala_total_senders_timedout_waiting_for_recvr_creation Total number of senders that timed-out waiting for receiving fragment to initialize.
+# TYPE impala_total_senders_timedout_waiting_for_recvr_creation counter
+impala_total_senders_timedout_waiting_for_recvr_creation 0
+# HELP impala_total_senders_blocked_on_recvr_creation Total number of senders that have been blocked waiting for receiving fragment to initialize.
+# TYPE impala_total_senders_blocked_on_recvr_creation counter
+impala_total_senders_blocked_on_recvr_creation 0
+# HELP impala_senders_blocked_on_recvr_creation Number of senders waiting for receiving fragment to initialize
+# TYPE impala_senders_blocked_on_recvr_creation gauge
+impala_senders_blocked_on_recvr_creation 0
+# HELP impala_rpc_impala_DataStreamService_rpcs_queue_overflow Service impala.DataStreamService: Total number of incoming RPCs that were rejected due to overflow of the service queue.
+# TYPE impala_rpc_impala_DataStreamService_rpcs_queue_overflow counter
+impala_rpc_impala_DataStreamService_rpcs_queue_overflow 0
+# HELP impala_mem_tracker_DataStreamService_peak_usage_bytes Memtracker DataStreamService Peak Usage Bytes
+# TYPE impala_mem_tracker_DataStreamService_peak_usage_bytes gauge
+impala_mem_tracker_DataStreamService_peak_usage_bytes 0
+# HELP impala_mem_tracker_DataStreamService_current_usage_bytes Memtracker DataStreamService Current Usage Bytes
+# TYPE impala_mem_tracker_DataStreamService_current_usage_bytes gauge
+impala_mem_tracker_DataStreamService_current_usage_bytes 0
+# HELP impala_rpc_impala_ControlService_rpcs_queue_overflow Service impala.ControlService: Total number of incoming RPCs that were rejected due to overflow of the service queue.
+# TYPE impala_rpc_impala_ControlService_rpcs_queue_overflow counter
+impala_rpc_impala_ControlService_rpcs_queue_overflow 0
+# HELP impala_mem_tracker_ControlService_peak_usage_bytes Memtracker ControlService Peak Usage Bytes
+# TYPE impala_mem_tracker_ControlService_peak_usage_bytes gauge
+impala_mem_tracker_ControlService_peak_usage_bytes 8307
+# HELP impala_mem_tracker_ControlService_current_usage_bytes Memtracker ControlService Current Usage Bytes
+# TYPE impala_mem_tracker_ControlService_current_usage_bytes gauge
+impala_mem_tracker_ControlService_current_usage_bytes 0
