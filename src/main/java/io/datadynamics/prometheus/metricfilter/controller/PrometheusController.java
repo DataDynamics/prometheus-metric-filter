@@ -2,6 +2,7 @@ package io.datadynamics.prometheus.metricfilter.controller;
 
 import com.google.common.base.Joiner;
 import io.datadynamics.prometheus.metricfilter.Patterns;
+import io.datadynamics.prometheus.metricfilter.util.ImpalaUtils;
 import io.micrometer.common.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import static io.micrometer.common.util.StringUtils.isEmpty;
@@ -84,6 +87,12 @@ public class PrometheusController {
 
             return ResponseEntity.ok(Joiner.on("\n").join(metrics));
         }
+    }
+
+    @GetMapping("/coordinator")
+    ResponseEntity<Map> getQueryMetrics(@RequestParam(name = "URL", required = true) String url) throws IOException {
+        Map status = ImpalaUtils.getRunning(url);
+        return ResponseEntity.ok(status);
     }
 
 }
