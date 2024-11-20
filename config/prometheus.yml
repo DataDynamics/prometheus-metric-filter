@@ -1,0 +1,81 @@
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+# - "first_rules.yml"
+# - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+
+scrape_configs:
+
+  - job_name: "kudu-exporter"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["localhost:9055"]
+
+  - job_name: "kudu-master-1"
+    metrics_path: /metrics
+    scrape_interval: 5s
+    params:
+      url: ["http://hdu4.datalake.net:8051/metrics_prometheus"]
+      name: ["kudu_tserver_clock_ntp_status,kudu_master_clock_ntp_status"]
+    static_configs:
+      - targets: ["nifi1.datalake.net:9091"]
+
+  - job_name: "kudu-master-2"
+    metrics_path: /metrics
+    scrape_interval: 5s
+    params:
+      url: ["http://hdu5.datalake.net:8051/metrics_prometheus"]
+      name: ["kudu_tserver_clock_ntp_status,kudu_master_clock_ntp_status"]
+    static_configs:
+      - targets: ["nifi1.datalake.net:9091"]
+
+  - job_name: "kudu-master-3"
+    metrics_path: /metrics
+    scrape_interval: 5s
+    params:
+      url: ["http://hdu6.datalake.net:8051/metrics_prometheus"]
+      name: ["kudu_tserver_clock_ntp_status,kudu_master_clock_ntp_status"]
+    static_configs:
+      - targets: ["nifi1.datalake.net:9091"]
+
+  - job_name: "kudu-worker-1"
+    metrics_path: /metrics
+    scrape_interval: 5s
+    params:
+      url: ["http://hdw1.datalake.net:8050/metrics_prometheus"]
+      name: ["kudu_tserver_clock_ntp_status,kudu_master_clock_ntp_status"]
+    static_configs:
+      - targets: ["nifi1.datalake.net:9091"]
+
+  - job_name: "kudu-worker-2"
+    metrics_path: /metrics
+    scrape_interval: 5s
+    params:
+      url: ["http://hdw2.datalake.net:8050/metrics_prometheus"]
+      name: ["kudu_tserver_clock_ntp_status,kudu_master_clock_ntp_status"]
+    static_configs:
+      - targets: ["nifi1.datalake.net:9091"]
+
+  - job_name: "kudu-worker-3"
+    metrics_path: /metrics
+    scrape_interval: 5s
+    params:
+      url: ["http://hdw3.datalake.net:8050/metrics_prometheus"]
+      name: ["kudu_tserver_clock_ntp_status,kudu_master_clock_ntp_status"]
+    static_configs:
+      - targets: ["nifi1.datalake.net:9091"]
