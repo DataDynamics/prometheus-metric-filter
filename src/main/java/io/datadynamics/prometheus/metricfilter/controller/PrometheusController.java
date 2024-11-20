@@ -58,10 +58,10 @@ public class PrometheusController {
         );
 
         String body = response.getBody();
-        String[] names = org.apache.commons.lang3.StringUtils.splitPreserveAllTokens(name);
         if (StringUtils.isEmpty(name)) {
             return ResponseEntity.ok(body);
         } else {
+            String[] names = org.apache.commons.lang3.StringUtils.splitPreserveAllTokens(name);
             List<String> metrics = new ArrayList<>();
             Scanner scanner = new Scanner(body);
             while (scanner.hasNextLine()) {
@@ -70,12 +70,13 @@ public class PrometheusController {
 
                 // metric name이 속해 있는지 확인한 후에 필터링 한다.
                 for (String n : names) {
+                    log.info("검증할 Name : {}, LINE : {}", n, line);
                     String trimmedName = n.trim();
-                    if ((!StringUtils.isEmpty(trimmedName)) && line.startsWith(String.format(Patterns.METRIC_HELP, trimmedName)) ||
+                    if ((!StringUtils.isEmpty(trimmedName)) && (line.startsWith(String.format(Patterns.METRIC_HELP, trimmedName)) ||
                             line.startsWith(String.format(Patterns.METRIC_TYPE, trimmedName)) ||
-                            line.startsWith(String.format(Patterns.METRIC_NAME, trimmedName))
+                            line.startsWith(String.format(Patterns.METRIC_NAME, trimmedName)))
                     ) {
-                        log.debug("Filter: {}", line);
+                        log.debug("Filtered: {}", line);
 
                         isFilter = true;
                         break;
