@@ -31,7 +31,8 @@ public class PrometheusController {
     RestTemplate restTemplate;
 
     @GetMapping
-    ResponseEntity<String> getMetrics(@RequestParam(name = "URL", required = true) String url, @RequestParam(name = "Metric's Name", required = true) String name) {
+    ResponseEntity<String> getMetrics(@RequestParam(name = "URL", required = true) String url,
+                                      @RequestParam(name = "Metric's Name", required = true) String name) {
         Assert.notNull(url, "URL은 필수값입니다.");
         if (isEmpty(name)) {
             return ResponseEntity.badRequest().body("name 옵션을 지정하십시오.");
