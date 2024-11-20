@@ -35,8 +35,8 @@ public class PrometheusController {
     RestTemplate restTemplate;
 
     @GetMapping
-    ResponseEntity<String> getMetrics(@RequestParam(required = true) String url,
-                                      @RequestParam(required = true) String name) {
+    ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url,
+                                      @RequestParam(name = "name", required = true) String name) {
 
         Assert.notNull(url, "URL은 필수값입니다.");
 
