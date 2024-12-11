@@ -2,9 +2,10 @@ package io.datadynamics.prometheus.metricfilter.controller;
 
 import com.google.common.base.Joiner;
 import io.datadynamics.prometheus.metricfilter.Patterns;
-import io.datadynamics.prometheus.metricfilter.util.ImpalaUtils;
 import io.micrometer.common.util.StringUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -17,19 +18,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.IOException;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 import static io.micrometer.common.util.StringUtils.isEmpty;
 
-@Slf4j
 @RestController
-@RequestMapping("/metrics")
-public class PrometheusController {
+@RequestMapping("/metrics/kudu")
+public class KuduController {
+
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     RestTemplate restTemplate;
@@ -93,20 +92,4 @@ public class PrometheusController {
             return ResponseEntity.ok(Joiner.on("\n").join(metrics));
         }
     }
-
-    @GetMapping(value = "/coordinator", produces = "text/plain")
-    ResponseEntity<String> getQueryMetrics(@RequestParam(name = "url", required = true) String url) throws IOException {
-        Map status = ImpalaUtils.getRunning(url);
-        List<String> metrics = new ArrayList();
-        metrics.add(String.format("# HELP impala_wait_to_close_query_count Number of Query to wait to close"));
-        metrics.add(String.format("# TYPE impala_wait_to_close_query_count counter"));
-        metrics.add(String.format("impala_wait_to_close_query_count{host=\"%s\"} %s", url, status.get("waitToClose")));
-
-        metrics.add(String.format("# HELP impala_running_query_count Number of Running Query"));
-        metrics.add(String.format("# TYPE impala_running_query_count counter"));
-        metrics.add(String.format("impala_running_query_count{host=\"%s\"} %s", url, status.get("running")));
-
-        return ResponseEntity.ok(Joiner.on("\n").join(metrics));
-    }
-
 }
