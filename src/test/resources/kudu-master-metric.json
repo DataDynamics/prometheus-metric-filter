@@ -1,0 +1,1857 @@
+[
+  {
+    "type": "tablet",
+    "id": "00000000000000000000000000000000",
+    "attributes": {
+      "partition": "RANGE (entry_type, entry_id) PARTITION UNBOUNDED",
+      "table_id": "sys.catalog.id",
+      "table_name": "sys.catalog"
+    },
+    "metrics": [
+      {
+        "name": "log_gc_running",
+        "value": 0
+      },
+      {
+        "name": "ops_behind_leader",
+        "value": 0
+      },
+      {
+        "name": "in_progress_ops",
+        "value": 0
+      },
+      {
+        "name": "log_cache_size",
+        "value": 2088
+      },
+      {
+        "name": "live_row_count",
+        "value": 2034
+      },
+      {
+        "name": "state",
+        "value": "RUNNING"
+      },
+      {
+        "name": "on_disk_size",
+        "value": 9273320
+      },
+      {
+        "name": "write_op_duration_client_propagated_consistency",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "commit_wait_duration",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "key_file_lookups_per_op",
+        "total_count": 252,
+        "min": 0,
+        "mean": 1.9603174603174603,
+        "percentile_75": 2,
+        "percentile_95": 2,
+        "percentile_99": 2,
+        "percentile_99_9": 2,
+        "percentile_99_99": 2,
+        "max": 2,
+        "total_sum": 494
+      },
+      {
+        "name": "undo_delta_block_gc_bytes_deleted",
+        "value": 825
+      },
+      {
+        "name": "deleted_rowset_gc_bytes_deleted",
+        "value": 0
+      },
+      {
+        "name": "bytes_flushed",
+        "value": 4307993
+      },
+      {
+        "name": "mrs_lookups",
+        "value": 0
+      },
+      {
+        "name": "delta_file_lookups",
+        "value": 0
+      },
+      {
+        "name": "compact_rs_running",
+        "value": 0
+      },
+      {
+        "name": "key_file_lookups",
+        "value": 494
+      },
+      {
+        "name": "compact_rs_mem_usage_to_deltas_size_ratio",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "flush_mrs_running",
+        "value": 0
+      },
+      {
+        "name": "bloom_lookups",
+        "value": 499
+      },
+      {
+        "name": "flush_dms_running",
+        "value": 0
+      },
+      {
+        "name": "tablet_active_scanners",
+        "value": 0
+      },
+      {
+        "name": "last_write_elapsed_time",
+        "value": 21632
+      },
+      {
+        "name": "snapshot_read_inflight_wait_duration",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "scans_started",
+        "value": 14597
+      },
+      {
+        "name": "undo_delta_block_gc_perform_duration",
+        "total_count": 13,
+        "min": 0,
+        "mean": 0.38461538461538466,
+        "percentile_75": 1,
+        "percentile_95": 1,
+        "percentile_99": 1,
+        "percentile_99_9": 1,
+        "percentile_99_99": 1,
+        "max": 1,
+        "total_sum": 5
+      },
+      {
+        "name": "last_read_elapsed_time",
+        "value": 447938
+      },
+      {
+        "name": "scanner_predicates_disabled",
+        "value": 0
+      },
+      {
+        "name": "upsert_ignore_errors",
+        "value": 0
+      },
+      {
+        "name": "raft_term",
+        "value": 59
+      },
+      {
+        "name": "undo_delta_block_estimated_retained_bytes",
+        "value": 0
+      },
+      {
+        "name": "log_sync_latency",
+        "total_count": 9082,
+        "min": 0,
+        "mean": 0.15965646333406739,
+        "percentile_75": 0,
+        "percentile_95": 1,
+        "percentile_99": 2,
+        "percentile_99_9": 6,
+        "percentile_99_99": 32,
+        "max": 34,
+        "total_sum": 1450
+      },
+      {
+        "name": "all_transactions_inflight",
+        "value": 0
+      },
+      {
+        "name": "insert_ignore_errors",
+        "value": 0
+      },
+      {
+        "name": "delta_major_compact_rs_running",
+        "value": 0
+      },
+      {
+        "name": "rows_deleted",
+        "value": 60
+      },
+      {
+        "name": "log_group_commit_latency",
+        "total_count": 393,
+        "min": 6,
+        "mean": 113.44783715012723,
+        "percentile_75": 122,
+        "percentile_95": 159,
+        "percentile_99": 508,
+        "percentile_99_9": 7296,
+        "percentile_99_99": 7296,
+        "max": 7318,
+        "total_sum": 44585
+      },
+      {
+        "name": "transaction_memory_pressure_rejections",
+        "value": 0
+      },
+      {
+        "name": "rows_updated",
+        "value": 187
+      },
+      {
+        "name": "failed_elections_since_stable_leader",
+        "value": 0
+      },
+      {
+        "name": "deleted_rowset_gc_running",
+        "value": 0
+      },
+      {
+        "name": "write_transactions_inflight",
+        "value": 0
+      },
+      {
+        "name": "rows_inserted",
+        "value": 5
+      },
+      {
+        "name": "delta_minor_compact_rs_running",
+        "value": 0
+      },
+      {
+        "name": "rows_upserted",
+        "value": 0
+      },
+      {
+        "name": "follower_memory_pressure_rejections",
+        "value": 0
+      },
+      {
+        "name": "undo_delta_block_gc_running",
+        "value": 0
+      },
+      {
+        "name": "update_ignore_errors",
+        "value": 0
+      },
+      {
+        "name": "time_since_last_leader_heartbeat",
+        "value": 54
+      },
+      {
+        "name": "deleted_rowset_estimated_retained_bytes",
+        "value": 0
+      },
+      {
+        "name": "delete_ignore_errors",
+        "value": 0
+      },
+      {
+        "name": "transaction_memory_limit_rejections",
+        "value": 0
+      },
+      {
+        "name": "bloom_lookups_per_op",
+        "total_count": 252,
+        "min": 1,
+        "mean": 1.9801587301587303,
+        "percentile_75": 2,
+        "percentile_95": 2,
+        "percentile_99": 2,
+        "percentile_99_9": 2,
+        "percentile_99_99": 2,
+        "max": 2,
+        "total_sum": 499
+      },
+      {
+        "name": "insertions_failed_dup_key",
+        "value": 0
+      },
+      {
+        "name": "flush_mrs_duration",
+        "total_count": 5,
+        "min": 4,
+        "mean": 7.0,
+        "percentile_75": 10,
+        "percentile_95": 10,
+        "percentile_99": 10,
+        "percentile_99_9": 10,
+        "percentile_99_99": 10,
+        "max": 10,
+        "total_sum": 35
+      },
+      {
+        "name": "upserts_as_updates",
+        "value": 0
+      },
+      {
+        "name": "log_entry_batches_per_group",
+        "total_count": 393,
+        "min": 1,
+        "mean": 1.015267175572519,
+        "percentile_75": 1,
+        "percentile_95": 1,
+        "percentile_99": 2,
+        "percentile_99_9": 2,
+        "percentile_99_99": 2,
+        "max": 2,
+        "total_sum": 399
+      },
+      {
+        "name": "scanner_rows_returned",
+        "value": 0
+      },
+      {
+        "name": "delta_file_lookups_per_op",
+        "total_count": 252,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "scanner_cells_returned",
+        "value": 0
+      },
+      {
+        "name": "delta_minor_compact_rs_duration",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "scanner_bytes_returned",
+        "value": 0
+      },
+      {
+        "name": "write_op_duration_commit_wait_consistency",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "scanner_rows_scanned",
+        "value": 0
+      },
+      {
+        "name": "log_cache_num_ops",
+        "value": 1
+      },
+      {
+        "name": "undo_delta_block_gc_init_duration",
+        "total_count": 13,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "memrowset_size",
+        "value": 265
+      },
+      {
+        "name": "scanner_cells_scanned_from_disk",
+        "value": 0
+      },
+      {
+        "name": "on_disk_data_size",
+        "value": 783644
+      },
+      {
+        "name": "log_reader_read_batch_latency",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "scanner_bytes_scanned_from_disk",
+        "value": 0
+      },
+      {
+        "name": "num_rowsets_on_disk",
+        "value": 1
+      },
+      {
+        "name": "flush_dms_duration",
+        "total_count": 1,
+        "min": 3,
+        "mean": 3.0,
+        "percentile_75": 3,
+        "percentile_95": 3,
+        "percentile_99": 3,
+        "percentile_99_9": 3,
+        "percentile_99_99": 3,
+        "max": 3,
+        "total_sum": 3
+      },
+      {
+        "name": "alter_schema_transactions_inflight",
+        "value": 0
+      },
+      {
+        "name": "compact_rs_duration",
+        "total_count": 5,
+        "min": 10,
+        "mean": 10.8,
+        "percentile_75": 11,
+        "percentile_95": 11,
+        "percentile_99": 11,
+        "percentile_99_9": 11,
+        "percentile_99_99": 11,
+        "max": 11,
+        "total_sum": 54
+      },
+      {
+        "name": "deleted_rowset_gc_duration",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "delta_major_compact_rs_duration",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "log_gc_duration",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "log_reader_bytes_read",
+        "value": 0
+      },
+      {
+        "name": "undo_delta_block_gc_delete_duration",
+        "total_count": 5,
+        "min": 1,
+        "mean": 1.0,
+        "percentile_75": 1,
+        "percentile_95": 1,
+        "percentile_99": 1,
+        "percentile_99_9": 1,
+        "percentile_99_99": 1,
+        "max": 1,
+        "total_sum": 5
+      },
+      {
+        "name": "compact_rs_mem_usage",
+        "total_count": 5,
+        "min": 28,
+        "mean": 13370.4,
+        "percentile_75": 28,
+        "percentile_95": 59392,
+        "percentile_99": 59392,
+        "percentile_99_9": 59392,
+        "percentile_99_99": 59392,
+        "max": 66740,
+        "total_sum": 66852
+      },
+      {
+        "name": "average_diskrowset_height",
+        "value": 1.0,
+        "total_sum": 783644.0,
+        "total_count": 783644.0
+      },
+      {
+        "name": "majority_done_ops",
+        "value": 0
+      },
+      {
+        "name": "log_reader_entries_read",
+        "value": 0
+      },
+      {
+        "name": "log_bytes_logged",
+        "value": 4651379
+      },
+      {
+        "name": "log_append_latency",
+        "total_count": 9257,
+        "min": 0,
+        "mean": 8.023873825213352,
+        "percentile_75": 6,
+        "percentile_95": 18,
+        "percentile_99": 52,
+        "percentile_99_9": 79,
+        "percentile_99_99": 1760,
+        "max": 2599,
+        "total_sum": 74277
+      },
+      {
+        "name": "leader_memory_pressure_rejections",
+        "value": 0
+      },
+      {
+        "name": "log_roll_latency",
+        "total_count": 1,
+        "min": 446,
+        "mean": 446.0,
+        "percentile_75": 446,
+        "percentile_95": 446,
+        "percentile_99": 446,
+        "percentile_99_9": 446,
+        "percentile_99_99": 446,
+        "max": 446,
+        "total_sum": 446
+      },
+      {
+        "name": "op_prepare_queue_length",
+        "total_count": 192,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "op_prepare_queue_time",
+        "total_count": 192,
+        "min": 13,
+        "mean": 59.671875,
+        "percentile_75": 70,
+        "percentile_95": 124,
+        "percentile_99": 192,
+        "percentile_99_9": 648,
+        "percentile_99_99": 648,
+        "max": 649,
+        "total_sum": 11457
+      },
+      {
+        "name": "op_prepare_run_time",
+        "total_count": 192,
+        "min": 28,
+        "mean": 61.890625,
+        "percentile_75": 67,
+        "percentile_95": 81,
+        "percentile_99": 105,
+        "percentile_99_9": 203,
+        "percentile_99_99": 203,
+        "max": 203,
+        "total_sum": 11883
+      }
+    ]
+  },
+  {
+    "type": "server",
+    "id": "kudu.master",
+    "attributes": {
+      "hostname": "hdu5.datalake.net",
+      "uuid": "bb5fccb60c2644b6b08757a316b4abfa"
+    },
+    "metrics": [
+      {
+        "name": "queue_overflow_rejections_kudu_server_GenericService_SetServerWallClockForTests",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_AlterTable",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_tserver_TabletCopyService_CheckSessionActive",
+        "value": 0
+      },
+      {
+        "name": "maintenance_op_find_best_candidate_duration",
+        "total_count": 1790317,
+        "min": 24,
+        "mean": 85.03068730286313,
+        "percentile_75": 87,
+        "percentile_95": 104,
+        "percentile_99": 122,
+        "percentile_99_9": 185,
+        "percentile_99_99": 420,
+        "max": 3739,
+        "total_sum": 152231885
+      },
+      {
+        "name": "block_manager_total_blocks_created",
+        "value": 71
+      },
+      {
+        "name": "handler_latency_kudu_tserver_TabletCopyService_FetchData",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "num_raft_leaders",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_ListTabletServers",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "op_apply_run_time",
+        "total_count": 191,
+        "min": 74,
+        "mean": 135.2408376963351,
+        "percentile_75": 148,
+        "percentile_95": 195,
+        "percentile_99": 231,
+        "percentile_99_9": 616,
+        "percentile_99_99": 616,
+        "max": 617,
+        "total_sum": 25831
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_RunLeaderElection",
+        "value": 0
+      },
+      {
+        "name": "reactor_active_latency_us",
+        "total_count": 38686284,
+        "min": 0,
+        "mean": 8.767205813822802,
+        "percentile_75": 3,
+        "percentile_95": 72,
+        "percentile_99": 103,
+        "percentile_99_9": 208,
+        "percentile_99_99": 342,
+        "max": 1865,
+        "total_sum": 339170614
+      },
+      {
+        "name": "hybrid_clock_max_errors",
+        "total_count": 3794339,
+        "min": 4748,
+        "mean": 100765.2925558312,
+        "percentile_75": 139264,
+        "percentile_95": 245760,
+        "percentile_99": 360448,
+        "percentile_99_9": 393216,
+        "percentile_99_99": 409600,
+        "max": 422174,
+        "total_sum": 382337679391
+      },
+      {
+        "name": "file_cache_lookups",
+        "value": 50568
+      },
+      {
+        "name": "log_block_manager_bytes_under_management",
+        "value": 858107
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_ReplaceTablet",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "block_manager_total_disk_sync",
+        "value": 122
+      },
+      {
+        "name": "op_apply_queue_time",
+        "total_count": 191,
+        "min": 9,
+        "mean": 68.64921465968587,
+        "percentile_75": 71,
+        "percentile_95": 119,
+        "percentile_99": 185,
+        "percentile_99_9": 1576,
+        "percentile_99_99": 1576,
+        "max": 1580,
+        "total_sum": 13112
+      },
+      {
+        "name": "data_dirs_full",
+        "value": 0
+      },
+      {
+        "name": "data_dirs_failed",
+        "value": 0
+      },
+      {
+        "name": "spinlock_contention_time",
+        "value": 0
+      },
+      {
+        "name": "generic_current_allocated_bytes",
+        "value": 10926488
+      },
+      {
+        "name": "block_manager_total_blocks_deleted",
+        "value": 71
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_tserver_TabletCopyService_FetchData",
+        "value": 0
+      },
+      {
+        "name": "glog_info_messages",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_GetLastOpId",
+        "value": 0
+      },
+      {
+        "name": "hybrid_clock_error",
+        "value": 176165
+      },
+      {
+        "name": "rpc_connections_accepted",
+        "value": 8
+      },
+      {
+        "name": "generic_heap_size",
+        "value": 23068672
+      },
+      {
+        "name": "block_manager_total_bytes_read",
+        "value": 4903888
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_ListInFlightTables",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_RequestConsensusVote",
+        "total_count": 2,
+        "min": 222,
+        "mean": 1651.5,
+        "percentile_75": 3072,
+        "percentile_95": 3072,
+        "percentile_99": 3072,
+        "percentile_99_9": 3072,
+        "percentile_99_99": 3072,
+        "max": 3081,
+        "total_sum": 3303
+      },
+      {
+        "name": "threads_started",
+        "value": 165
+      },
+      {
+        "name": "op_apply_queue_length",
+        "total_count": 191,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "glog_error_messages",
+        "value": 0
+      },
+      {
+        "name": "clock_ntp_status",
+        "value": "now:1733820013599635 maxerror:176165 status:ok"
+      },
+      {
+        "name": "tcmalloc_current_total_thread_cache_bytes",
+        "value": 4999544
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_GetTableLocations",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "tcmalloc_pageheap_unmapped_bytes",
+        "value": 1245184
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_server_GenericService_CheckLeaks",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_DeleteTable",
+        "value": 0
+      },
+      {
+        "name": "cpu_utime",
+        "value": 1847366
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_GetMasterRegistration",
+        "total_count": 5,
+        "min": 66,
+        "mean": 94.6,
+        "percentile_75": 93,
+        "percentile_95": 142,
+        "percentile_99": 142,
+        "percentile_99_9": 142,
+        "percentile_99_99": 142,
+        "max": 142,
+        "total_sum": 473
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_TSHeartbeat",
+        "value": 0
+      },
+      {
+        "name": "block_cache_hits_caching",
+        "value": 174164
+      },
+      {
+        "name": "block_manager_total_readable_blocks",
+        "value": 66
+      },
+      {
+        "name": "block_cache_usage",
+        "value": 5142416
+      },
+      {
+        "name": "tcmalloc_pageheap_free_bytes",
+        "value": 794624
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_RequestConsensusVote",
+        "value": 0
+      },
+      {
+        "name": "threads_running",
+        "value": 67
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_TSHeartbeat",
+        "total_count": 1344223,
+        "min": 31,
+        "mean": 111.6374760735384,
+        "percentile_75": 127,
+        "percentile_95": 151,
+        "percentile_99": 174,
+        "percentile_99_9": 219,
+        "percentile_99_99": 402,
+        "max": 112563,
+        "total_sum": 150065663
+      },
+      {
+        "name": "block_cache_hits",
+        "value": 56
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_server_GenericService_GetStatus",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_IsAlterTableDone",
+        "value": 0
+      },
+      {
+        "name": "block_manager_total_writable_blocks",
+        "value": 71
+      },
+      {
+        "name": "log_block_manager_processed_containers_startup",
+        "value": 7
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_Ping",
+        "total_count": 3,
+        "min": 18,
+        "mean": 21.333333333333333,
+        "percentile_75": 22,
+        "percentile_95": 24,
+        "percentile_99": 24,
+        "percentile_99_9": 24,
+        "percentile_99_99": 24,
+        "max": 24,
+        "total_sum": 64
+      },
+      {
+        "name": "rpcs_timed_out_in_queue",
+        "value": 0
+      },
+      {
+        "name": "tcmalloc_max_total_thread_cache_bytes",
+        "value": 33554432
+      },
+      {
+        "name": "cpu_stime",
+        "value": 875407
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_GetMasterRegistration",
+        "value": 0
+      },
+      {
+        "name": "hybrid_clock_extrapolation_intervals",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_ListTabletServers",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_GetNodeInstance",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "voluntary_context_switches",
+        "value": 116144191
+      },
+      {
+        "name": "file_cache_inserts",
+        "value": 17
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_GetNodeInstance",
+        "value": 0
+      },
+      {
+        "name": "startup_progress_steps_remaining",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_GetTableLocations",
+        "value": 0
+      },
+      {
+        "name": "uptime",
+        "value": 447938485012
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_BulkChangeConfig",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "involuntary_context_switches",
+        "value": 4356407
+      },
+      {
+        "name": "reactor_load_percent",
+        "total_count": 17917536,
+        "min": 0,
+        "mean": 0.00001758054232456963,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 10,
+        "total_sum": 315
+      },
+      {
+        "name": "hybrid_clock_extrapolating",
+        "value": false
+      },
+      {
+        "name": "block_cache_inserts",
+        "value": 136
+      },
+      {
+        "name": "startup_progress_time_elapsed",
+        "value": 315
+      },
+      {
+        "name": "wal_dir_space_available_bytes",
+        "value": 83778482996
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_BulkChangeConfig",
+        "value": 0
+      },
+      {
+        "name": "scheduling_priority",
+        "value": 0
+      },
+      {
+        "name": "block_cache_lookups",
+        "value": 174396
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_GetLastOpId",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "file_cache_evictions",
+        "value": 1
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_ReplaceTablet",
+        "value": 0
+      },
+      {
+        "name": "log_block_manager_blocks_under_management",
+        "value": 5
+      },
+      {
+        "name": "maintenance_op_prepare_failed",
+        "value": 0
+      },
+      {
+        "name": "location_mapping_cache_hits",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_ConnectToMaster",
+        "total_count": 1,
+        "min": 76,
+        "mean": 76.0,
+        "percentile_75": 76,
+        "percentile_95": 76,
+        "percentile_99": 76,
+        "percentile_99_9": 76,
+        "percentile_99_99": 76,
+        "max": 76,
+        "total_sum": 76
+      },
+      {
+        "name": "file_cache_misses",
+        "value": 0
+      },
+      {
+        "name": "log_block_manager_containers",
+        "value": 7
+      },
+      {
+        "name": "location_mapping_cache_queries",
+        "value": 3
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_ConnectToMaster",
+        "value": 0
+      },
+      {
+        "name": "block_manager_blocks_open_reading",
+        "value": 5
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_server_GenericService_ServerClock",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_RecallDeletedTable",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_tserver_TabletCopyService_BeginTabletCopySession",
+        "value": 0
+      },
+      {
+        "name": "code_cache_queries",
+        "value": 14607
+      },
+      {
+        "name": "block_cache_misses_caching",
+        "value": 136
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_ListInFlightTables",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "block_manager_total_bytes_written",
+        "value": 4319483
+      },
+      {
+        "name": "glog_warning_messages",
+        "value": 0
+      },
+      {
+        "name": "cluster_replica_skew",
+        "value": 1
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_server_GenericService_DumpMemTrackers",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_ListTables",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_UpdateConsensus",
+        "total_count": 896264,
+        "min": 29,
+        "mean": 53.79090535824266,
+        "percentile_75": 58,
+        "percentile_95": 67,
+        "percentile_99": 74,
+        "percentile_99_9": 108,
+        "percentile_99_99": 428,
+        "max": 5040,
+        "total_sum": 48210852
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_tserver_TabletCopyService_EndTabletCopySession",
+        "value": 0
+      },
+      {
+        "name": "hybrid_clock_timestamp",
+        "value": 7101726775704842240
+      },
+      {
+        "name": "rpcs_queue_overflow",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_Ping",
+        "value": 0
+      },
+      {
+        "name": "log_block_manager_full_containers",
+        "value": 0
+      },
+      {
+        "name": "file_cache_misses_caching",
+        "value": 17
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_LeaderStepDown",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "block_cache_misses",
+        "value": 40
+      },
+      {
+        "name": "code_cache_hits",
+        "value": 14604
+      },
+      {
+        "name": "block_cache_evictions",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_server_GenericService_GetStatus",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_IsAlterTableDone",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "block_manager_blocks_open_writing",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_server_GenericService_GetFlags",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_GetTabletLocations",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_server_GenericService_GetFlags",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_GetTabletLocations",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_server_GenericService_ServerClock",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_RecallDeletedTable",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_tserver_TabletCopyService_BeginTabletCopySession",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_server_GenericService_SetServerWallClockForTests",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_AlterTable",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_tserver_TabletCopyService_CheckSessionActive",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "tablet_copy_open_source_sessions",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_server_GenericService_DumpMemTrackers",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_ListTables",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_tserver_TabletCopyService_EndTabletCopySession",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_GetTableStatistics",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_GetTableStatistics",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_ChangeConfig",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_GetTableSchema",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_GetTableSchema",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_UnsafeChangeConfig",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "data_dirs_space_available_bytes",
+        "value": 83778482996
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_ListMasters",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "memory_usage",
+        "value": 10959256
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_ListMasters",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_RunLeaderElection",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_RefreshAuthzCache",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_RefreshAuthzCache",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_GetConsensusState",
+        "total_count": 2,
+        "min": 37,
+        "mean": 37.5,
+        "percentile_75": 38,
+        "percentile_95": 38,
+        "percentile_99": 38,
+        "percentile_99_9": 38,
+        "percentile_99_99": 38,
+        "max": 38,
+        "total_sum": 75
+      },
+      {
+        "name": "log_block_manager_dead_containers_deleted",
+        "value": 0
+      },
+      {
+        "name": "file_cache_hits_caching",
+        "value": 50551
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_ChangeTServerState",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "file_cache_usage",
+        "value": 16
+      },
+      {
+        "name": "log_block_manager_total_containers_startup",
+        "value": 7
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_ChangeTServerState",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_consensus_ConsensusService_StartTabletCopy",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_AddMaster",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_AddMaster",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_RemoveMaster",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_RemoveMaster",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_UnregisterTServer",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_UnregisterTServer",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_UpdateConsensus",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_ChangeConfig",
+        "value": 0
+      },
+      {
+        "name": "file_cache_hits",
+        "value": 0
+      },
+      {
+        "name": "log_block_manager_holes_punched",
+        "value": 50
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_LeaderStepDown",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_GetConsensusState",
+        "value": 0
+      },
+      {
+        "name": "sys_catalog_oversized_write_requests",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_StartTabletCopy",
+        "value": 0
+      },
+      {
+        "name": "tablet_copy_bytes_sent",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_consensus_ConsensusService_UnsafeChangeConfig",
+        "value": 0
+      },
+      {
+        "name": "rpc_incoming_queue_time",
+        "total_count": 2240500,
+        "min": 3,
+        "mean": 63.40677929033698,
+        "percentile_75": 75,
+        "percentile_95": 105,
+        "percentile_99": 141,
+        "percentile_99_9": 235,
+        "percentile_99_99": 536,
+        "max": 8352,
+        "total_sum": 142062889
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_CreateTable",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_server_GenericService_SetFlag",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_CreateTable",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_server_GenericService_SetFlag",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_IsCreateTableDone",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_server_GenericService_FlushCoverage",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_master_MasterService_IsCreateTableDone",
+        "value": 0
+      },
+      {
+        "name": "queue_overflow_rejections_kudu_server_GenericService_FlushCoverage",
+        "value": 0
+      },
+      {
+        "name": "handler_latency_kudu_master_MasterService_DeleteTable",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      },
+      {
+        "name": "handler_latency_kudu_server_GenericService_CheckLeaks",
+        "total_count": 0,
+        "min": 0,
+        "mean": 0.0,
+        "percentile_75": 0,
+        "percentile_95": 0,
+        "percentile_99": 0,
+        "percentile_99_9": 0,
+        "percentile_99_99": 0,
+        "max": 0,
+        "total_sum": 0
+      }
+    ]
+  }
+]

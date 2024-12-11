@@ -18,6 +18,7 @@
         <!-- Spring Framework -->
         <spring.boot.version>3.3.5</spring.boot.version>
         <openapi.version>2.6.0</openapi.version>
+        <promethus.lib.version>0.16.0</promethus.lib.version>
     </properties>
 
     <build>
@@ -102,6 +103,34 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+
+        <!-- Prometheus -->
+
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient</artifactId>
+            <version>${promethus.lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_hotspot</artifactId>
+            <version>${promethus.lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_httpserver</artifactId>
+            <version>${promethus.lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_pushgateway</artifactId>
+            <version>${promethus.lib.version}</version>
+        </dependency>
+
+        <!-- TEST -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
