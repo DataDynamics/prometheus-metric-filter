@@ -12,12 +12,12 @@
     <properties>
         <!-- Maven -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
 
         <!-- Spring Framework -->
-        <spring.boot.version>3.3.5</spring.boot.version>
-        <openapi.version>2.6.0</openapi.version>
+        <spring.boot.version>2.7.18</spring.boot.version>
+        <swagger.version>3.0.0</swagger.version>
         <promethus.lib.version>0.16.0</promethus.lib.version>
     </properties>
 
@@ -55,10 +55,45 @@
                     </annotationProcessors>
                 </configuration>
             </plugin>
+
+
+            <plugin>
+                <groupId>com.googlecode.addjars-maven-plugin</groupId>
+                <artifactId>addjars-maven-plugin</artifactId>
+                <version>1.0.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>add-jars</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/lib</directory>
+                                    <includes>
+                                        <include>**/*.jar</include>
+                                    </includes>
+                                    <excludes>
+                                        <exclude>${basedir}/lib/runtime/**/*.jar</exclude>
+                                    </excludes>
+                                </resource>
+                                <resource>
+                                    <directory>${basedir}/lib/runtime</directory>
+                                    <scope>runtime</scope>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
     <dependencies>
+        <!-- ============================= -->
+        <!-- Spring Framework Dependencies -->
+        <!-- ============================= -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -70,22 +105,25 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>${openapi.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
         </dependency>
 
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
-            <version>${openapi.version}</version>
-        </dependency>
+        <!-- ==================== -->
+        <!-- Swagger Dependencies -->
+        <!-- ==================== -->
 
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>33.3.1-jre</version>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${swagger.version}</version>
         </dependency>
+
+        <!-- =================== -->
+        <!-- Lombok Dependencies -->
+        <!-- =================== -->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -93,44 +131,94 @@
             <optional>true</optional>
         </dependency>
 
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>1.18.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-
-        <!-- Prometheus -->
+        <!-- =========== -->
+        <!-- Promentheus -->
+        <!-- =========== -->
 
         <dependency>
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient</artifactId>
             <version>${promethus.lib.version}</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/simpleclient-0.16.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/commons-math3-3.6.1.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_hotspot</artifactId>
             <version>${promethus.lib.version}</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/simpleclient_hotspot-0.16.0.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_httpserver</artifactId>
             <version>${promethus.lib.version}</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/simpleclient_httpserver-0.16.0.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_pushgateway</artifactId>
             <version>${promethus.lib.version}</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/simpleclient_pushgateway-0.16.0.jar</systemPath>
         </dependency>
 
-        <!-- TEST -->
+        <!-- ================== -->
+        <!-- Guava Dependencies -->
+        <!-- ================== -->
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.3.1-jre</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/guava-33.3.1-jre.jar</systemPath>
+        </dependency>
+
+        <!-- ================== -->
+        <!-- JSoup Dependencies -->
+        <!-- ================== -->
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.18.3</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/jsoup-1.18.3.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/jspecify-1.0.0.jar</systemPath>
+        </dependency>
+
+        <!-- =============== -->
+        <!-- Jakarta Commons -->
+        <!-- =============== -->
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!-- ================= -->
+        <!-- Test Dependencies -->
+        <!-- ================= -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

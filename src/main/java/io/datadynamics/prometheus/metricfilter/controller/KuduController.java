@@ -2,8 +2,6 @@ package io.datadynamics.prometheus.metricfilter.controller;
 
 import com.google.common.base.Joiner;
 import io.datadynamics.prometheus.metricfilter.Patterns;
-import io.micrometer.common.util.StringUtils;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,16 +20,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static io.micrometer.common.util.StringUtils.isEmpty;
+import static org.apache.commons.lang3.StringUtils.isEmpty;
 
 @RestController
 @RequestMapping("/metrics/kudu")
 public class KuduController {
 
-    private Logger log = LoggerFactory.getLogger(this.getClass());
-
     @Autowired
     RestTemplate restTemplate;
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @GetMapping(produces = "text/plain")
     ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url,
@@ -57,7 +54,7 @@ public class KuduController {
         );
 
         String body = response.getBody();
-        if (StringUtils.isEmpty(name)) {
+        if (isEmpty(name)) {
             return ResponseEntity.ok(body);
         } else {
             String[] names = org.apache.commons.lang3.StringUtils.splitPreserveAllTokens(name, ",");
@@ -71,7 +68,7 @@ public class KuduController {
                 for (String n : names) {
                     log.info("검증할 Name : {}, LINE : {}", n, line);
                     String trimmedName = n.trim();
-                    if ((!StringUtils.isEmpty(trimmedName)) && (line.startsWith(String.format(Patterns.METRIC_HELP, trimmedName)) ||
+                    if ((!isEmpty(trimmedName)) && (line.startsWith(String.format(Patterns.METRIC_HELP, trimmedName)) ||
                             line.startsWith(String.format(Patterns.METRIC_TYPE, trimmedName)) ||
                             line.startsWith(String.format(Patterns.METRIC_NAME, trimmedName)))
                     ) {

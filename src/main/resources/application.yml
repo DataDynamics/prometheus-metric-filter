@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: Prometheus Metric API
+
+  #############################
+  # Spring Boot Configuration
+  #############################
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+  main:
+    allow-bean-definition-overriding: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+#############################
+# Server Configuration
+#############################
+
+server:
+  port: 9091
+
+#############################
+# Application Configuration
+#############################
+
+app:
+
+#############################
+# Logging Configuration
+#############################
+
+logging:
+  config: classpath:logback.xml
+
+#############################
+# Management Configuration
+#############################
+
+management:
+  health:
+    db:
+      enabled: false

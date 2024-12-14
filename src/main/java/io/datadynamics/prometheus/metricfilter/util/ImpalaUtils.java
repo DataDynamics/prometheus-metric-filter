@@ -7,10 +7,20 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.*;
+import java.util.List;
 import java.util.Map;
 
 public class ImpalaUtils {
+
+    public static Map getRunning(String url) throws IOException {
+        org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
+        Elements rows = doc.select("h3");
+        System.out.println(StringUtils.replace(rows.get(0).text(), " queries in flight", ""));
+        System.out.println(StringUtils.replace(rows.get(1).text(), " waiting to be closed [?]", ""));
+
+        return MapUtils.queryStatus("running", Integer.parseInt(StringUtils.replace(rows.get(0).text(), " queries in flight", "")),
+                "waitToClose", Integer.parseInt(StringUtils.replace(rows.get(1).text(), " waiting to be closed [?]", "")));
+    }
 
     /**
      * @param url Session URL ("http://10.0.1.71:25000/sessions")
@@ -22,7 +32,7 @@ public class ImpalaUtils {
         Element table = doc.getElementById("sessions-tbl");
         Elements rows = table.select("tr");
         List<Map> sessions = new ArrayList();
-        for(int i = 1 ; i < rows.size(); i++) {
+        for (int i = 1; i < rows.size(); i++) {
             Element row = rows.get(i);
             Elements cols = row.select("td");
             Map session = MapUtils.session(
@@ -45,16 +55,6 @@ public class ImpalaUtils {
             sessions.add(session);
         }
         return sessions;
-    }
-
-    public static Map getRunning(String url) throws IOException {
-        org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
-        Elements rows = doc.select("h3");
-        System.out.println(StringUtils.replace(rows.get(0).text(), " queries in flight", ""));
-        System.out.println(StringUtils.replace(rows.get(1).text(), " waiting to be closed [?]", ""));
-
-        return MapUtils.queryStatus("running", Integer.parseInt(StringUtils.replace(rows.get(0).text(), " queries in flight", "")),
-                "waitToClose", Integer.parseInt(StringUtils.replace(rows.get(1).text(), " waiting to be closed [?]", "")));
     }
 
 }

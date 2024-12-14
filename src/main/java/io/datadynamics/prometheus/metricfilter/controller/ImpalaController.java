@@ -2,6 +2,7 @@ package io.datadynamics.prometheus.metricfilter.controller;
 
 import com.google.common.base.Joiner;
 import io.datadynamics.prometheus.metricfilter.util.ImpalaUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @RestController
 @RequestMapping("/metrics/impala")
 public class ImpalaController {
@@ -38,13 +40,15 @@ public class ImpalaController {
         metrics.add(String.format("impala_running_query_count{host=\"%s\"} %s", url, status.get("running")));
 
         String v2 = Joiner.on("\n").join(metrics);
-        return ResponseEntity.ok(v1 + "\n" + v2);
+        String finalMetric = v1 + "\n" + v2;
+
+        log.debug("Impala Metric:\n{}", finalMetric);
+        return ResponseEntity.ok(finalMetric);
     }
 
     private String getPrometheusMetrics(String url) {
         String metrics = restTemplate.getForObject(url, String.class);
         String v1 = StringUtils.replace(metrics, "_'", "_");
-        String v2 = StringUtils.replace(v1, "'_", "_");
-        return v2;
+        return StringUtils.replace(v1, "'_", "_");
     }
 }
