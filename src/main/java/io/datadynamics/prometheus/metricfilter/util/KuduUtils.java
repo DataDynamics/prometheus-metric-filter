@@ -6,9 +6,9 @@ import java.util.List;
 
 public class KuduUtils {
 
-    public static List getMetrics(String url) {
-        RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(url, List.class);
-    }
+	public static List getMetrics(String url) {
+		RestTemplate restTemplate = new RestTemplate();
+		return restTemplate.getForObject(url, List.class);
+	}
 
 }

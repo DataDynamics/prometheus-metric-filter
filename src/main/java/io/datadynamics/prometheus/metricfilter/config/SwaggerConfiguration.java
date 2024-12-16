@@ -14,20 +14,20 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfiguration {
 
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build();
-    }
+	@Bean
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2)
+				.apiInfo(apiInfo())
+				.select()
+				.apis(RequestHandlerSelectors.any())
+				.paths(PathSelectors.any())
+				.build();
+	}
 
-    private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title("Prometheus Metric Filter")
-                .version("1.0.0")
-                .build();
-    }
+	private ApiInfo apiInfo() {
+		return new ApiInfoBuilder()
+				.title("Prometheus Metric Filter")
+				.version("1.0.0")
+				.build();
+	}
 }
