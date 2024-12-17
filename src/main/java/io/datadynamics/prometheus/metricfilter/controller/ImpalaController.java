@@ -22,9 +22,10 @@ import java.util.Map;
 @RequestMapping("/metrics/impala")
 public class ImpalaController {
 
+	private Logger log = LoggerFactory.getLogger(ImpalaController.class);
+
 	@Autowired
 	RestTemplate restTemplate;
-	private Logger log = LoggerFactory.getLogger(ImpalaController.class);
 
 	@GetMapping(produces = "text/plain")
 	ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url) throws IOException {
