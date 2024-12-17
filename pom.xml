@@ -18,7 +18,10 @@
         <!-- Spring Framework -->
         <spring.boot.version>2.7.18</spring.boot.version>
         <swagger.version>3.0.0</swagger.version>
+
+        <!-- ETC -->
         <promethus.lib.version>0.16.0</promethus.lib.version>
+        <thrift.version>0.16.0</thrift.version>
     </properties>
 
     <build>
@@ -131,9 +134,9 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- =========== -->
-        <!-- Promentheus -->
-        <!-- =========== -->
+        <!-- ========== -->
+        <!-- Prometheus -->
+        <!-- ========== -->
 
         <dependency>
             <groupId>io.prometheus</groupId>
@@ -173,6 +176,24 @@
             <version>${promethus.lib.version}</version>
             <scope>system</scope>
             <systemPath>${basedir}/lib/simpleclient_pushgateway-0.16.0.jar</systemPath>
+        </dependency>
+
+        <!-- =================== -->
+        <!-- Thrift Dependencies -->
+        <!-- =================== -->
+
+        <dependency>
+            <groupId>org.apache.impala</groupId>
+            <artifactId>impala-frontend</artifactId>
+            <version>4.0.0.7.1.8.44-1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/impala-frontend-4.0.0.7.1.8.44-1.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.thrift</groupId>
+            <artifactId>libthrift</artifactId>
+            <version>${thrift.version}</version>
         </dependency>
 
         <!-- ================== -->

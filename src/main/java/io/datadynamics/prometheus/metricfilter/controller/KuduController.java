@@ -26,67 +26,71 @@ import static org.apache.commons.lang3.StringUtils.isEmpty;
 @RequestMapping("/metrics/kudu")
 public class KuduController {
 
-	@Autowired
-	RestTemplate restTemplate;
-	private Logger log = LoggerFactory.getLogger(KuduController.class);
+    private Logger log = LoggerFactory.getLogger(KuduController.class);
 
-	@GetMapping(produces = "text/plain")
-	ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url,
-	                                  @RequestParam(name = "name", required = true) String name) {
-		log.info("url: {}, name: {}", url, name);
+    @Autowired
+    RestTemplate restTemplate;
 
-		Assert.notNull(url, "URL은 필수값입니다.");
+    @GetMapping(produces = "text/plain")
+    ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url,
+                                      @RequestParam(name = "name", required = true) String name) {
+        log.info("url: {}, name: {}", url, name);
 
-		if (isEmpty(name)) {
-			return ResponseEntity.badRequest().body("name 옵션을 지정하십시오.");
-		}
+        Assert.notNull(url, "URL은 필수값입니다.");
 
-		HttpHeaders headers = new HttpHeaders();
-		headers.set("Accept", "text/plain"); // for Prometheus
+        if (isEmpty(name)) {
+            return ResponseEntity.badRequest().body("name 옵션을 지정하십시오.");
+        }
 
-		HttpEntity request = new HttpEntity(headers);
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Accept", "text/plain"); // for Prometheus
 
-		ResponseEntity<String> response = restTemplate.exchange(
-				url,
-				HttpMethod.GET,
-				request,
-				String.class
-		);
+        HttpEntity request = new HttpEntity(headers);
 
-		String body = response.getBody();
-		if (isEmpty(name)) {
-			return ResponseEntity.ok(body);
-		} else {
-			String[] names = org.apache.commons.lang3.StringUtils.splitPreserveAllTokens(name, ",");
-			List<String> metrics = new ArrayList<>();
-			Scanner scanner = new Scanner(body);
-			while (scanner.hasNextLine()) {
-				String line = scanner.nextLine();
-				boolean isFilter = false;
+        ResponseEntity<String> response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                request,
+                String.class
+        );
 
-				// metric name이 속해 있는지 확인한 후에 필터링 한다.
-				for (String n : names) {
-					log.info("검증할 Name : {}, LINE : {}", n, line);
-					String trimmedName = n.trim();
-					if ((!isEmpty(trimmedName)) && (line.startsWith(String.format(Patterns.METRIC_HELP, trimmedName)) ||
-							line.startsWith(String.format(Patterns.METRIC_TYPE, trimmedName)) ||
-							line.startsWith(String.format(Patterns.METRIC_NAME, trimmedName)))
-					) {
-						log.debug("Filtered: {}", line);
+        String body = response.getBody();
+        if (isEmpty(name)) {
+            return ResponseEntity.ok(body);
+        } else {
+            String[] names = org.apache.commons.lang3.StringUtils.splitPreserveAllTokens(name, ",");
+            List<String> metrics = new ArrayList<>();
+            Scanner scanner = new Scanner(body);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                boolean isFilter = false;
 
-						isFilter = true;
-						break;
-					}
-				}
+                // metric name이 속해 있는지 확인한 후에 필터링 한다.
+                for (String n : names) {
+                    log.debug("검증할 Name : {}, LINE : {}", n, line);
+                    String trimmedName = n.trim();
+                    if ((!isEmpty(trimmedName)) && (line.startsWith(String.format(Patterns.METRIC_HELP, trimmedName)) ||
+                            line.startsWith(String.format(Patterns.METRIC_TYPE, trimmedName)) ||
+                            line.startsWith(String.format(Patterns.METRIC_NAME, trimmedName)))
+                    ) {
+                        log.debug("Filtered: {}", line);
 
-				// 핕터링 하지 않으면 metric을 사용한다.
-				if (!isFilter) {
-					metrics.add(line);
-				}
-			}
-			scanner.close();
+                        isFilter = true;
+                        break;
+                    }
+                }
 
-			return ResponseEntity.ok(Joiner.on("\n").join(metrics));
-		}
-	}
+                // 핕터링 하지 않으면 metric을 사용한다.
+                if (!isFilter) {
+                    metrics.add(line);
+                }
+            }
+            scanner.close();
+
+            String metricsString = Joiner.on("\n").join(metrics);
+
+            log.info("Kudu Metrics:\n{}", metricsString);
+            return ResponseEntity.ok(metricsString);
+        }
+    }
 }
