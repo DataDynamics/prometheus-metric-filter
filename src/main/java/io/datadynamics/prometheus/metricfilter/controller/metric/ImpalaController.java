@@ -1,4 +1,4 @@
-package io.datadynamics.prometheus.metricfilter.controller;
+package io.datadynamics.prometheus.metricfilter.controller.metric;
 
 import com.google.common.base.Joiner;
 import io.datadynamics.prometheus.metricfilter.util.ImpalaUtils;
