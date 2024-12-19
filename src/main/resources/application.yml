@@ -42,6 +42,11 @@ logging:
 #############################
 
 management:
-  health:
-    db:
-      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*,prometheus"
+  prometheus:
+    metrics:
+      export:
+        enabled: true

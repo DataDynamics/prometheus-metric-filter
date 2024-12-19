@@ -121,3 +121,11 @@ scrape_configs:
 # rpm -Uvh grafana-11.3.0+security~01-1.x86_64.rpm
 # systemctl restart grafana-server
 ```
+
+## Impala Query Profile
+
+Impala Query Profile은 `log/profile` 디렉토리에 저장되며 다음의 절차로 파싱 가능
+
+* Base64 Decoding
+* zlib Decompress
+* Thrift Deserialization

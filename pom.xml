@@ -124,6 +124,16 @@
             <version>${swagger.version}</version>
         </dependency>
 
+        <!-- ======================= -->
+        <!-- Micrometer Dependencies -->
+        <!-- ======================= -->
+
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <version>1.9.17</version>
+        </dependency>
+
         <!-- =================== -->
         <!-- Lombok Dependencies -->
         <!-- =================== -->
