@@ -22,35 +22,41 @@ import java.util.Map;
 @RequestMapping("/metrics/impala")
 public class ImpalaController {
 
-	private Logger log = LoggerFactory.getLogger(ImpalaController.class);
+    private Logger log = LoggerFactory.getLogger(ImpalaController.class);
 
-	@Autowired
-	RestTemplate restTemplate;
+    @Autowired
+    RestTemplate restTemplate;
 
-	@GetMapping(produces = "text/plain")
-	ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url) throws IOException {
-		String v1 = getPrometheusMetrics(url + "/metrics_prometheus");
+    @GetMapping(produces = "text/plain")
+    ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url) throws IOException {
+        String v1 = getPrometheusMetrics(url + "/metrics_prometheus");
 
-		Map status = ImpalaUtils.getRunning(url + "/queries");
-		List<String> metrics = new ArrayList();
-		metrics.add(String.format("# HELP impala_wait_to_close_query_count Number of Query to wait to close"));
-		metrics.add(String.format("# TYPE impala_wait_to_close_query_count counter"));
-		metrics.add(String.format("impala_wait_to_close_query_count{host=\"%s\"} %s", url, status.get("waitToClose")));
+        Map status = ImpalaUtils.getRunning(url + "/queries");
+        List<String> metrics = new ArrayList();
+        metrics.add(String.format("# HELP impala_wait_to_close_query_count Number of Query to wait to close"));
+        metrics.add(String.format("# TYPE impala_wait_to_close_query_count counter"));
+        metrics.add(String.format("impala_wait_to_close_query_count{host=\"%s\"} %s", url, status.get("waitToClose")));
 
-		metrics.add(String.format("# HELP impala_running_query_count Number of Running Query"));
-		metrics.add(String.format("# TYPE impala_running_query_count counter"));
-		metrics.add(String.format("impala_running_query_count{host=\"%s\"} %s", url, status.get("running")));
+        metrics.add(String.format("# HELP impala_running_query_count Number of Running Query"));
+        metrics.add(String.format("# TYPE impala_running_query_count counter"));
+        metrics.add(String.format("impala_running_query_count{host=\"%s\"} %s", url, status.get("running")));
 
-		String v2 = Joiner.on("\n").join(metrics);
-		String finalMetric = v1 + "\n" + v2;
+        String v2 = Joiner.on("\n").join(metrics);
+        String finalMetric = v1 + "\n" + v2;
 
-		log.debug("Impala Metric:\n{}", finalMetric);
-		return ResponseEntity.ok(finalMetric);
-	}
+        log.debug("Impala Metric:\n{}", finalMetric);
+        return ResponseEntity.ok(finalMetric);
+    }
 
-	private String getPrometheusMetrics(String url) {
-		String metrics = restTemplate.getForObject(url, String.class);
-		String v1 = StringUtils.replace(metrics, "_'", "_");
-		return StringUtils.replace(v1, "'_", "_");
-	}
+    /**
+     * Impala Prometheus Metric의 경우 JDK의 버전에 따라서 Metric에서 <pre>-'...'-</pre>이 포함된 Metric을 제거한다.
+     *
+     * @param url Impala Coordinator Prometheus Metric URL
+     * @return 정리한 Metric
+     */
+    private String getPrometheusMetrics(String url) {
+        String metrics = restTemplate.getForObject(url, String.class);
+        String v1 = StringUtils.replace(metrics, "_'", "_");
+        return StringUtils.replace(v1, "'_", "_");
+    }
 }
