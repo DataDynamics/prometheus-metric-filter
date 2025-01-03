@@ -89,8 +89,6 @@ public class ImpalaUtils {
         }
     }
 
-    // https://github.com/apache/impala/blob/master/lib/python/impala_py_lib/profiles.py
-
     public static TRuntimeProfileTree decode(byte[] input) throws Exception {
         Inflater inflater = new Inflater();
         inflater.setInput(input);
@@ -111,10 +109,10 @@ public class ImpalaUtils {
         return tree;
     }
 
-    public static List<String> inflightQueries(String coordinatorUrl) throws IOException {
+    public static List<String> queryIds(String coordinatorUrl, Integer index) throws IOException {
         List<String> queryIds = new ArrayList<>();
         org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/queries").get();
-        Elements elements = doc.selectXpath("/html/body/div/table[1]/tbody/tr");
+        Elements elements = doc.selectXpath(String.format("/html/body/div/table[%s]/tbody/tr", index)); // 1 = inflight, 2 = waited, 3 = completed
         if (elements.size() > 1) {
             for (int i = 1; i < elements.size(); i++) {
                 Elements tds = elements.get(i).children();
@@ -122,6 +120,7 @@ public class ImpalaUtils {
             }
         }
         return queryIds;
+
     }
 
     public static Map<String, String> inflightQueryProfiles(String coordinatorUrl, List<String> queryIds) throws IOException {
@@ -144,9 +143,9 @@ public class ImpalaUtils {
         }
     }
 
-    public static void saveInflightQueryProfiles(String coordinatorUrl) throws IOException {
+    public static void saveQueryProfiles(String coordinatorUrl, Integer index) throws IOException {
         List<String> output = new ArrayList<>();
-        List<String> queryIds = inflightQueries(coordinatorUrl);
+        List<String> queryIds = queryIds(coordinatorUrl, index);
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(System.currentTimeMillis());
         String filename = String.format("profiles_%s.txt", timestamp);
         Map<String, String> profiles = inflightQueryProfiles(coordinatorUrl, queryIds);

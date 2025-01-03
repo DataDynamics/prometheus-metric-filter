@@ -4,7 +4,6 @@ import org.apache.impala.thrift.TRuntimeProfileTree;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 public class ImpalaUtilsTests {
@@ -22,13 +21,17 @@ public class ImpalaUtilsTests {
     }
 
     @Test
-    public void inflightQueries() throws IOException {
-        List<String> queryIds = ImpalaUtils.inflightQueries("http://hdw3.datalake.net:25000");
-        System.out.println(queryIds);
+    public void saveInflightQueryProfiles() throws IOException {
+        ImpalaUtils.saveQueryProfiles("http://hdw3.datalake.net:25000", 1); // inflight
     }
 
     @Test
-    public void saveInflightQueryProfiles() throws IOException {
-        ImpalaUtils.saveInflightQueryProfiles("http://hdw3.datalake.net:25000");
+    public void saveWaitedToClosed() throws IOException {
+        ImpalaUtils.saveQueryProfiles("http://hdw3.datalake.net:25000", 2); // waited
+    }
+
+    @Test
+    public void saveCompletedQueryProfiles() throws IOException {
+        ImpalaUtils.saveQueryProfiles("http://hdw3.datalake.net:25000", 3); // compledted
     }
 }
