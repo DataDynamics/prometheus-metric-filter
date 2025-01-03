@@ -32,6 +32,6 @@ public class ImpalaUtilsTests {
 
     @Test
     public void saveCompletedQueryProfiles() throws IOException {
-        ImpalaUtils.saveQueryProfiles("http://hdw3.datalake.net:25000", 3); // compledted
+        ImpalaUtils.saveQueryProfiles("http://hdw3.datalake.net:25000", 3); // completed
     }
 }
