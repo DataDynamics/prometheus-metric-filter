@@ -1,6 +1,8 @@
 package io.datadynamics.prometheus.metricfilter.util;
 
+import com.google.common.base.Joiner;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.impala.thrift.TRuntimeProfileTree;
 import org.apache.thrift.TDeserializer;
 import org.apache.thrift.protocol.TCompactProtocol;
@@ -10,11 +12,14 @@ import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Base64Utils;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.Inflater;
@@ -67,16 +72,16 @@ public class ImpalaUtils {
         return sessions;
     }
 
-    public static Map decodeQueryProfile(String decoded) {
-        log.debug("Query Profile : {}", decoded);
-        String[] tokens = decoded.split(" ");
+    public static Map decodeQueryProfile(String encoded) {
+        log.debug("Query Profile : {}", encoded);
+        String[] tokens = encoded.split(" ");
         if (tokens.length < 3) {
             throw new IllegalArgumentException("인코딩되어 있는 Query Profile이 유효하지 않은 포맷입니다.");
         }
         try {
             return MapUtils.map(
                     "timestamp", tokens[0],
-                    "queryId", tokens[2],
+                    "queryId", tokens[1],
                     "queryProfile", decode(Base64Utils.decode(tokens[2].getBytes()))
             );
         } catch (Exception e) {
@@ -104,6 +109,54 @@ public class ImpalaUtils {
         deserializer.deserialize(tree, bytes);
         tree.validate();
         return tree;
+    }
+
+    public static List<String> inflightQueries(String coordinatorUrl) throws IOException {
+        List<String> queryIds = new ArrayList<>();
+        org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/queries").get();
+        Elements elements = doc.selectXpath("/html/body/div/table[1]/tbody/tr");
+        if (elements.size() > 1) {
+            for (int i = 1; i < elements.size(); i++) {
+                Elements tds = elements.get(i).children();
+                queryIds.add(tds.get(0).select("a").text());
+            }
+        }
+        return queryIds;
+    }
+
+    public static Map<String, String> inflightQueryProfiles(String coordinatorUrl, List<String> queryIds) throws IOException {
+        Map<String, String> profiles = new HashMap<>();
+        for (String queryId : queryIds) {
+            profiles.put(queryId, inflightQueryProfile(coordinatorUrl, queryId));
+        }
+        return profiles;
+    }
+
+    public static String inflightQueryProfile(String coordinatorUrl, String queryId) throws IOException {
+        RestTemplate template = new RestTemplate();
+        try {
+            String url = coordinatorUrl + "/query_profile_plain_text?query_id=" + queryId;
+            String profile = template.getForObject(url, String.class);
+            log.debug("Query Profile : {}", profile);
+            return profile;
+        } catch (Exception e) {
+            return ExceptionUtils.getStackTrace(e);
+        }
+    }
+
+    public static void saveInflightQueryProfiles(String coordinatorUrl) throws IOException {
+        List<String> output = new ArrayList<>();
+        List<String> queryIds = inflightQueries(coordinatorUrl);
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(System.currentTimeMillis());
+        String filename = String.format("profiles_%s.txt", timestamp);
+        Map<String, String> profiles = inflightQueryProfiles(coordinatorUrl, queryIds);
+        profiles.keySet().forEach(queryId -> {
+            output.add("=========================================================================");
+            output.add(String.format("Query ID : %s", queryId));
+            output.add("=========================================================================");
+            output.add(profiles.get(queryId));
+        });
+        org.springframework.util.FileCopyUtils.copy(Joiner.on("\n").join(output).getBytes(), new File(filename));
     }
 
 }
