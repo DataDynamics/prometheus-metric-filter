@@ -153,9 +153,39 @@ public class ImpalaUtils {
             output.add("=========================================================================");
             output.add(String.format("Query ID : %s", queryId));
             output.add("=========================================================================");
+            try {
+                output.addAll(getSummary(coordinatorUrl, queryId));
+            } catch (IOException e) {
+                // Ignored
+            }
             output.add(profiles.get(queryId));
         });
         org.springframework.util.FileCopyUtils.copy(Joiner.on("\n").join(output).getBytes(), new File(filename));
+    }
+
+    public static List<String> getSummary(String coordinatorUrl, String queryId) throws IOException {
+        List<String> output = new ArrayList<>();
+        String url = String.format("%s/query_summary?query_id=%s", coordinatorUrl, queryId);
+        org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
+        Element timeline = doc.getElementById("timeline");
+        Element summary = doc.getElementById("summary");
+
+        output.add("\n\n=[Timeline]==============================================================\n\n");
+        if (StringUtils.isEmpty(timeline.text().trim())) {
+            output.add("N/A");
+        } else {
+            output.add(timeline.text());
+        }
+
+        output.add("\n\n=[Summary]===============================================================\n\n");
+        if (StringUtils.isEmpty(summary.text().trim())) {
+            output.add("N/A");
+        } else {
+            output.add(summary.text());
+        }
+
+        output.add("\n\n=[Profile]===============================================================\n\n");
+        return output;
     }
 
 }

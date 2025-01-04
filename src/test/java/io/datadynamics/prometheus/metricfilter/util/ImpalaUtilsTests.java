@@ -34,4 +34,9 @@ public class ImpalaUtilsTests {
     public void saveCompletedQueryProfiles() throws IOException {
         ImpalaUtils.saveQueryProfiles("http://hdw3.datalake.net:25000", 3); // completed
     }
+
+    @Test
+    public void getSummary() throws IOException {
+        System.out.println(ImpalaUtils.getSummary("http://hdw3.datalake.net:25000", "ae4cd55852907527:3fdacc7300000000"));
+    }
 }
