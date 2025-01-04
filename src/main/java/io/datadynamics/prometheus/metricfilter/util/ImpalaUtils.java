@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.Inflater;
 
 public class ImpalaUtils {
@@ -279,13 +280,38 @@ public class ImpalaUtils {
         return org.springframework.util.StringUtils.countOccurrencesOf(result, successPattern) > 0;
     }
 
-    public static Map getActiveSession(String url) throws IOException {
-        org.jsoup.nodes.Document doc = Jsoup.connect(url + "/sessions").get();
+    /**
+     * Impala Coordinator의 Session 정보를 추출한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @return Active & Inactive Session
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
+    public static Map getActiveSession(String coordinatorUrl) throws IOException {
+        org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/sessions").get();
         String text = doc.selectXpath("/html/body/div/div[1]/h4").text(); // There are 0 sessions, of which 0 are active and 0 are inactive
         return MapUtils.sessionStatus(
                 "sessions", Integer.parseInt(StringUtils.substringBetween(text, "There are ", " sessions")),
                 "active", Integer.parseInt(StringUtils.substringBetween(text, "of which ", " are active")),
                 "inactive", Integer.parseInt(StringUtils.substringBetween(text, "are active and ", " are inactive"))
         );
+    }
+
+    /**
+     * Impala Coordinator의 Session을 사용자로 집계한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @return 사용자별 세션수
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
+    public static Map<String, AtomicInteger> getSessionStatsByUsername(String coordinatorUrl) throws IOException {
+        List<Map> sessions = ImpalaUtils.getSessions(coordinatorUrl);
+        Map<String, AtomicInteger> result = new java.util.HashMap<>();
+        sessions.forEach(session -> {
+            String username = (String) session.get("user");
+            result.computeIfAbsent(username, k -> new AtomicInteger(0));
+            result.get(username).incrementAndGet();
+        });
+        return result;
     }
 }

@@ -38,16 +38,7 @@ public class ImpalaManagementController {
 
     @GetMapping("/sessions/stats/byUsername")
     public ResponseEntity sessionStatsByUsername(@RequestParam(name = "url", required = true) String url) throws IOException {
-        List<Map> sessions = ImpalaUtils.getSessions(url);
-        Map<String, AtomicInteger> result = new java.util.HashMap<>();
-        sessions.forEach(session -> {
-            String username = (String) session.get("user");
-            if (result.get(username) == null) {
-                result.put(username, new AtomicInteger(0));
-            }
-            result.get(username).incrementAndGet();
-        });
-        return ResponseEntity.ok(result);
+        return ResponseEntity.ok(ImpalaUtils.getSessionStatsByUsername(url));
     }
 
     @GetMapping("/sessions/stats/byDelegatedUsername")
