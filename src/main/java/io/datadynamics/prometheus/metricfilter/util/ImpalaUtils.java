@@ -30,6 +30,13 @@ public class ImpalaUtils {
 
     public static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
+    /**
+     * Impala Coordinator의 /queries에서 inflight, waiting to closed의 건수를 추출한다.
+     *
+     * @param url Coordinator URL
+     * @return inflight, waiting to closed의 건수
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
     public static Map getRunning(String url) throws IOException {
         org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
         Elements rows = doc.select("h3");
@@ -38,12 +45,14 @@ public class ImpalaUtils {
     }
 
     /**
-     * @param url Session URL ("http://10.0.1.71:25000/sessions")
+     * Impaal Corodinator의 /sessions에서 세션 목록을 추출한다.
+     *
+     * @param coordinatorUrl Coordinator URL
      * @return 세션 목록
-     * @throws IOException
+     * @throws IOException Coordinator에 접속할 수 없는 경우
      */
-    public List<Map> getSessions(String url) throws IOException {
-        org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
+    public List<Map> getSessions(String coordinatorUrl) throws IOException {
+        org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/sessions").get();
         Element table = doc.getElementById("sessions-tbl");
         Elements rows = table.select("tr");
         List<Map> sessions = new ArrayList();
@@ -72,6 +81,12 @@ public class ImpalaUtils {
         return sessions;
     }
 
+    /**
+     * Query Profile 로그 파일에 저장되어 있는 인코딩되어 있는 Query Profile을 디코딩한다.
+     *
+     * @param encoded 인코딩되어 있는 Query Profile
+     * @return 디코딩한 Query Profile
+     */
     public static Map decodeQueryProfile(String encoded) {
         log.debug("Query Profile : {}", encoded);
         String[] tokens = encoded.split(" ");
@@ -89,9 +104,16 @@ public class ImpalaUtils {
         }
     }
 
-    public static TRuntimeProfileTree decode(byte[] input) throws Exception {
+    /**
+     * Thrift로 serialize되어 있는 Query Profile을 deserialize한다.
+     *
+     * @param serializedQueryProfile Serialize되어 있는 Query Profile
+     * @return Deserialize한 Thrift Object
+     * @throws Exception Serialize, Deserialize할 수 없는 경우
+     */
+    public static TRuntimeProfileTree decode(byte[] serializedQueryProfile) throws Exception {
         Inflater inflater = new Inflater();
-        inflater.setInput(input);
+        inflater.setInput(serializedQueryProfile);
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024];
@@ -109,6 +131,14 @@ public class ImpalaUtils {
         return tree;
     }
 
+    /**
+     * Impala Coordinator에서 Query ID 목록을 추출한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @param index          1 = inflight, 2 = waited, 3 = completed
+     * @return Query ID 목록
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
     public static List<String> queryIds(String coordinatorUrl, Integer index) throws IOException {
         List<String> queryIds = new ArrayList<>();
         org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/queries").get();
@@ -120,18 +150,33 @@ public class ImpalaUtils {
             }
         }
         return queryIds;
-
     }
 
-    public static Map<String, String> inflightQueryProfiles(String coordinatorUrl, List<String> queryIds) throws IOException {
+    /**
+     * 실행중인 쿼리의 Query Profile을 모두 추출한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @param queryIds       Query ID 목록
+     * @return Query Profile 목록
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
+    public static Map<String, String> queryProfiles(String coordinatorUrl, List<String> queryIds) throws IOException {
         Map<String, String> profiles = new HashMap<>();
         for (String queryId : queryIds) {
-            profiles.put(queryId, inflightQueryProfile(coordinatorUrl, queryId));
+            profiles.put(queryId, queryProfile(coordinatorUrl, queryId));
         }
         return profiles;
     }
 
-    public static String inflightQueryProfile(String coordinatorUrl, String queryId) throws IOException {
+    /**
+     * Query ID에 해당하는 Impala Query의 Query Profile을 추출한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @param queryId        Query ID
+     * @return Query Profile
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
+    public static String queryProfile(String coordinatorUrl, String queryId) throws IOException {
         RestTemplate template = new RestTemplate();
         try {
             String url = coordinatorUrl + "/query_profile_plain_text?query_id=" + queryId;
@@ -143,12 +188,19 @@ public class ImpalaUtils {
         }
     }
 
+    /**
+     * Impala Coordinator에서 Query Profile을 추출하여 파일로 저장한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @param index          1 = inflight, 2 = waited to close, 3 = completed
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
     public static void saveQueryProfiles(String coordinatorUrl, Integer index) throws IOException {
         List<String> output = new ArrayList<>();
         List<String> queryIds = queryIds(coordinatorUrl, index);
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(System.currentTimeMillis());
         String filename = String.format("profiles_%s.txt", timestamp);
-        Map<String, String> profiles = inflightQueryProfiles(coordinatorUrl, queryIds);
+        Map<String, String> profiles = queryProfiles(coordinatorUrl, queryIds);
         profiles.keySet().forEach(queryId -> {
             output.add("=========================================================================");
             output.add(String.format("Query ID : %s", queryId));
@@ -163,7 +215,15 @@ public class ImpalaUtils {
         org.springframework.util.FileCopyUtils.copy(Joiner.on("\n").join(output).getBytes(), new File(filename));
     }
 
-    public static List<String> getSummary(String coordinatorUrl, String queryId) throws IOException {
+    /**
+     * Coordinator의 /query_summary에서 쿼리의 Timeline, Summary를 추출한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @param queryId        Query ID
+     * @return Timeline, Summary
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
+    private static List<String> getSummary(String coordinatorUrl, String queryId) throws IOException {
         List<String> output = new ArrayList<>();
         String url = String.format("%s/query_summary?query_id=%s", coordinatorUrl, queryId);
         org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
