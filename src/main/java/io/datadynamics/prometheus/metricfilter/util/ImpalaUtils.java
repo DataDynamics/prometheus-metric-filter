@@ -26,8 +26,9 @@ import java.util.zip.Inflater;
 
 public class ImpalaUtils {
 
-    public static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
     private static Logger log = LoggerFactory.getLogger(ImpalaUtils.class);
+
+    public static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     /**
      * Impala Coordinator의 /queries에서 inflight, waiting to closed의 건수를 추출한다.
@@ -158,10 +159,23 @@ public class ImpalaUtils {
      * @throws IOException Coordinator에 접속할 수 없는 경우
      */
     public static void saveQueryProfiles(String coordinatorUrl, Integer index) throws IOException {
-        List<String> output = new ArrayList<>();
-        List<String> queryIds = queryIds(coordinatorUrl, index);
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(System.currentTimeMillis());
         String filename = String.format("profiles_%s.txt", timestamp);
+        String output = queryProfiles(coordinatorUrl, index);
+        org.springframework.util.FileCopyUtils.copy(output.getBytes(), new File(filename));
+    }
+
+    /**
+     * Impala Coordinator에서 Query Profile을 모두 추출한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @param index          1 = inflight, 2 = waited to close, 3 = completed
+     * @return 텍스트 형식의 Query Profile
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
+    public static String queryProfiles(String coordinatorUrl, Integer index) throws IOException {
+        List<String> output = new ArrayList<>();
+        List<String> queryIds = queryIds(coordinatorUrl, index);
         Map<String, String> profiles = queryProfiles(coordinatorUrl, queryIds);
         profiles.keySet().forEach(queryId -> {
             output.add("=========================================================================");
@@ -174,7 +188,7 @@ public class ImpalaUtils {
             }
             output.add(profiles.get(queryId));
         });
-        org.springframework.util.FileCopyUtils.copy(Joiner.on("\n").join(output).getBytes(), new File(filename));
+        return Joiner.on("\n").join(output);
     }
 
     /**
@@ -217,7 +231,7 @@ public class ImpalaUtils {
      * @return 세션 목록
      * @throws IOException Coordinator에 접속할 수 없는 경우
      */
-    public List<Map> getSessions(String coordinatorUrl) throws IOException {
+    public static List<Map> getSessions(String coordinatorUrl) throws IOException {
         org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/sessions").get();
         Element table = doc.getElementById("sessions-tbl");
         Elements rows = table.select("tr");
@@ -245,6 +259,21 @@ public class ImpalaUtils {
             sessions.add(session);
         }
         return sessions;
+    }
+
+    /**
+     * Session ID로 Impala Coordinator의 접속 세션을 강제 종료한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @param sessionId      Session ID
+     * @return 성공시 true
+     */
+    public static boolean killSession(String coordinatorUrl, String sessionId) {
+        String url = String.format("%s/close_session?session_id=%s", coordinatorUrl, sessionId);
+        RestTemplate template = new RestTemplate();
+        String result = template.getForObject(url, String.class);
+        String successPattern = String.format("Session %s closed successfully", sessionId);
+        return org.springframework.util.StringUtils.countOccurrencesOf(result, successPattern) > 0;
     }
 
 }
