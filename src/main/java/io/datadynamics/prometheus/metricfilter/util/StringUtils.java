@@ -1,5 +1,7 @@
 package io.datadynamics.prometheus.metricfilter.util;
 
+import java.net.URI;
+
 public class StringUtils {
 
     public static boolean isEmpty(Object obj) {
@@ -16,6 +18,15 @@ public class StringUtils {
 
     public static String getOrDefault(Object str, Object defaultStr) {
         return isEmpty(str) ? defaultStr.toString() : str.toString();
+    }
+
+    public static String getHostname(String url) {
+        try {
+            URI uri = new URI(url);
+            return uri.getHost() + ":" + uri.getPort();
+        } catch (Exception e) {
+            return "INVALID_URL";
+        }
     }
 
 }

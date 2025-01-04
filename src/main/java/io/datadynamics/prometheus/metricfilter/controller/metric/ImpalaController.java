@@ -22,10 +22,18 @@ import java.util.Map;
 @RequestMapping("/metrics/impala")
 public class ImpalaController {
 
-    @Autowired
-    RestTemplate restTemplate;
     private Logger log = LoggerFactory.getLogger(ImpalaController.class);
 
+    @Autowired
+    RestTemplate restTemplate;
+
+    /**
+     * Impala Prometheus Metric에서 Running Query, Wait To Closed 개수를 반환한다.
+     *
+     * @param url Coordinator URL
+     * @return Running Query, Wait To Closed 개수를 포함한 Prometheus Metrics
+     * @throws IOException Coordinator URL에 접속할 수 없는 경우
+     */
     @GetMapping(produces = "text/plain")
     ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url) throws IOException {
         String v1 = getPrometheusMetrics(url + "/metrics_prometheus");
@@ -33,12 +41,12 @@ public class ImpalaController {
         Map status = ImpalaUtils.getRunning(url + "/queries");
         List<String> metrics = new ArrayList();
         metrics.add(String.format("# HELP impala_wait_to_close_query_count Number of Query to wait to close"));
-        metrics.add(String.format("# TYPE impala_wait_to_close_query_count counter"));
-        metrics.add(String.format("impala_wait_to_close_query_count{host=\"%s\"} %s", url, status.get("waitToClose")));
+        metrics.add(String.format("# TYPE impala_wait_to_close_query_count gauge"));
+        metrics.add(String.format("impala_wait_to_close_query_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), status.get("waitToClose")));
 
         metrics.add(String.format("# HELP impala_running_query_count Number of Running Query"));
-        metrics.add(String.format("# TYPE impala_running_query_count counter"));
-        metrics.add(String.format("impala_running_query_count{host=\"%s\"} %s", url, status.get("running")));
+        metrics.add(String.format("# TYPE impala_running_query_count gauge"));
+        metrics.add(String.format("impala_running_query_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), status.get("running")));
 
         String v2 = Joiner.on("\n").join(metrics);
         String finalMetric = v1 + "\n" + v2;
