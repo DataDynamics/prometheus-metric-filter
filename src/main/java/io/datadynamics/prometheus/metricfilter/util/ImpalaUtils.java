@@ -38,7 +38,7 @@ public class ImpalaUtils {
      * @throws IOException Coordinator에 접속할 수 없는 경우
      */
     public static Map getRunning(String url) throws IOException {
-        org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
+        org.jsoup.nodes.Document doc = Jsoup.connect(url + "/queries").get();
         Elements rows = doc.select("h3");
         return MapUtils.queryStatus("running", Integer.parseInt(StringUtils.replace(rows.get(0).text(), " queries in flight", "")),
                 "waitToClose", Integer.parseInt(StringUtils.replace(rows.get(1).text(), " waiting to be closed [?]", "")));
@@ -279,4 +279,13 @@ public class ImpalaUtils {
         return org.springframework.util.StringUtils.countOccurrencesOf(result, successPattern) > 0;
     }
 
+    public static Map getActiveSession(String url) throws IOException {
+        org.jsoup.nodes.Document doc = Jsoup.connect(url + "/sessions").get();
+        String text = doc.selectXpath("/html/body/div/div[1]/h4").text(); // There are 0 sessions, of which 0 are active and 0 are inactive
+        return MapUtils.sessionStatus(
+                "sessions", Integer.parseInt(StringUtils.substringBetween(text, "There are ", " sessions")),
+                "active", Integer.parseInt(StringUtils.substringBetween(text, "of which ", " are active")),
+                "inactive", Integer.parseInt(StringUtils.substringBetween(text, "are active and ", " are inactive"))
+        );
+    }
 }

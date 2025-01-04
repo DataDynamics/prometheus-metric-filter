@@ -38,15 +38,29 @@ public class ImpalaController {
     ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url) throws IOException {
         String v1 = getPrometheusMetrics(url + "/metrics_prometheus");
 
-        Map status = ImpalaUtils.getRunning(url + "/queries");
+        Map queryStatus = ImpalaUtils.getRunning(url);
+        Map sessionStatus = ImpalaUtils.getActiveSession(url);
+
         List<String> metrics = new ArrayList();
         metrics.add(String.format("# HELP impala_wait_to_close_query_count Number of Query to wait to close"));
         metrics.add(String.format("# TYPE impala_wait_to_close_query_count gauge"));
-        metrics.add(String.format("impala_wait_to_close_query_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), status.get("waitToClose")));
+        metrics.add(String.format("impala_wait_to_close_query_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), queryStatus.get("waitToClose")));
 
         metrics.add(String.format("# HELP impala_running_query_count Number of Running Query"));
         metrics.add(String.format("# TYPE impala_running_query_count gauge"));
-        metrics.add(String.format("impala_running_query_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), status.get("running")));
+        metrics.add(String.format("impala_running_query_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), queryStatus.get("running")));
+
+        metrics.add(String.format("# HELP impala_session_count Number of Session"));
+        metrics.add(String.format("# TYPE impala_session_count gauge"));
+        metrics.add(String.format("impala_session_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), sessionStatus.get("sessions")));
+
+        metrics.add(String.format("# HELP impala_active_session_count Number of Active Session"));
+        metrics.add(String.format("# TYPE impala_active_session_count gauge"));
+        metrics.add(String.format("impala_active_session_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), sessionStatus.get("active")));
+
+        metrics.add(String.format("# HELP impala_inactive_session_count Number of Inactive Session"));
+        metrics.add(String.format("# TYPE impala_inactive_session_count gauge"));
+        metrics.add(String.format("impala_inactive_session_count{instance=\"%s\" job=\"impala-coordinator\"} %s", io.datadynamics.prometheus.metricfilter.util.StringUtils.getHostname(url), sessionStatus.get("inactive")));
 
         String v2 = Joiner.on("\n").join(metrics);
         String finalMetric = v1 + "\n" + v2;

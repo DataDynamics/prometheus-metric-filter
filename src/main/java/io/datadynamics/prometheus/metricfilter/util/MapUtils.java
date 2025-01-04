@@ -13,6 +13,16 @@ public class MapUtils {
         return map;
     }
 
+    public static Map sessionStatus(String sessions, Integer sessionValue,
+                                    String active, Integer activeValue,
+                                    String inactive, Integer inactiveValue) {
+        Map map = new HashMap();
+        map.put(sessions, sessionValue);
+        map.put(active, activeValue);
+        map.put(inactive, inactiveValue);
+        return map;
+    }
+
     public static Map session(String sessionType, String sessionTypeValue,
                               String openQueries, String openQueriesValue,
                               String totalQueries, String totalQueriesValue,
