@@ -23,7 +23,8 @@ public class ImpalaManagementController {
             summary = "세션 목록",
             description = "Impala Coordinator에 등록되어 있는 모든 세션목록을 반환합니다.",
             responses = {
-                    @ApiResponse(responseCode = "200", description = "정상적으로 세션 정보를 수집한 경우")
+                    @ApiResponse(responseCode = "200", description = "정상적으로 세션 정보를 수집한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
             }
     )
     @GetMapping("/sessions")
@@ -36,7 +37,8 @@ public class ImpalaManagementController {
             description = "지정한 Session ID로 세션을 강제 종료합니다.",
             responses = {
                     @ApiResponse(responseCode = "200", description = "정상적으로 세션을 종료한 경우"),
-                    @ApiResponse(responseCode = "404", description = "존재하지 않는 세션을 강제 종료한 경우")
+                    @ApiResponse(responseCode = "404", description = "존재하지 않는 세션을 강제 종료한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
             }
     )
     @GetMapping("/sessions/killBySessionId")
@@ -52,7 +54,8 @@ public class ImpalaManagementController {
             summary = "세션 강제 종료",
             description = "지정한 User가 생성한 모든 세션을 강제 종료합니다.",
             responses = {
-                    @ApiResponse(responseCode = "200", description = "정상적으로 세션을 강제 종료한 경우")
+                    @ApiResponse(responseCode = "200", description = "정상적으로 세션을 강제 종료한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
             }
     )
     @GetMapping("/sessions/killByUsername")
@@ -73,7 +76,8 @@ public class ImpalaManagementController {
             summary = "User 기반 세션수",
             description = "세션 목록에서 Username 기준으로 세션수를 합산합니다.",
             responses = {
-                    @ApiResponse(responseCode = "200", description = "정상적으로 세션 처리 현황을 처리한 경우")
+                    @ApiResponse(responseCode = "200", description = "정상적으로 세션 처리 현황을 처리한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
             }
     )
     @GetMapping("/sessions/stats/byUsername")
@@ -87,7 +91,8 @@ public class ImpalaManagementController {
             summary = "Delegated User 기반 세션수",
             description = "세션 목록에서 Delegated Username 기준으로 세션수를 합산합니다.",
             responses = {
-                    @ApiResponse(responseCode = "200", description = "Delegated User 기반 세션수")
+                    @ApiResponse(responseCode = "200", description = "Delegated User 기반 세션수"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
             }
     )
     @GetMapping("/sessions/stats/byDelegatedUsername")
@@ -110,7 +115,8 @@ public class ImpalaManagementController {
             summary = "현재 실행중인 Impala Query의 Query ID 목록",
             description = "현재 실행중인 Impala Query ID 목록을 반환합니다.",
             responses = {
-                    @ApiResponse(responseCode = "200", description = "정상적으로 Query ID 목록을 생성한 경우")
+                    @ApiResponse(responseCode = "200", description = "정상적으로 Query ID 목록을 생성한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
             }
     )
     @GetMapping("/profiles/inflightQueryIds")
@@ -124,7 +130,8 @@ public class ImpalaManagementController {
             summary = "현재 종료 대기중인 Impala Query의 Query ID 목록",
             description = "현재 종료 대기중인 Impala Query ID 목록을 반환합니다.",
             responses = {
-                    @ApiResponse(responseCode = "200", description = "정상적으로 Query ID 목록을 생성한 경우")
+                    @ApiResponse(responseCode = "200", description = "정상적으로 Query ID 목록을 생성한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
             }
     )
     @GetMapping("/profiles/waitToCloseQueryIds")
@@ -138,7 +145,8 @@ public class ImpalaManagementController {
             summary = "실행을 완료한 Impala Query의 Query ID 목록",
             description = "실행을 완료한 Impala Query ID 목록을 반환합니다.",
             responses = {
-                    @ApiResponse(responseCode = "200", description = "정상적으로 Query ID 목록을 생성한 경우")
+                    @ApiResponse(responseCode = "200", description = "정상적으로 Query ID 목록을 생성한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
             }
     )
     @GetMapping("/profiles/completedQueryIds")
@@ -148,6 +156,14 @@ public class ImpalaManagementController {
         return ImpalaUtils.queryIds(url, 3);
     }
 
+    @Operation(
+            summary = "Impala Query ID의 Query Profile",
+            description = "Impala Query ID에 대한 Query Profile을 반환합니다.",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "정상적으로 Query Profile을 처리한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
+            }
+    )
     @GetMapping("/profiles")
     public ResponseEntity<String> queryProfile(
             @Parameter(name = "url", description = "Impala Coordinator URL", required = true, example = "http://impala:25000")
@@ -158,6 +174,14 @@ public class ImpalaManagementController {
         return ResponseEntity.ok(profile);
     }
 
+    @Operation(
+            summary = "실행을 완료한 Impala Query의 Query ID 목록",
+            description = "실행을 완료한 Impala Query ID 목록을 반환합니다.",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "정상적으로 Query Profile을 처리한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
+            }
+    )
     @GetMapping("/profiles/inflight")
     public ResponseEntity<String> inflightQueryProfiles(
             @Parameter(name = "url", description = "Impala Coordinator URL", required = true, example = "http://impala:25000")
@@ -165,6 +189,14 @@ public class ImpalaManagementController {
         return ResponseEntity.ok(ImpalaUtils.queryProfiles(url, 1));
     }
 
+    @Operation(
+            summary = "종료 대기중인 Impala Query ID의 Query Profile",
+            description = "종료 대기중인 Impala Query ID의 Query Profile을 반환합니다.",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "정상적으로 Query Profile을 처리한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
+            }
+    )
     @GetMapping("/profiles/waitToClose")
     public ResponseEntity<String> waitToCloseQueryProfiles(
             @Parameter(name = "url", description = "Impala Coordinator URL", required = true, example = "http://impala:25000")
@@ -172,6 +204,14 @@ public class ImpalaManagementController {
         return ResponseEntity.ok(ImpalaUtils.queryProfiles(url, 2));
     }
 
+    @Operation(
+            summary = "실행을 완료한 Impala Query ID의 Query Profile",
+            description = "실행을 완료한 Impala Query ID의 Query Profile을 반환합니다.",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "정상적으로 Query Profile을 처리한 경우"),
+                    @ApiResponse(responseCode = "500", description = "처리중 에러가 발생한 경우")
+            }
+    )
     @GetMapping("/profiles/completed")
     public ResponseEntity<String> completedQueryProfiles(
             @Parameter(name = "url", description = "Impala Coordinator URL", required = true, example = "http://impala:25000")
