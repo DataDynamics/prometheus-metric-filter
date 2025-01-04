@@ -26,9 +26,8 @@ import java.util.zip.Inflater;
 
 public class ImpalaUtils {
 
-    private static Logger log = LoggerFactory.getLogger(ImpalaUtils.class);
-
     public static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    private static Logger log = LoggerFactory.getLogger(ImpalaUtils.class);
 
     /**
      * Impala Coordinator의 /queries에서 inflight, waiting to closed의 건수를 추출한다.
@@ -42,43 +41,6 @@ public class ImpalaUtils {
         Elements rows = doc.select("h3");
         return MapUtils.queryStatus("running", Integer.parseInt(StringUtils.replace(rows.get(0).text(), " queries in flight", "")),
                 "waitToClose", Integer.parseInt(StringUtils.replace(rows.get(1).text(), " waiting to be closed [?]", "")));
-    }
-
-    /**
-     * Impaal Corodinator의 /sessions에서 세션 목록을 추출한다.
-     *
-     * @param coordinatorUrl Coordinator URL
-     * @return 세션 목록
-     * @throws IOException Coordinator에 접속할 수 없는 경우
-     */
-    public List<Map> getSessions(String coordinatorUrl) throws IOException {
-        org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/sessions").get();
-        Element table = doc.getElementById("sessions-tbl");
-        Elements rows = table.select("tr");
-        List<Map> sessions = new ArrayList();
-        for (int i = 1; i < rows.size(); i++) {
-            Element row = rows.get(i);
-            Elements cols = row.select("td");
-            Map session = MapUtils.session(
-                    "sessionType", cols.get(0).text(),
-                    "openQueries", cols.get(1).text(),
-                    "totalQueries", cols.get(2).text(),
-                    "user", cols.get(3).text(),
-                    "delegatedUser", cols.get(4).text(),
-                    "sessionId", cols.get(5).text(),
-                    "networkAddress", cols.get(6).text(),
-                    "defaultDatabase", cols.get(7).text(),
-                    "startTime", cols.get(8).text(),
-                    "lastAccessed", cols.get(9).text(),
-                    "idleTimeoutSecs", cols.get(10).text(),
-                    "expired", cols.get(11).text(),
-                    "closed", cols.get(12).text(),
-                    "refCount", cols.get(13).text(),
-                    "action", cols.get(14).text()
-            );
-            sessions.add(session);
-        }
-        return sessions;
     }
 
     /**
@@ -246,6 +208,43 @@ public class ImpalaUtils {
 
         output.add("\n\n=[Profile]===============================================================\n\n");
         return output;
+    }
+
+    /**
+     * Impaal Corodinator의 /sessions에서 세션 목록을 추출한다.
+     *
+     * @param coordinatorUrl Coordinator URL
+     * @return 세션 목록
+     * @throws IOException Coordinator에 접속할 수 없는 경우
+     */
+    public List<Map> getSessions(String coordinatorUrl) throws IOException {
+        org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/sessions").get();
+        Element table = doc.getElementById("sessions-tbl");
+        Elements rows = table.select("tr");
+        List<Map> sessions = new ArrayList();
+        for (int i = 1; i < rows.size(); i++) {
+            Element row = rows.get(i);
+            Elements cols = row.select("td");
+            Map session = MapUtils.session(
+                    "sessionType", cols.get(0).text(),
+                    "openQueries", cols.get(1).text(),
+                    "totalQueries", cols.get(2).text(),
+                    "user", cols.get(3).text(),
+                    "delegatedUser", cols.get(4).text(),
+                    "sessionId", cols.get(5).text(),
+                    "networkAddress", cols.get(6).text(),
+                    "defaultDatabase", cols.get(7).text(),
+                    "startTime", cols.get(8).text(),
+                    "lastAccessed", cols.get(9).text(),
+                    "idleTimeoutSecs", cols.get(10).text(),
+                    "expired", cols.get(11).text(),
+                    "closed", cols.get(12).text(),
+                    "refCount", cols.get(13).text(),
+                    "action", cols.get(14).text()
+            );
+            sessions.add(session);
+        }
+        return sessions;
     }
 
 }

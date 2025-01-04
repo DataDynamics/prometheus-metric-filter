@@ -10,11 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-/**
- * @author Haneul, Kim
- * @version 1.0.0
- * @since 2024-11-20
- */
 public class KuduInsertCallable implements Callable<Integer> {
     public static final String CONNECTION_URL = "jdbc:impala://hdw1.datalake.net:21050/default";
     public static final String JDBC_DRIVER = "com.cloudera.impala.jdbc.Driver";

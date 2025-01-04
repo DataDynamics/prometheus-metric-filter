@@ -7,11 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author Haneul, Kim
- * @version 1.0.0
- * @since 2024-11-20
- */
+
 public class KuduInsertPar {
 
     public static void main(String[] args) throws InterruptedException {

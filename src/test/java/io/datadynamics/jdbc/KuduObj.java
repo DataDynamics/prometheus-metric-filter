@@ -2,11 +2,6 @@ package io.datadynamics.jdbc;
 
 import lombok.Data;
 
-/**
- * @author Haneul, Kim
- * @version 1.0.0
- * @since 2024-11-20
- */
 @Data
 public class KuduObj {
 

@@ -26,10 +26,9 @@ import static org.apache.commons.lang3.StringUtils.isEmpty;
 @RequestMapping("/metrics/kudu")
 public class KuduController {
 
-    private Logger log = LoggerFactory.getLogger(KuduController.class);
-
     @Autowired
     RestTemplate restTemplate;
+    private Logger log = LoggerFactory.getLogger(KuduController.class);
 
     @GetMapping(produces = "text/plain")
     ResponseEntity<String> getMetrics(@RequestParam(name = "url", required = true) String url,

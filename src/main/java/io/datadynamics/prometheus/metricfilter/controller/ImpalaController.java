@@ -11,9 +11,8 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/impala")
 public class ImpalaController {
 
-    private Logger log = LoggerFactory.getLogger(ImpalaController.class);
-
     @Autowired
     RestTemplate restTemplate;
+    private Logger log = LoggerFactory.getLogger(ImpalaController.class);
 
 }
