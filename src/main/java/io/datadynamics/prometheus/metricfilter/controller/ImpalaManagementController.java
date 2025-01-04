@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 @RequestMapping("/impala")
-public class ImpalaController {
+public class ImpalaManagementController {
 
     @GetMapping("/sessions")
     public List<Map> sessions(@RequestParam(name = "url", required = true) String url) throws IOException {
@@ -27,7 +27,7 @@ public class ImpalaController {
     }
 
     @GetMapping("/sessions/killByUsername")
-    public ResponseEntity killByUsername(@RequestParam(name = "url", required = true) String url, @RequestParam(name = "sessionId", required = true) String username) throws IOException {
+    public ResponseEntity killByUsername(@RequestParam(name = "url", required = true) String url, @RequestParam(name = "username", required = true) String username) throws IOException {
         List<Map> sessions = ImpalaUtils.getSessions(url);
         Map<String, Boolean> result = new java.util.HashMap<>();
         sessions.stream().filter(session -> username.equals(session.get("user"))).forEach(session -> {
@@ -85,19 +85,19 @@ public class ImpalaController {
         return ResponseEntity.ok(profile);
     }
 
-    @GetMapping("/profiles/inflightQueryProfiles")
+    @GetMapping("/profiles/inflight")
     public ResponseEntity<String> inflightQueryProfiles(@RequestParam(name = "url", required = true) String url) throws IOException {
         return ResponseEntity.ok(ImpalaUtils.queryProfiles(url, 1));
     }
 
-    @GetMapping("/profiles/waitToCloseQueryProfiles")
+    @GetMapping("/profiles/waitToClose")
     public ResponseEntity<String> waitToCloseQueryProfiles(@RequestParam(name = "url", required = true) String url) throws IOException {
         return ResponseEntity.ok(ImpalaUtils.queryProfiles(url, 2));
     }
 
-    @GetMapping("/profiles/completedQueryProfiles")
+    @GetMapping("/profiles/completed")
     public ResponseEntity<String> completedQueryProfiles(@RequestParam(name = "url", required = true) String url) throws IOException {
-        return ResponseEntity.ok(ImpalaUtils.queryProfiles(url, 2));
+        return ResponseEntity.ok(ImpalaUtils.queryProfiles(url, 3));
     }
 
 }

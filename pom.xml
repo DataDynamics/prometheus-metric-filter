@@ -152,40 +152,36 @@
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient</artifactId>
             <version>${promethus.lib.version}</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/simpleclient-0.16.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_common</artifactId>
+            <version>${promethus.lib.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-math3</artifactId>
             <version>3.6.1</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/commons-math3-3.6.1.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_hotspot</artifactId>
             <version>${promethus.lib.version}</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/simpleclient_hotspot-0.16.0.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_httpserver</artifactId>
             <version>${promethus.lib.version}</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/simpleclient_httpserver-0.16.0.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_pushgateway</artifactId>
             <version>${promethus.lib.version}</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/simpleclient_pushgateway-0.16.0.jar</systemPath>
         </dependency>
 
         <!-- =================== -->

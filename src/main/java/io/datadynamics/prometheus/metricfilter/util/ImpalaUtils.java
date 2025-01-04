@@ -232,7 +232,9 @@ public class ImpalaUtils {
      * @throws IOException Coordinator에 접속할 수 없는 경우
      */
     public static List<Map> getSessions(String coordinatorUrl) throws IOException {
-        org.jsoup.nodes.Document doc = Jsoup.connect(coordinatorUrl + "/sessions").get();
+        String url = coordinatorUrl + "/sessions";
+        log.debug("Impala Coordinator Sessions URL : {}", url);
+        org.jsoup.nodes.Document doc = Jsoup.connect(url).get();
         Element table = doc.getElementById("sessions-tbl");
         Elements rows = table.select("tr");
         List<Map> sessions = new ArrayList();
@@ -270,6 +272,7 @@ public class ImpalaUtils {
      */
     public static boolean killSession(String coordinatorUrl, String sessionId) {
         String url = String.format("%s/close_session?session_id=%s", coordinatorUrl, sessionId);
+        log.debug("Impala Coordinator Close Session URL : {}", url);
         RestTemplate template = new RestTemplate();
         String result = template.getForObject(url, String.class);
         String successPattern = String.format("Session %s closed successfully", sessionId);
