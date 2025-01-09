@@ -1,0 +1,12 @@
+[Unit]
+Description=Push Gateway
+Documentation=https://prometheus.io/docs/introduction/overview/
+After=network-online.target
+
+[Service]
+User=prometheus
+Restart=on-failure
+ExecStart=/opt/pushgateway/pushgateway
+
+[Install]
+WantedBy=multi-user.target
