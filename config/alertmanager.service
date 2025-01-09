@@ -1,0 +1,13 @@
+[Unit]
+Description=Alert Manager
+Documentation=https://prometheus.io/docs/introduction/overview/
+After=network-online.target
+
+[Service]
+User=fharenheit
+Restart=on-failure
+ExecStart=/opt/alertmanager/alertmanager --config.file=/opt/alertmanager/alertmanager.yml
+
+
+[Install]
+WantedBy=multi-user.target
