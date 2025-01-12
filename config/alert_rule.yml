@@ -1,0 +1,60 @@
+groups:
+  - name: so_many_running_query
+    rules:
+      - alert: so_many_running_query_detect
+        expr: impala_running_query_count{job="impala-coordinator"} >= 200
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Impala Coordinator의 Running Query 경고 {{ $labels.instance }}"
+          description: "최근 5분간 {{ $labels.instance }}의 Running Query의 개수가 200개를 넘어서고 있습니다. 현재값: {{ $value }}"
+
+  - name: so_many_running_query
+    rules:
+      - alert: BatchJobNoRecentSuccess
+        expr: time() - my_batch_job_last_success_time_seconds{job="batch"} > 86400*2
+
+  - name: high_cpu_usage
+    alert: HighCPUUsage
+    expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High CPU usage detected on {{ $labels.instance }}"
+      description: "CPU usage is above 80% for 5 minutes"
+
+  - name: http_request_sayhello_detect
+    rules:
+      - alert: http_request_sayhello_detect
+        expr: increase(helloworld_sayhello_total[1m]) > 10
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: "HTTP Request 경고 {{ $labels.instance }}"
+          description: "최근 1분간 {{ $labels.instance }}의 호출 건수가 10개를 넘어서고 있습니다. 현재값: {{ $value }}"
+
+  - name: http_500_error_detect_1
+    rules:
+      - alert: http_500_error_detect
+        expr: rate(http_requests_total{status=”500”}[2m]) > 0
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: "HTTP Request 경고 {{ $labels.instance }}"
+          description: "최근 1분간 {{ $labels.instance }}의 호출 건수가 10개를 넘어서고 있습니다. 현재값: {{ $value }}"
+
+  - name: http_500_error_detect_2
+    rules:
+      - record: job:http_requests_total:rate2m
+        expr: sum(rate(http_requests_total[2m])) without(method, status, instance)
+      - record: job:http_requests_status500:rate2m
+        expr: sum(rate(http_requests_total{status=”500”}[2m])) without(method, status, instance)
+      - alert: Serving HTTP 500 errors
+        expr: job:http_requests_status500:rate2m / job:http_requests_total:rate2m > 0.01
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: "HTTP Request 경고 {{ $labels.instance }}"
+          description: "최근 1분간 {{ $labels.instance }}의 호출 건수가 10개를 넘어서고 있습니다. 현재값: {{ $value }}"
